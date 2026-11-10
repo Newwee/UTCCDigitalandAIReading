@@ -8,7 +8,7 @@ import { BackgroundEffects } from './components/ui/BackgroundEffects';
 import { HomeView } from './views/HomeView';
 import { StudyLibraryView } from './views/StudyLibraryView';
 import { ReadingPageView } from './views/ReadingPageView';
-import { RevisionView } from './views/RevisionView';
+import { RevisionView, RevisionTab } from './views/RevisionView';
 import { BookmarksHistoryView } from './views/BookmarksHistoryView';
 import { ContentAuditView } from './views/ContentAuditView';
 import { CompetitionView } from './views/CompetitionView';
@@ -36,6 +36,8 @@ export function App() {
     state.lastReadTopicId || STUDY_TOPICS[0]?.id || ''
   );
   const [libraryCategoryFilter, setLibraryCategoryFilter] = useState<CategoryId | 'all'>('all');
+  const [revisionSubTab, setRevisionSubTab] = useState<RevisionTab>('unit-tests');
+  const [revisionCategory, setRevisionCategory] = useState<CategoryId | undefined>(undefined);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   // Navigate to a specific topic and switch to reading tab
@@ -52,6 +54,13 @@ export function App() {
     } else {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  };
+
+  const handleOpenRevision = (subTab: RevisionTab = 'unit-tests', categoryId?: CategoryId) => {
+    setRevisionSubTab(subTab);
+    setRevisionCategory(categoryId);
+    setCurrentTab('revision');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectTab = (tab: NavTab) => {
@@ -84,6 +93,7 @@ export function App() {
               setLibraryCategoryFilter(cat);
               setCurrentTab('library');
             }}
+            onOpenRevision={handleOpenRevision}
             completedIds={state.completedTopicIds}
             bookmarkedIds={state.bookmarkedTopicIds}
             lastReadTopicId={state.lastReadTopicId}
@@ -118,7 +128,11 @@ export function App() {
         )}
 
         {currentTab === 'revision' && (
-          <RevisionView onOpenTopic={handleOpenTopic} />
+          <RevisionView 
+            onOpenTopic={handleOpenTopic} 
+            initialTab={revisionSubTab}
+            initialCategoryId={revisionCategory}
+          />
         )}
 
         {currentTab === 'audit' && (

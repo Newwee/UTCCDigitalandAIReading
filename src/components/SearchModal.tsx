@@ -3,6 +3,7 @@ import { Search, X, BookOpen, Tag, ArrowRight, HelpCircle, Layers } from 'lucide
 import { STUDY_TOPICS, CATEGORIES } from '../data/studyContent';
 import { PRACTICE_QUESTIONS } from '../data/practiceQuestions';
 import { GLOSSARY_TERMS } from '../data/glossaryData';
+import { UNIT_SUMMARIES } from '../data/easySummariesData';
 import { StudyTopic } from '../types';
 
 interface SearchModalProps {
@@ -98,7 +99,38 @@ export const SearchModal: React.FC<SearchModalProps> = ({
       }
     });
 
-    // 3. Match in Practice Questions
+    // 3. Match in Easy Summaries (Formulas, Concept Cards, Memory Tricks)
+    UNIT_SUMMARIES.forEach(unit => {
+      const targetLesson = STUDY_TOPICS.find(t => t.category === unit.id) || STUDY_TOPICS[0];
+
+      // Formulas
+      unit.formulasAndRules?.forEach(f => {
+        if (f.name.toLowerCase().includes(clean) || f.formula.toLowerCase().includes(clean) || f.explanation.toLowerCase().includes(clean)) {
+          searchResults.push({
+            targetTopicId: targetLesson.id,
+            badgeText: `สูตรคำนวณ (หน่วย ${unit.unitNumber})`,
+            badgeColor: 'bg-[#35D5F2]/15 text-[#35D5F2] border-[#35D5F2]/25',
+            title: `สูตร: ${f.name} [${f.formula}]`,
+            snippet: `${f.explanation} (ตัวอย่าง: ${f.example} -> ${f.result})`,
+          });
+        }
+      });
+
+      // Memory tricks
+      unit.memoryTricks.forEach(m => {
+        if (m.title.toLowerCase().includes(clean) || m.description.toLowerCase().includes(clean) || m.technique.toLowerCase().includes(clean)) {
+          searchResults.push({
+            targetTopicId: targetLesson.id,
+            badgeText: `ทริคจำ (หน่วย ${unit.unitNumber})`,
+            badgeColor: 'bg-[#EC4899]/15 text-[#EC4899] border-[#EC4899]/25',
+            title: `ทริคจำ: ${m.title}`,
+            snippet: `${m.description} -> ${m.technique}`,
+          });
+        }
+      });
+    });
+
+    // 4. Match in Practice Questions
     PRACTICE_QUESTIONS.forEach(q => {
       if (
         q.question.toLowerCase().includes(clean) ||

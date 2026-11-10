@@ -17,7 +17,8 @@ import {
   Calendar,
   Flame,
   ShieldCheck,
-  ShieldAlert
+  ShieldAlert,
+  AlertTriangle
 } from 'lucide-react';
 import { SpotlightCard } from '../components/ui/SpotlightCard';
 import { GradientText } from '../components/ui/GradientText';
@@ -29,11 +30,13 @@ import { CONTENT_AUDIT_REPORT } from '../data/contentAudit';
 import { COMPETITION_DATA } from '../data/competitionInfo';
 import { NavTab } from '../components/Header';
 import { CategoryId } from '../types';
+import { Target, Lightbulb } from 'lucide-react';
 
 interface HomeViewProps {
   onSelectTab: (tab: NavTab) => void;
   onOpenTopic: (topicId: string) => void;
   onSelectCategoryFilter: (catId: CategoryId | 'all') => void;
+  onOpenRevision?: (subTab?: 'unit-tests' | 'summaries' | 'quiz' | 'flashcards' | 'traps', categoryId?: CategoryId) => void;
   completedIds: string[];
   bookmarkedIds: string[];
   lastReadTopicId?: string;
@@ -43,6 +46,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
   onSelectTab,
   onOpenTopic,
   onSelectCategoryFilter,
+  onOpenRevision,
   completedIds,
   bookmarkedIds,
   lastReadTopicId,
@@ -97,11 +101,25 @@ export const HomeView: React.FC<HomeViewProps> = ({
             </button>
 
             <button
-              onClick={() => onSelectTab('revision')}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-sm font-semibold transition-all"
+              onClick={() => {
+                if (onOpenRevision) onOpenRevision('unit-tests');
+                else onSelectTab('revision');
+              }}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[#35D5F2]/40 hover:border-[#35D5F2] text-sm font-bold transition-all shadow-glow-cyan"
             >
-              <Sparkles className="w-4 h-4 text-[#35D5F2]" />
-              <span>ทำข้อสอบจำลอง 100 ข้อ (Quiz Mode)</span>
+              <Target className="w-4 h-4 text-[#35D5F2]" />
+              <span>ข้อสอบแยก 5 หน่วย (Unit Drill)</span>
+            </button>
+
+            <button
+              onClick={() => {
+                if (onOpenRevision) onOpenRevision('summaries');
+                else onSelectTab('revision');
+              }}
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#111B30] to-[#18243A] hover:bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[#8B7CFF]/40 hover:border-[#8B7CFF] text-sm font-semibold transition-all shadow-glow-violet"
+            >
+              <Lightbulb className="w-4 h-4 text-amber-300" />
+              <span>สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
             </button>
 
             <button
@@ -284,9 +302,46 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-[var(--border-color)] flex items-center justify-between text-xs font-semibold text-[#35D5F2]">
-                  <span>เปิดอ่านบทเรียนกลุ่มนี้</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <div className="pt-4 mt-4 border-t border-[var(--border-color)] flex items-center justify-between text-xs">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectCategoryFilter(category.id);
+                      onSelectTab('library');
+                    }}
+                    className="font-semibold text-[#35D5F2] hover:underline flex items-center gap-1"
+                  >
+                    <span>อ่านบทเรียน</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (onOpenRevision) onOpenRevision('summaries', category.id);
+                        else onSelectTab('revision');
+                      }}
+                      className="px-2 py-1 rounded-md bg-[var(--bg-elevated)] hover:bg-[#8B7CFF]/15 text-[#8B7CFF] border border-[var(--border-color)] text-[11px] font-bold transition-all flex items-center gap-1"
+                      title="อ่านสรุปย่อหน่วยนี้"
+                    >
+                      <Lightbulb className="w-3 h-3 text-amber-300" />
+                      <span>สรุป</span>
+                    </button>
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (onOpenRevision) onOpenRevision('unit-tests', category.id);
+                        else onSelectTab('revision');
+                      }}
+                      className="px-2.5 py-1 rounded-md bg-[#35D5F2]/10 hover:bg-[#35D5F2] text-[#35D5F2] hover:text-[#080D1B] border border-[#35D5F2]/30 text-[11px] font-bold transition-all flex items-center gap-1"
+                      title="ทำข้อสอบ 20 ข้อของหน่วยนี้"
+                    >
+                      <Target className="w-3 h-3" />
+                      <span>สอบ 20 ข้อ</span>
+                    </button>
+                  </div>
                 </div>
               </SpotlightCard>
             );
@@ -296,26 +351,57 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
       {/* Quick Access Tools */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 className="text-lg font-bold text-[var(--text-primary)] mb-4">
-          เครื่องมือเตรียมตัวสอบ (Exam Tools)
-        </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="flex items-center justify-between mb-4">
+          <h3 className="text-lg font-bold text-[var(--text-primary)]">
+            เครื่องมือเตรียมตัวสอบ (Exam Preparation Suite)
+          </h3>
+          <span className="text-xs text-[var(--text-muted)]">ครบทั้งแบบฝึกหัด สรุปย่อ และจำลองสถานการณ์</span>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           <button
-            onClick={() => onSelectTab('revision')}
-            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-left transition-all group"
+            onClick={() => onOpenRevision ? onOpenRevision('unit-tests') : onSelectTab('revision')}
+            className="p-4 rounded-xl bg-gradient-to-br from-[#111B30] to-[#18243A] hover:bg-[var(--bg-elevated)] border border-[#35D5F2]/40 hover:border-[#35D5F2] text-left transition-all group shadow-glow-cyan"
           >
-            <Sparkles className="w-5 h-5 text-[#35D5F2] mb-2 group-hover:scale-110 transition-transform" />
-            <h4 className="text-sm font-bold text-[var(--text-primary)]">ข้อสอบจำลอง 100 ข้อ</h4>
-            <p className="text-xs text-[var(--text-muted)] mt-1">Quiz Mode พร้อมเฉลยละเอียด</p>
+            <Target className="w-5 h-5 text-[#35D5F2] mb-2 group-hover:scale-110 transition-transform" />
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ข้อสอบแยก 5 หน่วย</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">เจาะลึกหน่วยละ 20 ข้อ</p>
           </button>
 
           <button
-            onClick={() => onSelectTab('revision')}
-            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#8B7CFF]/40 text-left transition-all group"
+            onClick={() => onOpenRevision ? onOpenRevision('summaries') : onSelectTab('revision')}
+            className="p-4 rounded-xl bg-gradient-to-br from-[#111B30] to-[#18243A] hover:bg-[var(--bg-elevated)] border border-[#8B7CFF]/40 hover:border-[#8B7CFF] text-left transition-all group shadow-glow-violet"
           >
-            <Layers className="w-5 h-5 text-[#8B7CFF] mb-2 group-hover:scale-110 transition-transform" />
-            <h4 className="text-sm font-bold text-[var(--text-primary)]">แฟลชการ์ด 40 คำศัพท์</h4>
-            <p className="text-xs text-[var(--text-muted)] mt-1">สุ่มทวนคำศัพท์เทคนิค</p>
+            <Lightbulb className="w-5 h-5 text-amber-300 mb-2 group-hover:scale-110 transition-transform" />
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">สรุปฉบับเข้าใจง่าย</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">สูตรลัด & ทริคตัดช้อยส์</p>
+          </button>
+
+          <button
+            onClick={() => onOpenRevision ? onOpenRevision('quiz') : onSelectTab('revision')}
+            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-left transition-all group"
+          >
+            <Sparkles className="w-5 h-5 text-[#35D5F2] mb-2 group-hover:scale-110 transition-transform" />
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ข้อสอบรวม 100 ข้อ</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">Full Mock Exam จับเวลา</p>
+          </button>
+
+          <button
+            onClick={() => onOpenRevision ? onOpenRevision('flashcards') : onSelectTab('revision')}
+            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#53DBAB]/40 text-left transition-all group"
+          >
+            <Layers className="w-5 h-5 text-[#53DBAB] mb-2 group-hover:scale-110 transition-transform" />
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">แฟลชการ์ด 40 คำศัพท์</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">สุ่มทวนศัพท์เทคนิค</p>
+          </button>
+
+          <button
+            onClick={() => onOpenRevision ? onOpenRevision('traps') : onSelectTab('revision')}
+            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#F59E0B]/40 text-left transition-all group"
+          >
+            <AlertTriangle className="w-5 h-5 text-[#F59E0B] mb-2 group-hover:scale-110 transition-transform" />
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">12 จุดหลอกห้องสอบ</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">ข้อที่คนมักตอบผิด</p>
           </button>
 
           <button
@@ -323,17 +409,8 @@ export const HomeView: React.FC<HomeViewProps> = ({
             className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#53DBAB]/40 text-left transition-all group"
           >
             <FileCheck2 className="w-5 h-5 text-[#53DBAB] mb-2 group-hover:scale-110 transition-transform" />
-            <h4 className="text-sm font-bold text-[var(--text-primary)]">ตรวจ 57 หน้า 100%</h4>
-            <p className="text-xs text-[var(--text-muted)] mt-1">Content Audit Checklist</p>
-          </button>
-
-          <button
-            onClick={() => onSelectTab('competition')}
-            className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#F59E0B]/40 text-left transition-all group"
-          >
-            <Award className="w-5 h-5 text-[#F59E0B] mb-2 group-hover:scale-110 transition-transform" />
-            <h4 className="text-sm font-bold text-[var(--text-primary)]">เกณฑ์และรางวัล</h4>
-            <p className="text-xs text-[var(--text-muted)] mt-1">ปรนัย 20 + อัตนัย 10 ข้อ</p>
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ตรวจ 57 หน้า 100%</h4>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">Audit Coverage</p>
           </button>
         </div>
       </section>

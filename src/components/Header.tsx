@@ -41,7 +41,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'home', label: 'แดชบอร์ด', icon: Layers },
     { id: 'library', label: 'คลังเนื้อหา', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
-    { id: 'revision', label: 'ทบทวน & ควิซ', icon: Award },
+    { id: 'revision', label: 'ข้อสอบ & สรุปย่อ', icon: Award },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2 },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles },

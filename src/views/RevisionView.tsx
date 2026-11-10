@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   Award, 
   Sparkles, 
@@ -18,7 +18,9 @@ import {
   Calendar,
   Check,
   Eye,
-  EyeOff
+  EyeOff,
+  Lightbulb,
+  Target
 } from 'lucide-react';
 import { CATEGORIES } from '../data/studyContent';
 import { PRACTICE_QUESTIONS, PracticeQuestion } from '../data/practiceQuestions';
@@ -28,13 +30,37 @@ import { ADVANCED_QUESTIONS, AdvancedQuestion } from '../data/advancedQuestionsD
 import { TEAM_STRATEGY } from '../data/teamStrategyData';
 import { SpotlightCard } from '../components/ui/SpotlightCard';
 import { GradientText } from '../components/ui/GradientText';
+import { UnitExamEngine } from '../components/UnitExamEngine';
+import { EasySummariesView } from '../components/EasySummariesView';
+import { CategoryId } from '../types';
+
+export type RevisionTab = 'unit-tests' | 'summaries' | 'quiz' | 'flashcards' | 'traps' | 'advanced' | 'strategy';
 
 interface RevisionViewProps {
   onOpenTopic: (topicId: string) => void;
+  initialTab?: RevisionTab;
+  initialCategoryId?: CategoryId;
 }
 
-export const RevisionView: React.FC<RevisionViewProps> = ({ onOpenTopic }) => {
-  const [activeTab, setActiveTab] = useState<'quiz' | 'flashcards' | 'traps' | 'advanced' | 'strategy'>('quiz');
+export const RevisionView: React.FC<RevisionViewProps> = ({ 
+  onOpenTopic, 
+  initialTab = 'unit-tests',
+  initialCategoryId
+}) => {
+  const [activeTab, setActiveTab] = useState<RevisionTab>(initialTab);
+  const [currentCategoryId, setCurrentCategoryId] = useState<CategoryId | undefined>(initialCategoryId);
+
+  useEffect(() => {
+    if (initialTab) {
+      setActiveTab(initialTab);
+    }
+  }, [initialTab]);
+
+  useEffect(() => {
+    if (initialCategoryId) {
+      setCurrentCategoryId(initialCategoryId);
+    }
+  }, [initialCategoryId]);
 
   // ========================================================
   // 1. QUIZ MODE STATE & LOGIC
@@ -139,27 +165,51 @@ export const RevisionView: React.FC<RevisionViewProps> = ({ onOpenTopic }) => {
       {/* Main Mode Tabs */}
       <div className="flex items-center gap-2 overflow-x-auto border-b border-[var(--border-color)] pb-3 scrollbar-none">
         <button
-          onClick={() => setActiveTab('quiz')}
+          onClick={() => setActiveTab('unit-tests')}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
-            activeTab === 'quiz'
+            activeTab === 'unit-tests'
               ? 'bg-[#35D5F2] text-[#080D1B] shadow-glow-cyan'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
           }`}
         >
+          <Target className="w-4 h-4" />
+          <span>🎯 ข้อสอบแยก 5 หน่วย (Unit Drill)</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('summaries')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+            activeTab === 'summaries'
+              ? 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] shadow-glow-cyan'
+              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+          }`}
+        >
+          <Lightbulb className="w-4 h-4 text-amber-300" />
+          <span>⚡ สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
+        </button>
+
+        <button
+          onClick={() => setActiveTab('quiz')}
+          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+            activeTab === 'quiz'
+              ? 'bg-[#8B7CFF] text-[#080D1B] shadow-glow-violet'
+              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+          }`}
+        >
           <Sparkles className="w-4 h-4" />
-          <span>ข้อสอบจำลอง (Quiz Mode: 100 ข้อ)</span>
+          <span>ข้อสอบรวม 100 ข้อ (Full Quiz)</span>
         </button>
 
         <button
           onClick={() => setActiveTab('flashcards')}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
             activeTab === 'flashcards'
-              ? 'bg-[#8B7CFF] text-[#080D1B] shadow-glow-violet'
+              ? 'bg-[#53DBAB] text-[#080D1B]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
           }`}
         >
           <Layers className="w-4 h-4" />
-          <span>แฟลชการ์ดคำศัพท์ (Flashcards: 40 คำ)</span>
+          <span>แฟลชการ์ดคำศัพท์ (40 คำ)</span>
         </button>
 
         <button
@@ -190,7 +240,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({ onOpenTopic }) => {
           onClick={() => setActiveTab('strategy')}
           className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
             activeTab === 'strategy'
-              ? 'bg-[#53DBAB] text-[#080D1B]'
+              ? 'bg-[#38BDF8] text-[#080D1B]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
           }`}
         >
@@ -198,6 +248,33 @@ export const RevisionView: React.FC<RevisionViewProps> = ({ onOpenTopic }) => {
           <span>กลยุทธ์ทีม 3 คน (Team Strategy)</span>
         </button>
       </div>
+
+      {/* ======================================================== */}
+      {/* 0. UNIT-BASED EXAM ENGINE                                */}
+      {/* ======================================================== */}
+      {activeTab === 'unit-tests' && (
+        <UnitExamEngine
+          initialCategoryId={currentCategoryId}
+          onOpenTopic={onOpenTopic}
+          onGoToSummary={(cat) => {
+            setCurrentCategoryId(cat);
+            setActiveTab('summaries');
+          }}
+        />
+      )}
+
+      {/* ======================================================== */}
+      {/* 0.5. EASY-TO-UNDERSTAND SUMMARIES (CHEAT SHEETS)         */}
+      {/* ======================================================== */}
+      {activeTab === 'summaries' && (
+        <EasySummariesView
+          onStartUnitQuiz={(cat) => {
+            setCurrentCategoryId(cat);
+            setActiveTab('unit-tests');
+          }}
+          onOpenTopic={onOpenTopic}
+        />
+      )}
 
       {/* ======================================================== */}
       {/* 1. QUIZ MODE                                             */}
