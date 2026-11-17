@@ -105,10 +105,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 if (onOpenRevision) onOpenRevision('unit-tests');
                 else onSelectTab('revision');
               }}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[#35D5F2]/40 hover:border-[#35D5F2] text-sm font-bold transition-all shadow-glow-cyan"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#35D5F2]/20 via-[#111B30] to-[#35D5F2]/10 hover:from-[#35D5F2] hover:to-[#35D5F2] hover:text-[#080D1B] text-[#35D5F2] border-2 border-[#35D5F2] text-sm font-extrabold transition-all shadow-glow-cyan transform hover:-translate-y-0.5"
             >
-              <Target className="w-4 h-4 text-[#35D5F2]" />
-              <span>ข้อสอบแยก 5 หน่วย (Unit Drill)</span>
+              <Target className="w-4 h-4" />
+              <span>🎯 ข้อสอบแยก 5 หน่วย (150 ข้อ)</span>
+              <span className="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-[#35D5F2] text-[#080D1B] animate-pulse">
+                NEW
+              </span>
             </button>
 
             <button
@@ -116,10 +119,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 if (onOpenRevision) onOpenRevision('summaries');
                 else onSelectTab('revision');
               }}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#111B30] to-[#18243A] hover:bg-[var(--bg-elevated)] text-[var(--text-primary)] border border-[#8B7CFF]/40 hover:border-[#8B7CFF] text-sm font-semibold transition-all shadow-glow-violet"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#8B7CFF]/20 via-[#111B30] to-[#EC4899]/15 hover:from-[#8B7CFF] hover:to-[#EC4899] hover:text-white text-[#8B7CFF] border-2 border-[#8B7CFF] text-sm font-extrabold transition-all shadow-glow-violet transform hover:-translate-y-0.5"
             >
               <Lightbulb className="w-4 h-4 text-amber-300" />
-              <span>สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
+              <span>⚡ สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
+              <span className="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-[#8B7CFF] text-white animate-pulse">
+                HOT
+              </span>
             </button>
 
             <button
@@ -228,6 +234,91 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </div>
         </section>
       )}
+
+      {/* NEW FEATURE HIGHLIGHT SHOWCASE BANNER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#111B30] via-[#0D1526] to-[#18243A] border-2 border-[#35D5F2]/40 shadow-glow-cyan relative overflow-hidden">
+          {/* Ambient light blobs */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#35D5F2]/20 to-[#8B7CFF]/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--border-color)] pb-4">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="px-3 py-1 rounded-full text-[11px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan">
+                  ✨ อัปเดตใหม่ล่าสุด (NEW UPDATE)
+                </span>
+                <span className="text-xs text-[var(--text-muted)] font-mono">
+                  คลังข้อสอบ 150 ข้อเต็ม (5 หน่วย x 30 ข้อ) + สรุปย่อ 5 หมวด
+                </span>
+              </div>
+              <span className="text-xs text-[#53DBAB] font-bold flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4" />
+                <span>พร้อมใช้งาน 100% ครอบคลุม 57 หน้า</span>
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {/* Feature 1: Unit Drill 150 ข้อ */}
+              <div 
+                onClick={() => onOpenRevision ? onOpenRevision('unit-tests') : onSelectTab('revision')}
+                className="p-6 rounded-2xl bg-[var(--bg-elevated)]/90 hover:bg-[var(--bg-elevated)] border-2 border-[#35D5F2]/40 hover:border-[#35D5F2] transition-all cursor-pointer group shadow-card-elevated space-y-4 hover:shadow-glow-cyan transform hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-2xl bg-[#35D5F2]/15 text-[#35D5F2] border border-[#35D5F2]/30 flex items-center justify-center group-hover:scale-110 transition-transform shadow-glow-cyan">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <span className="px-3 py-1 rounded-full text-[11px] font-black bg-[#35D5F2] text-[#080D1B] shadow-glow-cyan">
+                    150 ข้อ • 5 หน่วย
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-black text-[var(--text-primary)] group-hover:text-[#35D5F2] transition-colors flex items-center gap-2">
+                    <span>🎯 ข้อสอบแยก 5 หน่วย (Unit Practice Tests)</span>
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                    ฝึกทำข้อสอบตรงตามกลุ่มวิชา หน่วยละ 30 ข้อ (ข้อ 1–150) มีให้เลือกทั้ง <strong>โหมดสอบจริงจับเวลา 25 นาที</strong> หรือ <strong>โหมดฝึกซ้อมตรวจเฉลยทันที</strong> พร้อมบันทึกคะแนนสูงสุดและเฉลยละเอียด
+                  </p>
+                </div>
+
+                <div className="pt-2 flex items-center justify-between text-xs font-black text-[#35D5F2]">
+                  <span>เริ่มทำข้อสอบแยก 5 หน่วยทันที</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
+
+              {/* Feature 2: Easy Summaries & Cheat Sheets */}
+              <div 
+                onClick={() => onOpenRevision ? onOpenRevision('summaries') : onSelectTab('revision')}
+                className="p-6 rounded-2xl bg-[var(--bg-elevated)]/90 hover:bg-[var(--bg-elevated)] border-2 border-[#8B7CFF]/40 hover:border-[#8B7CFF] transition-all cursor-pointer group shadow-card-elevated space-y-4 hover:shadow-glow-violet transform hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-2xl bg-[#8B7CFF]/15 text-[#8B7CFF] border border-[#8B7CFF]/30 flex items-center justify-center group-hover:scale-110 transition-transform shadow-glow-violet">
+                    <Lightbulb className="w-6 h-6 text-amber-300" />
+                  </div>
+                  <span className="px-3 py-1 rounded-full text-[11px] font-black bg-gradient-to-r from-[#8B7CFF] to-[#EC4899] text-white shadow-glow-violet">
+                    HOT • อ่านจบ 15 นาที
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-black text-[var(--text-primary)] group-hover:text-[#8B7CFF] transition-colors flex items-center gap-2">
+                    <span>⚡ สรุปฉบับเข้าใจง่าย (Quick Visual Notes)</span>
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                    สกัดเฉพาะจุดตายที่ออกสอบชัวร์: แก่นแท้ 1 ประโยค, สูตรคำนวณทางลัด (AMAT, Subnetting, F1-Score, VRAM), ตารางเปรียบเทียบจุดต่าง และทริคตัดช้อยส์ในห้องสอบ
+                  </p>
+                </div>
+
+                <div className="pt-2 flex items-center justify-between text-xs font-black text-[#8B7CFF]">
+                  <span>เปิดอ่านสรุปฉบับเข้าใจง่ายทันที</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* 5 Official Study Categories Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">

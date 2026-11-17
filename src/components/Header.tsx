@@ -37,11 +37,11 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems: { id: NavTab; label: string; icon: React.ElementType; badge?: number }[] = [
+  const navItems: { id: NavTab; label: string; icon: React.ElementType; badge?: number; tag?: string }[] = [
     { id: 'home', label: 'แดชบอร์ด', icon: Layers },
     { id: 'library', label: 'คลังเนื้อหา', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
-    { id: 'revision', label: 'ข้อสอบ & สรุปย่อ', icon: Award },
+    { id: 'revision', label: 'ข้อสอบ & สรุปย่อ', icon: Award, tag: 'NEW 150 ข้อ' },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2 },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles },
@@ -94,6 +94,11 @@ export const Header: React.FC<HeaderProps> = ({
               >
                 <Icon className={`w-4 h-4 ${isActive ? 'text-[#35D5F2]' : 'text-[var(--text-muted)]'}`} />
                 <span>{item.label}</span>
+                {item.tag && (
+                  <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan shrink-0">
+                    {item.tag}
+                  </span>
+                )}
                 {item.badge !== undefined && item.badge > 0 && (
                   <span className="ml-0.5 px-1.5 py-0.2 text-[10px] font-bold rounded-full bg-[#35D5F2] text-[#080D1B]">
                     {item.badge}
@@ -163,6 +168,11 @@ export const Header: React.FC<HeaderProps> = ({
                 <div className="flex items-center gap-3">
                   <Icon className="w-4 h-4" />
                   <span>{item.label}</span>
+                  {item.tag && (
+                    <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan">
+                      {item.tag}
+                    </span>
+                  )}
                 </div>
                 {item.badge !== undefined && item.badge > 0 && (
                   <span className="px-2 py-0.5 text-xs font-bold rounded-full bg-[#35D5F2] text-[#080D1B]">

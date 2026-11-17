@@ -163,29 +163,37 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
       </div>
 
       {/* Main Mode Tabs */}
-      <div className="flex items-center gap-2 overflow-x-auto border-b border-[var(--border-color)] pb-3 scrollbar-none">
+      <div className="flex items-center gap-2.5 overflow-x-auto border-b border-[var(--border-color)] pb-3 scrollbar-none">
         <button
           onClick={() => setActiveTab('unit-tests')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border ${
             activeTab === 'unit-tests'
-              ? 'bg-[#35D5F2] text-[#080D1B] shadow-glow-cyan'
-              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+              ? 'bg-[#35D5F2] text-[#080D1B] border-[#35D5F2] shadow-glow-cyan'
+              : 'text-[var(--text-primary)] border-[#35D5F2]/50 bg-[#35D5F2]/10 hover:bg-[#35D5F2]/20 shadow-sm'
           }`}
         >
-          <Target className="w-4 h-4" />
+          <Target className="w-4 h-4 text-[#35D5F2]" />
           <span>🎯 ข้อสอบแยก 5 หน่วย (Unit Drill)</span>
+          <span className={`px-1.5 py-0.2 rounded-md text-[9px] font-black uppercase ${
+            activeTab === 'unit-tests' ? 'bg-[#080D1B] text-[#35D5F2]' : 'bg-[#35D5F2] text-[#080D1B]'
+          }`}>
+            NEW 150 ข้อ
+          </span>
         </button>
 
         <button
           onClick={() => setActiveTab('summaries')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border ${
             activeTab === 'summaries'
-              ? 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] shadow-glow-cyan'
-              : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+              ? 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] border-transparent shadow-glow-cyan'
+              : 'text-[var(--text-primary)] border-[#8B7CFF]/50 bg-[#8B7CFF]/10 hover:bg-[#8B7CFF]/20 shadow-sm'
           }`}
         >
           <Lightbulb className="w-4 h-4 text-amber-300" />
           <span>⚡ สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
+          <span className="px-1.5 py-0.2 rounded-md bg-gradient-to-r from-[#8B7CFF] to-[#EC4899] text-white text-[9px] font-black uppercase">
+            HOT
+          </span>
         </button>
 
         <button
