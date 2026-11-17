@@ -89,28 +89,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
             รวบรวมเนื้อหาครบถ้วนจากคู่มือเตรียมสอบฉบับสมบูรณ์ (57 หน้า) ทั้ง 5 กลุ่มความรู้, 150 ข้อสอบจำลองพร้อมเฉลยละเอียด, 40 คำศัพท์เทคนิค และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
           </p>
 
-          {/* Action CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <button
-              onClick={() => onSelectTab('library')}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] font-bold text-sm hover:opacity-95 shadow-glow-cyan transition-all transform hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <BookOpen className="w-4 h-4" />
-              <span>เข้าสู่คลังบทเรียน (7 บท)</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-3 pt-4 max-w-3xl mx-auto w-full px-2">
             <button
               onClick={() => {
                 if (onOpenRevision) onOpenRevision('unit-tests');
                 else onSelectTab('revision');
               }}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#35D5F2]/20 via-[#111B30] to-[#35D5F2]/10 hover:from-[#35D5F2] hover:to-[#35D5F2] hover:text-[#080D1B] text-[#35D5F2] border-2 border-[#35D5F2] text-sm font-extrabold transition-all shadow-glow-cyan transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#35D5F2] hover:bg-[#20c8e7] text-[#080D1B] text-sm sm:text-base font-black transition-all shadow-glow-cyan transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
             >
-              <Target className="w-4 h-4" />
+              <Target className="w-5 h-5 text-[#080D1B] shrink-0" />
               <span>🎯 ข้อสอบแยก 5 หน่วย (150 ข้อ)</span>
-              <span className="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-[#35D5F2] text-[#080D1B] animate-pulse">
-                NEW
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-[#080D1B] text-[#35D5F2] uppercase tracking-wider shrink-0 animate-pulse">
+                NEW 150 ข้อ
               </span>
             </button>
 
@@ -119,20 +109,29 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 if (onOpenRevision) onOpenRevision('summaries');
                 else onSelectTab('revision');
               }}
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-[#8B7CFF]/20 via-[#111B30] to-[#EC4899]/15 hover:from-[#8B7CFF] hover:to-[#EC4899] hover:text-white text-[#8B7CFF] border-2 border-[#8B7CFF] text-sm font-extrabold transition-all shadow-glow-violet transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#8B7CFF] hover:bg-[#7a6aee] text-white text-sm sm:text-base font-black transition-all shadow-glow-violet transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
             >
-              <Lightbulb className="w-4 h-4 text-amber-300" />
+              <Lightbulb className="w-5 h-5 text-amber-300 shrink-0" />
               <span>⚡ สรุปฉบับเข้าใจง่าย (Quick Notes)</span>
-              <span className="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-[#8B7CFF] text-white animate-pulse">
-                HOT
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-400 text-[#080D1B] uppercase tracking-wider shrink-0 animate-pulse">
+                HOT สรุป 15 นาที
               </span>
             </button>
 
             <button
-              onClick={() => onSelectTab('audit')}
-              className="inline-flex items-center gap-2 px-4 py-3 rounded-xl bg-[var(--bg-elevated)] hover:bg-[#53DBAB]/10 text-xs font-semibold text-[var(--text-secondary)] hover:text-[#53DBAB] border border-[var(--border-color)] transition-all"
+              onClick={() => onSelectTab('library')}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#18243A] hover:bg-[#20304c] text-white border-2 border-white/15 hover:border-[#35D5F2] font-bold text-sm transition-all transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
             >
-              <FileCheck2 className="w-4 h-4 text-[#53DBAB]" />
+              <BookOpen className="w-4 h-4 text-[#35D5F2] shrink-0" />
+              <span>เข้าสู่คลังบทเรียน (7 บท)</span>
+              <ArrowRight className="w-4 h-4 text-[#35D5F2] shrink-0" />
+            </button>
+
+            <button
+              onClick={() => onSelectTab('audit')}
+              className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-[#53DBAB]/10 hover:bg-[#53DBAB]/20 text-[#53DBAB] border border-[#53DBAB]/40 font-bold text-xs sm:text-sm transition-all transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
+            >
+              <FileCheck2 className="w-4 h-4 text-[#53DBAB] shrink-0" />
               <span>ตรวจ 57 หน้า (100% Coverage)</span>
             </button>
           </div>

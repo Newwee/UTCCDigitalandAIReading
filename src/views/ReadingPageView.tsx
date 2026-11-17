@@ -156,11 +156,10 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
         />
       </div>
 
-      {/* Floating Mobile Controls Bar */}
-      <div className="lg:hidden sticky top-16 z-20 glass-panel px-4 py-2 flex items-center justify-between border-b border-[var(--border-color)]">
+      <div className="xl:hidden sticky top-16 z-20 glass-panel px-4 py-2.5 flex items-center justify-between border-b border-[var(--border-color)]">
         <button
           onClick={() => setLeftSidebarOpen(true)}
-          className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)]"
+          className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[40px]"
         >
           <BookOpen className="w-3.5 h-3.5 text-[#35D5F2]" />
           <span>หัวข้อ ({STUDY_TOPICS.length})</span>
@@ -172,7 +171,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
 
         <button
           onClick={() => setRightTocOpen(true)}
-          className="flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1.5 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)]"
+          className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[40px]"
         >
           <ListOrdered className="w-3.5 h-3.5 text-[#8B7CFF]" />
           <span>สารบัญบท</span>
@@ -183,10 +182,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* ======================================================== */}
-          {/* LEFT SIDEBAR: Categories & Topics Navigation             */}
-          {/* ======================================================== */}
-          <aside className="hidden lg:block lg:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 space-y-6 scrollbar-thin">
+          <aside className="hidden xl:block xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 space-y-6 scrollbar-thin">
             <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
@@ -243,10 +239,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
             </div>
           </aside>
 
-          {/* ======================================================== */}
-          {/* CENTER CONTENT: The Long-form Reader                     */}
-          {/* ======================================================== */}
-          <main className="lg:col-span-6 w-full flex flex-col items-center">
+          <main className="w-full lg:col-span-8 xl:col-span-6 flex flex-col items-center">
             <div ref={contentContainerRef} className={`w-full ${widthClasses} space-y-8`}>
               
               {/* Reading Settings Control Bar */}
@@ -612,10 +605,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
             </div>
           </main>
 
-          {/* ======================================================== */}
-          {/* RIGHT SIDEBAR: Table of Contents & Reading Progress      */}
-          {/* ======================================================== */}
-          <aside className="hidden lg:block lg:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-2 space-y-6 scrollbar-thin">
+          <aside className="hidden lg:block lg:col-span-4 xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-2 space-y-6 scrollbar-thin">
             <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
@@ -685,9 +675,8 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
         </div>
       </div>
 
-      {/* Mobile Drawer: Left Sidebar (Topic List) */}
       {leftSidebarOpen && (
-        <div className="fixed inset-0 z-50 flex bg-black/60 backdrop-blur-sm lg:hidden">
+        <div className="fixed inset-0 z-50 flex bg-black/60 backdrop-blur-sm xl:hidden">
           <div className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-r border-[var(--border-color)] p-5 overflow-y-auto space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-[var(--border-color)]">
               <h3 className="font-bold text-sm text-[var(--text-primary)]">รายการบทเรียนทั้งหมด</h3>
@@ -735,9 +724,8 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
         </div>
       )}
 
-      {/* Mobile Drawer: Right Table of Contents */}
       {rightTocOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm lg:hidden">
+        <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm xl:hidden">
           <div className="flex-1" onClick={() => setRightTocOpen(false)} />
           <div className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-l border-[var(--border-color)] p-5 overflow-y-auto space-y-4">
             <div className="flex items-center justify-between pb-3 border-b border-[var(--border-color)]">

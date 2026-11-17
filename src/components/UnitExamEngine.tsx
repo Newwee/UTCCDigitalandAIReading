@@ -636,7 +636,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[var(--border-color)] pb-3">
             <div>
               <h3 className="text-lg font-bold text-[var(--text-primary)]">
-                ตรวจคำตอบและคำอธิบายละเอียด (20 ข้อ)
+                ตรวจคำตอบและคำอธิบายละเอียด ({total} ข้อ)
               </h3>
               <p className="text-xs text-[var(--text-muted)]">
                 อ้างอิงจาก UTCC Digital and AI Challenge 2026 Study Guide
@@ -887,7 +887,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
               <button
                 key={idx}
                 onClick={() => setCurrentQIndex(idx)}
-                className={`h-8 rounded-lg text-xs font-mono transition-all border relative flex items-center justify-center ${cellClass}`}
+                className={`min-h-[38px] sm:min-h-[44px] rounded-xl text-xs sm:text-sm font-bold font-mono transition-all border relative flex items-center justify-center active:scale-95 ${cellClass}`}
               >
                 <span>{idx + 1}</span>
                 {hasFlag && (

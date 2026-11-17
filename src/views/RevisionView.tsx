@@ -162,11 +162,10 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
         </p>
       </div>
 
-      {/* Main Mode Tabs */}
       <div className="flex items-center gap-2.5 overflow-x-auto border-b border-[var(--border-color)] pb-3 scrollbar-none">
         <button
           onClick={() => setActiveTab('unit-tests')}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-black whitespace-nowrap transition-all border min-h-[44px] active:scale-95 ${
             activeTab === 'unit-tests'
               ? 'bg-[#35D5F2] text-[#080D1B] border-[#35D5F2] shadow-glow-cyan'
               : 'text-[var(--text-primary)] border-[#35D5F2]/50 bg-[#35D5F2]/10 hover:bg-[#35D5F2]/20 shadow-sm'
@@ -183,7 +182,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
 
         <button
           onClick={() => setActiveTab('summaries')}
-          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-black whitespace-nowrap transition-all border ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-black whitespace-nowrap transition-all border min-h-[44px] active:scale-95 ${
             activeTab === 'summaries'
               ? 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] border-transparent shadow-glow-cyan'
               : 'text-[var(--text-primary)] border-[#8B7CFF]/50 bg-[#8B7CFF]/10 hover:bg-[#8B7CFF]/20 shadow-sm'
@@ -198,7 +197,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
 
         <button
           onClick={() => setActiveTab('quiz')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all min-h-[44px] active:scale-95 ${
             activeTab === 'quiz'
               ? 'bg-[#8B7CFF] text-[#080D1B] shadow-glow-violet'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
@@ -210,7 +209,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
 
         <button
           onClick={() => setActiveTab('flashcards')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all min-h-[44px] active:scale-95 ${
             activeTab === 'flashcards'
               ? 'bg-[#53DBAB] text-[#080D1B]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
@@ -222,7 +221,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
 
         <button
           onClick={() => setActiveTab('traps')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all min-h-[44px] active:scale-95 ${
             activeTab === 'traps'
               ? 'bg-[#F59E0B] text-[#080D1B]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
@@ -234,7 +233,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
 
         <button
           onClick={() => setActiveTab('advanced')}
-          className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all min-h-[44px] active:scale-95 ${
             activeTab === 'advanced'
               ? 'bg-[#EC4899] text-[#080D1B]'
               : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'

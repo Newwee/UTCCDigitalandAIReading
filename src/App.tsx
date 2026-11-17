@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useStudyState } from './hooks/useStudyState';
 import { Header, NavTab } from './components/Header';
+import { AppleTabBar } from './components/AppleTabBar';
 import { Footer } from './components/Footer';
 import { SearchModal } from './components/SearchModal';
 import { BackgroundEffects } from './components/ui/BackgroundEffects';
@@ -39,6 +40,7 @@ export function App() {
   const [revisionSubTab, setRevisionSubTab] = useState<RevisionTab>('unit-tests');
   const [revisionCategory, setRevisionCategory] = useState<CategoryId | undefined>(undefined);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [moreSheetOpen, setMoreSheetOpen] = useState(false);
 
   // Navigate to a specific topic and switch to reading tab
   const handleOpenTopic = (topicId: string, sectionId?: string) => {
@@ -83,8 +85,7 @@ export function App() {
         bookmarkedCount={state.bookmarkedTopicIds.length}
       />
 
-      {/* Main Content Area */}
-      <div className="flex-1 relative z-10">
+      <div className="flex-1 relative z-10 pb-24 xl:pb-0">
         {currentTab === 'home' && (
           <HomeView
             onSelectTab={handleSelectTab}
@@ -154,10 +155,19 @@ export function App() {
         {currentTab === 'about' && <AboutView />}
       </div>
 
-      {/* Footer */}
       <Footer onSelectTab={handleSelectTab} />
 
-      {/* Global Quick Search Modal */}
+      <AppleTabBar
+        currentTab={currentTab}
+        onSelectTab={handleSelectTab}
+        bookmarkedCount={state.bookmarkedTopicIds.length}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        onOpenSearch={() => setIsSearchOpen(true)}
+        moreSheetOpen={moreSheetOpen}
+        onToggleMoreSheet={() => setMoreSheetOpen(prev => !prev)}
+      />
+
       <SearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}

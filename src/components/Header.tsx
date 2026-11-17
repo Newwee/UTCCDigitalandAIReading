@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = ({
         </button>
 
         {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {navItems.map(item => {
             const Icon = item.icon;
             const isActive = currentTab === item.id;
@@ -86,21 +86,21 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition-all relative ${
+                className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs 2xl:text-sm font-medium transition-all relative shrink-0 whitespace-nowrap ${
                   isActive
                     ? 'text-[#35D5F2] bg-[#35D5F2]/10 border border-[#35D5F2]/30 shadow-sm'
                     : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#35D5F2]' : 'text-[var(--text-muted)]'}`} />
-                <span>{item.label}</span>
+                <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#35D5F2]' : 'text-[var(--text-muted)]'}`} />
+                <span className="whitespace-nowrap">{item.label}</span>
                 {item.tag && (
-                  <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan shrink-0">
+                  <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan shrink-0 whitespace-nowrap">
                     {item.tag}
                   </span>
                 )}
                 {item.badge !== undefined && item.badge > 0 && (
-                  <span className="ml-0.5 px-1.5 py-0.2 text-[10px] font-bold rounded-full bg-[#35D5F2] text-[#080D1B]">
+                  <span className="ml-0.5 px-1.5 py-0.2 text-[10px] font-bold rounded-full bg-[#35D5F2] text-[#080D1B] shrink-0">
                     {item.badge}
                   </span>
                 )}
@@ -109,12 +109,10 @@ export const Header: React.FC<HeaderProps> = ({
           })}
         </nav>
 
-        {/* Right Action Icons: Search, Theme, Mobile Toggle */}
         <div className="flex items-center gap-2">
-          {/* Search Button */}
           <button
             onClick={onOpenSearch}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-sm text-[var(--text-secondary)] transition-all shadow-sm group"
+            className="flex items-center gap-2 px-3 py-2 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-sm text-[var(--text-secondary)] transition-all shadow-sm group min-h-[40px]"
             title="ค้นหาเนื้อหา (Ctrl+K)"
           >
             <Search className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[#35D5F2] transition-colors" />
@@ -124,10 +122,9 @@ export const Header: React.FC<HeaderProps> = ({
             </kbd>
           </button>
 
-          {/* Theme Toggle */}
           <button
             onClick={onToggleTheme}
-            className="p-2 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[#35D5F2] transition-all shadow-sm"
+            className="p-2.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[#35D5F2] transition-all shadow-sm min-h-[40px] min-w-[40px] flex items-center justify-center"
             aria-label="เปลี่ยนธีม มืด/สว่าง"
             title={theme === 'dark' ? 'เปลี่ยนเป็นธีมสว่าง' : 'เปลี่ยนเป็นธีมมืด'}
           >
@@ -138,10 +135,9 @@ export const Header: React.FC<HeaderProps> = ({
             )}
           </button>
 
-          {/* Mobile Hamburger Toggle */}
           <button
             onClick={() => setMobileMenuOpen(prev => !prev)}
-            className="lg:hidden p-2 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] text-[var(--text-primary)] transition-all"
+            className="xl:hidden p-2.5 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] text-[var(--text-primary)] transition-all min-h-[40px] min-w-[40px] flex items-center justify-center"
             aria-label="เมนูนำทาง"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -149,9 +145,8 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-[var(--border-color)] bg-[var(--bg-card)] px-4 py-3 space-y-1 animate-fade-in shadow-2xl">
+        <div className="xl:hidden border-b border-[var(--border-color)] bg-[var(--bg-card)] px-4 py-3 space-y-1 animate-fade-in shadow-2xl">
           {navItems.map(item => {
             const Icon = item.icon;
             const isActive = currentTab === item.id;

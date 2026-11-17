@@ -138,7 +138,7 @@ export const EasySummariesView: React.FC<EasySummariesViewProps> = ({
                   setSelectedUnitIndex(idx);
                   setSearchQuery('');
                 }}
-                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-2xl text-xs font-bold whitespace-nowrap transition-all border ${
+                className={`flex items-center gap-2.5 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all border min-h-[44px] active:scale-95 ${
                   isSelected
                     ? 'shadow-glow-cyan text-[#080D1B]'
                     : 'bg-[var(--bg-elevated)]/60 text-[var(--text-secondary)] border-[var(--border-color)] hover:border-[#35D5F2]/40 hover:text-[var(--text-primary)]'
