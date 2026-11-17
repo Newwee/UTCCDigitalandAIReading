@@ -56,7 +56,7 @@ export const UNIT_CONFIGS: UnitInfo[] = [
     nameEn: 'General IT, History & Emerging Tech',
     color: '#35D5F2',
     icon: Globe,
-    questionRange: 'ข้อ 1–20 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 1–20, 101–110)',
     sourcePages: 'หน้า 2–5, 24–30',
     description: 'ประวัติศาสตร์คอมพิวเตอร์, 5 ยุคเทคโนโลยี, บุคคลสำคัญ, Wi-Fi 7 (802.11be), 5G NR, Quantum Computing, กฎหมาย PDPA และโนเบล 2024',
     topics: ['ประวัติศาสตร์ & ยุค 1-5', 'Ada Lovelace & Alan Turing', 'Wi-Fi 7 320MHz MLO', 'Qubit & Superposition', 'PDPA & CIA Triad']
@@ -68,7 +68,7 @@ export const UNIT_CONFIGS: UnitInfo[] = [
     nameEn: 'Networks, Subnetting, Protocols & Cloud',
     color: '#8B7CFF',
     icon: Layers,
-    questionRange: 'ข้อ 21–40 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 21–40, 111–120)',
     sourcePages: 'หน้า 5–8, 30–36',
     description: 'OSI 7 Layers, TCP/IP, PDU, Subnetting CIDR /24–/30, Private IP RFC 1918, DNS Resolution, Cloud IaaS/PaaS/SaaS และ Docker Containers',
     topics: ['OSI 7 Layers & PDUs', 'TCP 3-Way Handshake vs UDP', 'คำนวณ Subnetting CIDR', 'Private IP Classes', 'Cloud Models & Docker']
@@ -80,7 +80,7 @@ export const UNIT_CONFIGS: UnitInfo[] = [
     nameEn: 'Computer Architecture, Memory, RAID & OS',
     color: '#53DBAB',
     icon: HardDrive,
-    questionRange: 'ข้อ 41–60 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 41–60, 121–130)',
     sourcePages: 'หน้า 8–11, 36–42',
     description: 'สถาปัตยกรรม von Neumann vs Harvard, Machine Cycle 4 ขั้นตอน, CPU Registers, คำนวณ AMAT แคช, NVMe PCIe, RAID 0/1/5/6/10 และ Linux chmod',
     topics: ['von Neumann vs Harvard', 'Fetch-Decode-Execute Cycle', 'คำนวณ AMAT L1/RAM', 'RAID 0/1/5/6 ความจุและทนทาน', 'Linux Permissions 755/644']
@@ -92,7 +92,7 @@ export const UNIT_CONFIGS: UnitInfo[] = [
     nameEn: 'Programming, Data Structures & Algorithms',
     color: '#EC4899',
     icon: Code2,
-    questionRange: 'ข้อ 61–80 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 61–80, 131–140)',
     sourcePages: 'หน้า 11–14, 42–47',
     description: 'สัญลักษณ์ Flowchart ISO 5807, ตรรกศาสตร์ De Morgan, ลำดับ Big-O Notation, Binary Search, Sorting Algorithms, Stack/Queue และ BST In-Order',
     topics: ['สัญลักษณ์ผังงาน Flowchart', 'De Morgan & Boolean Laws', 'Big-O O(1) ถึง O(N²)', 'Binary Search O(log N)', 'BST In-Order Traversal']
@@ -104,7 +104,7 @@ export const UNIT_CONFIGS: UnitInfo[] = [
     nameEn: 'AI, Machine Learning, LLMs & Deep Learning',
     color: '#F59E0B',
     icon: Brain,
-    questionRange: 'ข้อ 81–100 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 81–100, 141–150)',
     sourcePages: 'หน้า 14–18, 47–52',
     description: '3 เสาหลัก ML, คำนวณ Confusion Matrix (Accuracy, Precision, Recall, F1), Transformer Self-Attention, ขั้นตอน RAG Pipeline, Quantization VRAM และ Stable Diffusion',
     topics: ['Supervised vs Unsupervised vs RL', 'คำนวณ Precision & Recall & F1', 'Transformer Self-Attention', 'RAG Vector Database', 'Quantization FP16/INT8/INT4']
@@ -277,7 +277,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#35D5F2]/10 border border-[#35D5F2]/30 text-[#35D5F2] text-xs font-semibold">
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Unit Drill & Mastery Engine • คลังข้อสอบจริง 100 ข้อ</span>
+                <span>Unit Drill & Mastery Engine • คลังข้อสอบจริง 150 ข้อ</span>
               </div>
 
               <h2 className="text-2xl sm:text-4xl font-black text-[var(--text-primary)]">
@@ -288,7 +288,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
               </h2>
 
               <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
-                ฝึกทำข้อสอบตรงตาม 5 กลุ่มสาระความรู้จริง หน่วยละ 20 ข้อ (รวม 100 ข้อ) พร้อมระบบจับเวลา วิเคราะห์ระดับความยาก และเฉลยละเอียดทุกข้อจากคู่มือ 57 หน้า
+                ฝึกทำข้อสอบตรงตาม 5 กลุ่มสาระความรู้จริง หน่วยละ 30 ข้อ (รวมคลังข้อสอบ 150 ข้อ) พร้อมระบบจับเวลา วิเคราะห์ระดับความยาก และเฉลยละเอียดทุกข้อจากคู่มือและข้อสอบจำลอง
               </p>
             </div>
 
@@ -444,7 +444,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
                     }}
                   >
                     <Sparkles className="w-4 h-4" />
-                    <span>เริ่มทำข้อสอบหน่วยที่ {unit.unitNumber} (20 ข้อ)</span>
+                    <span>เริ่มทำข้อสอบหน่วยที่ {unit.unitNumber} ({questions.length} ข้อ)</span>
                   </button>
 
                   <div className="flex items-center justify-between text-[11px] text-[var(--text-muted)] pt-1">
@@ -814,7 +814,7 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
               </span>
             </div>
             <span className="text-[11px] text-[var(--text-muted)]">
-              ตอบแล้ว {answeredCount}/20 ข้อ
+              ตอบแล้ว {answeredCount}/{unitQuestions.length} ข้อ
             </span>
           </div>
         </div>
@@ -863,11 +863,11 @@ export const UnitExamEngine: React.FC<UnitExamEngineProps> = ({
         </div>
       </div>
 
-      {/* 20-Question Grid Navigator */}
+      {/* Question Grid Navigator */}
       <div className="p-3.5 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-2">
         <div className="flex items-center justify-between text-[11px] text-[var(--text-muted)]">
-          <span className="font-semibold">ข้อสอบทั้งหมด 20 ข้อ (คลิกเพื่อกระโดดข้ามข้อ):</span>
-          <span>ข้อปัจจุบัน: {currentQIndex + 1}/20</span>
+          <span className="font-semibold">ข้อสอบทั้งหมด {unitQuestions.length} ข้อ (คลิกเพื่อกระโดดข้ามข้อ):</span>
+          <span>ข้อปัจจุบัน: {currentQIndex + 1}/{unitQuestions.length}</span>
         </div>
 
         <div className="grid grid-cols-10 gap-1.5 sm:gap-2">

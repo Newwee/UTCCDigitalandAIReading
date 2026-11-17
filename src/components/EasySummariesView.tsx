@@ -222,7 +222,7 @@ export const EasySummariesView: React.FC<EasySummariesViewProps> = ({
                       className="px-4 py-2 rounded-xl bg-[#35D5F2] text-[#080D1B] font-bold text-xs hover:bg-[#35D5F2]/90 transition-all flex items-center gap-1.5 shadow-glow-cyan"
                     >
                       <Sparkles className="w-3.5 h-3.5" />
-                      <span>ทำข้อสอบหน่วยนี้ (20 ข้อ)</span>
+                      <span>ทำข้อสอบหน่วยนี้ (30 ข้อ)</span>
                     </button>
                   )}
                 </div>
@@ -286,7 +286,7 @@ export const EasySummariesView: React.FC<EasySummariesViewProps> = ({
                     className="px-4 py-2 rounded-xl bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] font-bold text-xs hover:opacity-95 transition-all flex items-center gap-1.5 shadow-glow-cyan"
                   >
                     <Sparkles className="w-3.5 h-3.5" />
-                    <span>เริ่มทำข้อสอบหน่วยนี้ (20 ข้อ)</span>
+                    <span>เริ่มทำข้อสอบหน่วยนี้ (30 ข้อ)</span>
                   </button>
                 )}
               </div>
@@ -549,7 +549,7 @@ export const EasySummariesView: React.FC<EasySummariesViewProps> = ({
                 พร้อมทดสอบความเข้าใจของหน่วยที่ {currentUnit.unitNumber} แล้วหรือยัง?
               </h4>
               <p className="text-xs text-[var(--text-secondary)]">
-                ฝึกทำข้อสอบตรงตามกลุ่มวิชา 20 ข้อ พร้อมจับเวลาและเฉลยละเอียด
+                ฝึกทำข้อสอบตรงตามกลุ่มวิชา 30 ข้อ พร้อมจับเวลาและเฉลยละเอียด
               </p>
             </div>
 
@@ -559,7 +559,7 @@ export const EasySummariesView: React.FC<EasySummariesViewProps> = ({
                 className="px-6 py-3 rounded-2xl bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] font-extrabold text-sm hover:opacity-95 shadow-glow-cyan transition-all flex items-center gap-2 shrink-0"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>ทำข้อสอบหน่วยที่ {currentUnit.unitNumber} ทันที (20 ข้อ)</span>
+                <span>ทำข้อสอบหน่วยที่ {currentUnit.unitNumber} ทันที (30 ข้อ)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             )}

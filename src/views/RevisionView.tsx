@@ -158,7 +158,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
           </GradientText>
         </h1>
         <p className="text-sm text-[var(--text-secondary)] max-w-3xl leading-relaxed">
-          ระบบฝึกทำข้อสอบจำลอง 100 ข้อเสมือนจริง, แฟลชการ์ดคำศัพท์ 40 รายการ, จุดหลอกในห้องสอบ 12 ประเด็น และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
+          ระบบฝึกทำข้อสอบจำลอง 150 ข้อเสมือนจริง, แฟลชการ์ดคำศัพท์ 40 รายการ, จุดหลอกในห้องสอบ 12 ประเด็น และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
         </p>
       </div>
 
@@ -197,7 +197,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
           }`}
         >
           <Sparkles className="w-4 h-4" />
-          <span>ข้อสอบรวม 100 ข้อ (Full Quiz)</span>
+          <span>ข้อสอบรวม 150 ข้อ (Full Quiz)</span>
         </button>
 
         <button
@@ -292,7 +292,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                   ตั้งค่าชุดข้อสอบจำลอง UTCC Digital & AI Challenge
                 </h2>
                 <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                  คัดเลือกจากคลังข้อสอบจำลอง 100 ข้อ พร้อมจับเวลาและเฉลยละเอียดแบบ Real-time
+                  คัดเลือกจากคลังข้อสอบจำลอง 150 ข้อ พร้อมจับเวลาและเฉลยละเอียดแบบ Real-time
                 </p>
               </div>
 
@@ -305,9 +305,9 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                   <div className="grid grid-cols-4 gap-2">
                     {[
                       { id: 'all', label: 'ทั้งหมด' },
-                      { id: 'basic', label: 'พื้นฐาน (1–30)' },
-                      { id: 'intermediate', label: 'ปานกลาง (31–70)' },
-                      { id: 'advanced', label: 'ยาก (71–100)' },
+                      { id: 'basic', label: 'พื้นฐาน (43 ข้อ)' },
+                      { id: 'intermediate', label: 'ปานกลาง (64 ข้อ)' },
+                      { id: 'advanced', label: 'ยาก (43 ข้อ)' },
                     ].map(opt => (
                       <button
                         key={opt.id}
@@ -334,10 +334,10 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                     onChange={e => setQuizCategory(e.target.value)}
                     className="w-full px-3 py-2.5 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border-color)] text-xs text-[var(--text-primary)] outline-none cursor-pointer"
                   >
-                    <option value="all">ทุกกลุ่มวิชา (5 กลุ่มสาระ)</option>
+                    <option value="all">ทุกกลุ่มวิชา (5 กลุ่มสาระ รวม 150 ข้อ)</option>
                     {CATEGORIES.map(c => (
                       <option key={c.id} value={c.id}>
-                        {c.nameTh}
+                        {c.nameTh} (30 ข้อ)
                       </option>
                     ))}
                   </select>
@@ -349,7 +349,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                     จำนวนข้อในการทดสอบ
                   </label>
                   <div className="grid grid-cols-4 gap-2">
-                    {[10, 20, 30, 50].map(cnt => (
+                    {[20, 50, 100, 150].map(cnt => (
                       <button
                         key={cnt}
                         onClick={() => setQuizCount(cnt)}
@@ -359,7 +359,7 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                             : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] border-[var(--border-color)]'
                         }`}
                       >
-                        {cnt} ข้อ {cnt === 20 && '(เท่ารอบคัดเลือก)'}
+                        {cnt} ข้อ {cnt === 20 ? '(รอบคัดเลือก)' : cnt === 150 ? '(ทั้งคลัง)' : ''}
                       </button>
                     ))}
                   </div>

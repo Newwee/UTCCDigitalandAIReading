@@ -3025,5 +3025,1505 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "answerText": "8,256 พารามิเตอร์",
     "explanation": "สูตรคำนวณพารามิเตอร์ของชั้น Dense Layer ที่มีอินพุต Nin และเอาต์พุต Nout คือ: Parameters = (Nin × Nout) + Nout = (128 × 64) + 64 = 8,192 + 64 = 8,256 พารามิเตอร์ 6. Advanced Questions — โจทย์วิเคราะห์และบูรณาการระดับสูง (สำหรับรอบชิงชนะ เลิศ) ในรอบชิงชนะเลิศ (Final Round) ซึ่งคัดเหลือเพียง 10 ทีมสุดท้ายจาก 100 ทีม (UTCC STECH) โจทย์มักต้องการการคิด วิเคราะห์แบบบูรณาการข้ามกลุ่มวิชา โจทย์วิเคราะห์ 5 ข้อต่อไปนี้ออกแบบมาเพื่อฝึกทักษะการแก้ปัญหาเชิงลึกของทีม ที่",
     "sourcePage": 52
+  },
+  {
+    "id": "q-101",
+    "number": 101,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - ประวัติศาสตร์คอมพิวเตอร์",
+    "difficulty": "basic",
+    "question": "ข้อใดอธิบายความแตกต่างระหว่างบทบาทของ Charles Babbage และ Ada Lovelace ในประวัติศาสตร์คอมพิวเตอร์ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Babbage ออกแบบ Analytical Engine ส่วน Lovelace เสนอแนวคิดขั้นตอนการคำนวณเพื่อให้เครื่องประมวลผล"
+      },
+      {
+        "key": "ข",
+        "text": "Babbage สร้างภาษา Assembly ส่วน Lovelace เป็นผู้คิดค้นทรานซิสเตอร์"
+      },
+      {
+        "key": "ค",
+        "text": "Babbage พัฒนาเครื่อง ENIAC ส่วน Lovelace ออกแบบสถาปัตยกรรม von Neumann"
+      },
+      {
+        "key": "ง",
+        "text": "Babbage คิดค้นระบบเลขฐานสอง ส่วน Lovelace พัฒนาระบบปฏิบัติการเครื่องแรก"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "Babbage ออกแบบ Analytical Engine ส่วน Lovelace เสนอแนวคิดขั้นตอนการคำนวณเพื่อให้เครื่องประมวลผล",
+    "explanation": "Charles Babbage ได้รับการยกย่องว่าเป็นบิดาแห่งคอมพิวเตอร์ เนื่องจากออกแบบ Analytical Engine ซึ่งมีแนวคิดองค์ประกอบสำคัญคล้ายคอมพิวเตอร์สมัยใหม่ เช่น หน่วยประมวลผล หน่วยความจำ และกลไกควบคุมการทำงาน ส่วน Ada Lovelace วิเคราะห์ศักยภาพของเครื่องดังกล่าวและเขียนขั้นตอนการคำนวณ Bernoulli Numbers ซึ่งมักได้รับการยกย่องว่าเป็นโปรแกรมคอมพิวเตอร์ยุคแรก ข้อ ข ผิด เพราะ Assembly และทรานซิสเตอร์เกิดขึ้นในบริบทและยุคสมัยที่แตกต่างกัน ข้อ ค ผิด เพราะ ENIAC และสถาปัตยกรรม von Neumann เกิดขึ้นภายหลังจากผลงานของทั้งสองคนมาก ข้อ ง ผิด เพราะระบบเลขฐานสองมีประวัติยาวนานก่อน Babbage และ Lovelace ไม่ได้เป็นผู้พัฒนาระบบปฏิบัติการ",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-102",
+    "number": 102,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - วิวัฒนาการคอมพิวเตอร์",
+    "difficulty": "basic",
+    "question": "คอมพิวเตอร์ในยุคที่สาม (Third Generation) มีการเปลี่ยนแปลงทางเทคโนโลยีที่สำคัญอย่างไรเมื่อเทียบกับยุคที่สอง?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "เปลี่ยนจากหลอดสุญญากาศมาใช้ทรานซิสเตอร์เป็นองค์ประกอบหลัก"
+      },
+      {
+        "key": "ข",
+        "text": "เปลี่ยนจากทรานซิสเตอร์มาใช้วงจรรวม (Integrated Circuit: IC)"
+      },
+      {
+        "key": "ค",
+        "text": "เปลี่ยนจากวงจรรวมมาใช้ไมโครโปรเซสเซอร์ที่รวม CPU ไว้ในชิปเดียว"
+      },
+      {
+        "key": "ง",
+        "text": "เปลี่ยนจากไมโครโปรเซสเซอร์มาใช้ระบบประมวลผลควอนตัมเป็นมาตรฐาน"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "เปลี่ยนจากทรานซิสเตอร์มาใช้วงจรรวม (Integrated Circuit: IC)",
+    "explanation": "คอมพิวเตอร์ยุคที่สามใช้ Integrated Circuit (IC) ซึ่งรวมอุปกรณ์อิเล็กทรอนิกส์หลายตัวไว้บนชิปสารกึ่งตัวนำ ทำให้ลดขนาด เพิ่มความเร็ว ลดการใช้พลังงาน และเพิ่มความน่าเชื่อถือเมื่อเทียบกับการใช้ทรานซิสเตอร์แยกชิ้นในยุคที่สอง ข้อ ก เป็นลักษณะการเปลี่ยนผ่านจากยุคที่หนึ่งไปสู่ยุคที่สอง ข้อ ค เป็นลักษณะสำคัญของยุคที่สี่ ซึ่งเกี่ยวข้องกับไมโครโปรเซสเซอร์และ VLSI ข้อ ง ไม่ใช่ลักษณะของยุคที่ห้า เพราะ Quantum Computing ยังไม่ใช่เทคโนโลยีมาตรฐานที่แทนที่คอมพิวเตอร์แบบดั้งเดิม",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-103",
+    "number": 103,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - เทคโนโลยี Wi-Fi 7",
+    "difficulty": "intermediate",
+    "question": "องค์กรแห่งหนึ่งต้องการติดตั้งเครือข่าย Wi-Fi 7 เพื่อรองรับงานที่ต้องการ Throughput สูงและความหน่วงต่ำ ข้อใดอธิบายความสามารถของมาตรฐาน IEEE 802.11be ได้ถูกต้องครบถ้วนที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 160 MHz ใช้ 1024-QAM และทำงานได้เพียงย่านความถี่เดียว"
+      },
+      {
+        "key": "ข",
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz ใช้ 4096-QAM และ Multi-Link Operation"
+      },
+      {
+        "key": "ค",
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 80 MHz ใช้ 256-QAM และสื่อสารผ่านสาย Ethernet ร่วมกับ Wireless เท่านั้น"
+      },
+      {
+        "key": "ง",
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz แต่ไม่สามารถใช้หลายย่านความถี่พร้อมกันได้"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz ใช้ 4096-QAM และ Multi-Link Operation",
+    "explanation": "Wi-Fi 7 หรือ IEEE 802.11be เป็นมาตรฐาน Extremely High Throughput ที่มีคุณสมบัติสำคัญ ได้แก่ ช่องสัญญาณกว้างสูงสุด 320 MHz ในย่านความถี่ที่รองรับ การมอดูเลต 4096-QAM ซึ่งบรรจุข้อมูลได้ 12 บิตต่อสัญลักษณ์ และ Multi-Link Operation (MLO) ที่ช่วยให้อุปกรณ์ส่งหรือรับข้อมูลผ่านหลายลิงก์ได้ตามเงื่อนไขของระบบ ข้อ ก สับสนกับคุณสมบัติบางส่วนของ Wi-Fi 6 และ Wi-Fi 6E ซึ่งมีช่องสัญญาณสูงสุด 160 MHz และใช้ 1024-QAM ข้อ ค ให้ค่าความกว้างช่องสัญญาณและระดับการมอดูเลตต่ำกว่าความสามารถเด่นของ Wi-Fi 7 ข้อ ง ผิดเพราะ MLO เป็นหนึ่งในคุณสมบัติหลักของ Wi-Fi 7 อย่างไรก็ตาม การใช้งานจริงขึ้นอยู่กับย่านความถี่ กฎระเบียบ และความสามารถของอุปกรณ์ทั้งสองฝั่ง",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-104",
+    "number": 104,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - เทคโนโลยีเครือข่าย 5G",
+    "difficulty": "intermediate",
+    "question": "โรงงานอุตสาหกรรมต้องการระบบสื่อสารระหว่างหุ่นยนต์ที่ต้องตอบสนองภายในเวลาสั้นมาก มีความน่าเชื่อถือสูง และมีความหน่วงต่ำ ควรเลือกใช้ความสามารถหลักของ 5G NR กลุ่มใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "eMBB เพราะออกแบบมาเพื่อเพิ่มความเร็วในการดาวน์โหลดข้อมูลขนาดใหญ่"
+      },
+      {
+        "key": "ข",
+        "text": "mMTC เพราะออกแบบมาเพื่อเชื่อมต่ออุปกรณ์ IoT จำนวนมหาศาล"
+      },
+      {
+        "key": "ค",
+        "text": "URLLC เพราะออกแบบมาเพื่อการสื่อสารที่มีความหน่วงต่ำและความน่าเชื่อถือสูง"
+      },
+      {
+        "key": "ง",
+        "text": "FDD เพราะเป็นชื่อบริการหลักของ 5G ที่รับประกันความหน่วงระดับต่ำที่สุด"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "URLLC เพราะออกแบบมาเพื่อการสื่อสารที่มีความหน่วงต่ำและความน่าเชื่อถือสูง",
+    "explanation": "URLLC ย่อมาจาก Ultra-Reliable Low-Latency Communications เป็นกลุ่มความสามารถของ 5G ที่มุ่งเน้นการส่งข้อมูลอย่างน่าเชื่อถือและมีความหน่วงต่ำ เหมาะกับการควบคุมหุ่นยนต์ ระบบอัตโนมัติ และงานที่ต้องตอบสนองอย่างรวดเร็ว ข้อ ก eMBB (enhanced Mobile Broadband) เน้น Throughput สูง เช่น วิดีโอความละเอียดสูงและการดาวน์โหลดข้อมูลขนาดใหญ่ ข้อ ข mMTC (massive Machine-Type Communications) เน้นการเชื่อมต่ออุปกรณ์จำนวนมาก เช่น เซนเซอร์ IoT ที่ส่งข้อมูลปริมาณไม่มากต่ออุปกรณ์ ข้อ ง FDD เป็นวิธีการจัดสรรช่องสัญญาณขาขึ้นและขาลง ไม่ใช่กลุ่มบริการ 5G NR ตามสามเสาหลัก eMBB, URLLC และ mMTC",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-105",
+    "number": 105,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - Quantum Computing",
+    "difficulty": "intermediate",
+    "question": "นักวิจัยต้องการพัฒนาอัลกอริทึมควอนตัมสำหรับแยกตัวประกอบจำนวนเต็มขนาดใหญ่ ซึ่งเป็นพื้นฐานสำคัญของความปลอดภัย RSA ควรเลือกอัลกอริทึมใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Grover's Algorithm ซึ่งเร่งการค้นหาข้อมูลแบบไม่เรียงลำดับเป็น O(√N)"
+      },
+      {
+        "key": "ข",
+        "text": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มได้อย่างมีประสิทธิภาพเชิงพหุนามในแบบจำลองควอนตัม"
+      },
+      {
+        "key": "ค",
+        "text": "Dijkstra's Algorithm ซึ่งค้นหาเส้นทางที่สั้นที่สุดด้วย Qubit"
+      },
+      {
+        "key": "ง",
+        "text": "K-Means Algorithm ซึ่งใช้ Quantum Entanglement เพื่อแบ่งจำนวนเฉพาะ"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มได้อย่างมีประสิทธิภาพเชิงพหุนามในแบบจำลองควอนตัม",
+    "explanation": "Shor's Algorithm เป็นอัลกอริทึมควอนตัมที่แก้ปัญหาการแยกตัวประกอบจำนวนเต็มโดยใช้ประโยชน์จาก Quantum Fourier Transform และแนวคิดการค้นหาคาบ ทำให้สามารถแยกตัวประกอบจำนวนเต็มได้ในเวลาพหุนามเมื่อมีคอมพิวเตอร์ควอนตัมแบบ Fault-Tolerant ที่มีขนาดเหมาะสม จึงมีผลต่อสมมติฐานความปลอดภัยของ RSA ข้อ ก เป็นอัลกอริทึมของ Grover ซึ่งให้การเร่งการค้นหาแบบไม่มีโครงสร้างจาก O(N) เป็น O(√N) ไม่ใช่อัลกอริทึมหลักสำหรับการแยกตัวประกอบ ข้อ ค เป็นอัลกอริทึมกราฟแบบดั้งเดิมสำหรับหาเส้นทางที่สั้นที่สุด ไม่ได้ใช้ Qubit เป็นเงื่อนไขของอัลกอริทึม ข้อ ง เป็นเทคนิค Unsupervised Learning ที่ใช้จัดกลุ่มข้อมูล ไม่ได้ออกแบบมาเพื่อแยกตัวประกอบจำนวนเต็ม",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-106",
+    "number": 106,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - Quantum Computing",
+    "difficulty": "basic",
+    "question": "ข้อใดอธิบายความแตกต่างระหว่าง Quantum Superposition และ Quantum Entanglement ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Superposition คือการเชื่อมต่อ Qubit หลายตัว ส่วน Entanglement คือการเพิ่มจำนวนบิตแบบทวิภาค"
+      },
+      {
+        "key": "ข",
+        "text": "Superposition คือสถานะซ้อนทับของสถานะควอนตัม ส่วน Entanglement คือความสัมพันธ์เชิงควอนตัมระหว่างระบบที่ไม่สามารถอธิบายแยกจากกันได้อย่างสมบูรณ์"
+      },
+      {
+        "key": "ค",
+        "text": "Superposition ทำให้ Qubit มีค่าเป็น 0 และ 1 พร้อมกันในความหมายเดียวกับบิตคลาสสิก ส่วน Entanglement คือการคัดลอก Qubit ได้ไม่จำกัด"
+      },
+      {
+        "key": "ง",
+        "text": "Superposition และ Entanglement เป็นชื่อเรียกเดียวกันของการเพิ่มความถี่สัญญาณในวงจรควอนตัม"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Superposition คือสถานะซ้อนทับของสถานะควอนตัม ส่วน Entanglement คือความสัมพันธ์เชิงควอนตัมระหว่างระบบที่ไม่สามารถอธิบายแยกจากกันได้อย่างสมบูรณ์",
+    "explanation": "Quantum Superposition อธิบายสถานะของ Qubit ที่สามารถอยู่ในผลรวมเชิงควอนตัมของสถานะพื้นฐาน |0⟩ และ |1⟩ ได้ โดยเมื่อวัดจะได้ผลลัพธ์ตามความน่าจะเป็น ส่วน Entanglement เป็นความสัมพันธ์ระหว่าง Qubit หลายตัวที่ทำให้สถานะรวมของระบบมีความเชื่อมโยงกัน และไม่สามารถแทนด้วยสถานะของแต่ละ Qubit อย่างอิสระได้ ข้อ ก สลับความหมายของแนวคิดทั้งสองและเข้าใจผิดเกี่ยวกับจำนวนบิต ข้อ ค ใช้คำว่าอยู่ในสถานะ 0 และ 1 พร้อมกันในความหมายแบบคลาสสิก ซึ่งไม่ถูกต้อง อีกทั้ง Quantum No-Cloning Theorem ห้ามคัดลอกสถานะควอนตัมที่ไม่ทราบค่าได้อย่างสมบูรณ์โดยทั่วไป ข้อ ง เป็นการสับสนกับแนวคิดด้านสัญญาณ ไม่เกี่ยวข้องกับนิยามของ Superposition หรือ Entanglement",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-107",
+    "number": 107,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - Cybersecurity CIA Triad",
+    "difficulty": "basic",
+    "question": "บริษัทแห่งหนึ่งพบว่าฐานข้อมูลลูกค้าถูกแก้ไขโดยผู้ที่ไม่มีสิทธิ์ แม้ระบบจะยังเปิดให้บริการและไม่มีข้อมูลรั่วไหล เหตุการณ์ดังกล่าวกระทบองค์ประกอบใดของ CIA Triad โดยตรงที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Confidentiality"
+      },
+      {
+        "key": "ข",
+        "text": "Integrity"
+      },
+      {
+        "key": "ค",
+        "text": "Availability"
+      },
+      {
+        "key": "ง",
+        "text": "Authentication"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Integrity",
+    "explanation": "Integrity หมายถึงการรักษาความถูกต้อง ความครบถ้วน และความน่าเชื่อถือของข้อมูล การที่ผู้ไม่มีสิทธิ์แก้ไขข้อมูลทำให้ข้อมูลไม่สามารถรับประกันความถูกต้องได้ จึงเป็นการละเมิด Integrity โดยตรง ข้อ ก Confidentiality เน้นการป้องกันการเปิดเผยข้อมูลแก่บุคคลที่ไม่ได้รับอนุญาต ซึ่งโจทย์ระบุว่าไม่มีข้อมูลรั่วไหล ข้อ ค Availability เน้นการทำให้ระบบและข้อมูลพร้อมใช้งานเมื่อจำเป็น แต่ระบบยังเปิดให้บริการตามปกติ ข้อ ง Authentication เป็นกระบวนการพิสูจน์ตัวตน ไม่ใช่องค์ประกอบหลักของ CIA Triad แม้การยืนยันตัวตนที่ไม่รัดกุมอาจเป็นสาเหตุให้เกิดปัญหาด้าน Integrity ได้",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-108",
+    "number": 108,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - กฎหมาย PDPA",
+    "difficulty": "intermediate",
+    "question": "บริษัท A ว่าจ้างบริษัท B ให้จัดเก็บและประมวลผลข้อมูลส่วนบุคคลของลูกค้าตามคำสั่งของบริษัท A โดยบริษัท A เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผล บทบาทของบริษัท B ตาม PDPA คือข้อใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Data Subject เพราะเป็นผู้ที่ข้อมูลส่วนบุคคลถูกนำมาใช้งาน"
+      },
+      {
+        "key": "ข",
+        "text": "Data Controller เพราะเป็นผู้ให้บริการจัดเก็บข้อมูล"
+      },
+      {
+        "key": "ค",
+        "text": "Data Processor เพราะประมวลผลข้อมูลตามคำสั่งของ Data Controller"
+      },
+      {
+        "key": "ง",
+        "text": "Data Protection Officer เพราะมีหน้าที่จัดเก็บข้อมูลให้บริษัท A"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "Data Processor เพราะประมวลผลข้อมูลตามคำสั่งของ Data Controller",
+    "explanation": "ตามหลัก PDPA ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller) เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลข้อมูล ส่วนผู้ประมวลผลข้อมูลส่วนบุคคล (Data Processor) ดำเนินการเกี่ยวกับข้อมูลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูล ดังนั้นบริษัท A เป็น Controller และบริษัท B เป็น Processor ข้อ ก Data Subject คือบุคคลธรรมดาที่ข้อมูลส่วนบุคคลเกี่ยวข้องด้วย ไม่ใช่บริษัทที่ให้บริการประมวลผล ข้อ ข ผิดเพราะบริษัท B ไม่ได้เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลตามเงื่อนไขของโจทย์ ข้อ ง DPO คือเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล มีหน้าที่ให้คำแนะนำ ตรวจสอบ และประสานงานตามกฎหมาย ไม่ใช่ชื่อเรียกของผู้ให้บริการจัดเก็บข้อมูล ทั้งนี้บทบาทจริงต้องพิจารณาจากอำนาจและการดำเนินการจริง ไม่ใช่ชื่อในสัญญาเพียงอย่างเดียว",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-109",
+    "number": 109,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - Nobel Prize 2024",
+    "difficulty": "basic",
+    "question": "รางวัลโนเบลสาขาฟิสิกส์ประจำปี 2024 มอบให้ John J. Hopfield และ Geoffrey Hinton จากผลงานที่เกี่ยวข้องกับหัวข้อใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "การพัฒนาเครื่องมือคำนวณโครงสร้างโปรตีนด้วย AlphaFold"
+      },
+      {
+        "key": "ข",
+        "text": "การค้นพบกลไกทางพันธุกรรมที่ควบคุมการแบ่งเซลล์"
+      },
+      {
+        "key": "ค",
+        "text": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วยโครงข่ายประสาทเทียม"
+      },
+      {
+        "key": "ง",
+        "text": "การค้นพบหลักการเข้ารหัสข้อมูลแบบ Quantum Encryption"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วยโครงข่ายประสาทเทียม",
+    "explanation": "รางวัลโนเบลสาขาฟิสิกส์ปี 2024 มอบให้ John J. Hopfield และ Geoffrey Hinton สำหรับการค้นพบและประดิษฐ์สิ่งที่ทำให้เกิด Machine Learning ด้วยโครงข่ายประสาทเทียม โดยผลงานของ Hopfield เกี่ยวข้องกับ Associative Memory และ Hopfield Network ส่วน Hinton มีผลงานเกี่ยวกับวิธีการเรียนรู้ของโครงข่ายประสาทเทียม ข้อ ก เป็นเนื้อหาที่เกี่ยวข้องกับ AlphaFold และรางวัลโนเบลสาขาเคมีปี 2024 ซึ่งมีผู้ได้รับรางวัลคือ David Baker, Demis Hassabis และ John Jumper ข้อ ข ไม่ใช่ผลงานที่เป็นเหตุผลของรางวัลดังกล่าว ข้อ ง ไม่ใช่หัวข้อที่ระบุในการมอบรางวัลโนเบลสาขาฟิสิกส์ปี 2024",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-110",
+    "number": 110,
+    "categoryId": "general-it",
+    "tag": "กลุ่ม 1 - Nobel Prize 2024 และ AI",
+    "difficulty": "intermediate",
+    "question": "รางวัลโนเบลสาขาเคมีปี 2024 มีความเกี่ยวข้องกับความก้าวหน้าด้าน AI อย่างไร?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "มอบให้ผู้พัฒนา AlphaFold ซึ่งใช้ AI ช่วยทำนายโครงสร้างสามมิติของโปรตีน และผลงานด้านการออกแบบโปรตีน"
+      },
+      {
+        "key": "ข",
+        "text": "มอบให้ผู้พัฒนา ChatGPT ซึ่งสามารถสร้างข้อความทางวิทยาศาสตร์ได้อย่างอัตโนมัติ"
+      },
+      {
+        "key": "ค",
+        "text": "มอบให้ผู้พัฒนาระบบ Blockchain สำหรับจัดเก็บข้อมูลการทดลองทางเคมี"
+      },
+      {
+        "key": "ง",
+        "text": "มอบให้ผู้พัฒนา GPU ที่ใช้ฝึก Deep Learning สำหรับการประมวลผลภาพ"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "มอบให้ผู้พัฒนา AlphaFold ซึ่งใช้ AI ช่วยทำนายโครงสร้างสามมิติของโปรตีน และผลงานด้านการออกแบบโปรตีน",
+    "explanation": "รางวัลโนเบลสาขาเคมีปี 2024 มีผู้ได้รับรางวัลสามคน ได้แก่ David Baker จากผลงานด้านการออกแบบโปรตีนเชิงคำนวณ และ Demis Hassabis กับ John Jumper จากผลงานด้านการทำนายโครงสร้างโปรตีนด้วย AlphaFold2 ระบบดังกล่าวใช้ Machine Learning และโครงข่ายประสาทเทียมเพื่อช่วยคาดการณ์โครงสร้างสามมิติของโปรตีนจากลำดับกรดอะมิโน ข้อ ข ChatGPT เป็นโมเดลภาษาขนาดใหญ่ แต่ไม่ได้เป็นผลงานที่ได้รับรางวัลโนเบลสาขาเคมีปี 2024 ข้อ ค Blockchain เป็นเทคโนโลยีบัญชีรายการแบบกระจาย ไม่ใช่ผลงานหลักที่ใช้มอบรางวัล ข้อ ง GPU เป็นฮาร์ดแวร์สำคัญสำหรับ AI แต่ไม่ใช่ผลงานที่ได้รับรางวัลดังกล่าว",
+    "sourcePage": 1
+  },
+  {
+    "id": "q-111",
+    "number": 111,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - OSI Model และ TCP/IP",
+    "difficulty": "basic",
+    "question": "เมื่อข้อมูลจากแอปพลิเคชันถูกส่งผ่านเครือข่ายแบบ TCP/IP และผ่านการ Encapsulation ตามลำดับ PDU ในชั้น Transport, Network และ Data Link จะเรียกว่าอะไรตามลำดับ?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Segment, Packet, Frame"
+      },
+      {
+        "key": "ข",
+        "text": "Packet, Segment, Frame"
+      },
+      {
+        "key": "ค",
+        "text": "Frame, Packet, Segment"
+      },
+      {
+        "key": "ง",
+        "text": "Data, Frame, Bit"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "Segment, Packet, Frame",
+    "explanation": "กระบวนการ Encapsulation เปลี่ยนรูปแบบข้อมูลตามชั้นเครือข่าย โดยชั้น Transport ใช้ Segment สำหรับ TCP หรือ Datagram สำหรับ UDP ชั้น Network ใช้ Packet ซึ่งมีข้อมูล IP Address และชั้น Data Link ใช้ Frame ซึ่งมีข้อมูลสำหรับการส่งภายในลิงก์ เช่น MAC Address ส่วน Physical Layer ส่งเป็น Bit ข้อ ข สลับ Segment กับ Packet ซึ่งเป็น PDU คนละชั้น ข้อ ค เรียงลำดับย้อนกลับจากการ Encapsulation ข้อ ง นำ PDU จากหลายชั้นมาปะปนและไม่ได้แสดงลำดับ Transport, Network และ Data Link ที่ถูกต้อง",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-112",
+    "number": 112,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - TCP Three-Way Handshake",
+    "difficulty": "intermediate",
+    "question": "ในการสร้างการเชื่อมต่อ TCP ระหว่าง Client และ Server ลำดับข้อความใดแสดงกระบวนการ Three-Way Handshake ได้ถูกต้อง?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Client ส่ง ACK, Server ส่ง SYN, Client ส่ง FIN"
+      },
+      {
+        "key": "ข",
+        "text": "Client ส่ง SYN, Server ส่ง SYN-ACK, Client ส่ง ACK"
+      },
+      {
+        "key": "ค",
+        "text": "Client ส่ง SYN-ACK, Server ส่ง ACK, Client ส่ง SYN"
+      },
+      {
+        "key": "ง",
+        "text": "Client ส่ง FIN, Server ส่ง FIN-ACK, Client ส่ง RST"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Client ส่ง SYN, Server ส่ง SYN-ACK, Client ส่ง ACK",
+    "explanation": "TCP Three-Way Handshake เริ่มจาก Client ส่ง SYN เพื่อขอเปิดการเชื่อมต่อและแจ้ง Initial Sequence Number จากนั้น Server ตอบ SYN-ACK เพื่อรับทราบ SYN และแจ้ง Sequence Number ของตนเอง สุดท้าย Client ส่ง ACK เพื่อยืนยันการรับข้อมูล ทำให้ทั้งสองฝ่ายสามารถเริ่มส่งข้อมูลได้ ข้อ ก ไม่ใช่ลำดับการเปิดการเชื่อมต่อ และใช้ FIN ซึ่งเกี่ยวข้องกับการปิดการเชื่อมต่อ ข้อ ค เรียงลำดับผิดและให้ Client ส่ง SYN-ACK ก่อนที่ Server จะตอบกลับ ข้อ ง เป็นการใช้ Flag ที่เกี่ยวข้องกับการยุติหรือรีเซ็ตการเชื่อมต่อ ไม่ใช่กระบวนการสร้างการเชื่อมต่อปกติ",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-113",
+    "number": 113,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - TCP และ UDP",
+    "difficulty": "basic",
+    "question": "ระบบ VoIP ต้องการส่งข้อมูลเสียงแบบเรียลไทม์ โดยยอมรับการสูญหายของแพ็กเก็ตบางส่วนได้ เพื่อหลีกเลี่ยงความหน่วงจากการส่งซ้ำ โปรโตคอล Transport ใดเหมาะสมที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "TCP เพราะมีการยืนยันทุกแพ็กเก็ตและรับประกันว่าเสียงจะไม่สูญหาย"
+      },
+      {
+        "key": "ข",
+        "text": "UDP เพราะไม่มีการรับประกันการส่งถึง แต่มี Overhead ต่ำและเหมาะกับงานที่ต้องการความหน่วงต่ำ"
+      },
+      {
+        "key": "ค",
+        "text": "HTTP เพราะสามารถส่งข้อมูลเสียงผ่าน Application Layer ได้โดยไม่ต้องใช้ Transport Protocol"
+      },
+      {
+        "key": "ง",
+        "text": "ICMP เพราะออกแบบมาเพื่อส่งข้อมูล Multimedia แบบเรียลไทม์"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "UDP เพราะไม่มีการรับประกันการส่งถึง แต่มี Overhead ต่ำและเหมาะกับงานที่ต้องการความหน่วงต่ำ",
+    "explanation": "UDP เป็น Connectionless Transport Protocol ที่ไม่ทำ Three-Way Handshake และไม่มีกลไก Retransmission, Sequencing และ Flow Control แบบ TCP ทำให้มี Overhead ต่ำและเหมาะกับแอปพลิเคชันที่ให้ความสำคัญกับเวลามากกว่าการส่งข้อมูลทุกแพ็กเก็ตให้ครบ เช่น VoIP และการสตรีมแบบเรียลไทม์ ข้อ ก TCP มีความสามารถด้าน Reliability แต่การส่งซ้ำและการจัดลำดับข้อมูลอาจเพิ่ม Latency และ Jitter ข้อ ค HTTP เป็นโปรโตคอลระดับ Application Layer ซึ่งต้องอาศัย Transport Layer ในการส่งข้อมูล ข้อ ง ICMP ใช้สำหรับข้อความควบคุมและวินิจฉัยเครือข่าย เช่น Ping ไม่ใช่โปรโตคอลหลักสำหรับส่งเสียงแบบเรียลไทม์",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-114",
+    "number": 114,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - การคำนวณ Subnetting",
+    "difficulty": "intermediate",
+    "question": "ผู้ดูแลระบบได้รับเครือข่าย 192.168.10.0/24 และต้องแบ่งเป็น Subnet ขนาด /27 ทุก Subnet จะมี IP Address สำหรับใช้งานกับอุปกรณ์ปลายทางได้จริงกี่หมายเลข?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "14 หมายเลข"
+      },
+      {
+        "key": "ข",
+        "text": "30 หมายเลข"
+      },
+      {
+        "key": "ค",
+        "text": "32 หมายเลข"
+      },
+      {
+        "key": "ง",
+        "text": "62 หมายเลข"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "30 หมายเลข",
+    "explanation": "Subnet /27 มี Host Bits เท่ากับ 32 - 27 = 5 บิต จำนวน IP Address ทั้งหมดต่อ Subnet คือ 2^5 = 32 หมายเลข โดยตาม Subnet IPv4 แบบทั่วไปจะหัก Network Address และ Broadcast Address ออกอย่างละ 1 หมายเลข จึงเหลือ Usable Hosts = 32 - 2 = 30 หมายเลข ข้อ ก คือจำนวน Usable Hosts ของ /28 ซึ่งมี Host Bits 4 บิตและรองรับ 14 เครื่อง ข้อ ค เป็นจำนวน IP ทั้งหมดของ /27 แต่รวม Network และ Broadcast Address ด้วย ข้อ ง คือจำนวน Usable Hosts ของ /26 ซึ่งมี Host Bits 6 บิตและรองรับ 62 เครื่อง",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-115",
+    "number": 115,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - IPv4 Private Address",
+    "difficulty": "intermediate",
+    "question": "ผู้ดูแลระบบตรวจสอบ IP Address ของเครื่องลูกข่ายและพบว่าได้รับหมายเลข 169.254.25.10/16 โดยไม่มี Default Gateway กำหนดไว้ ข้อใดอธิบายสถานการณ์นี้ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "เป็น Private IP ในช่วง 10.0.0.0/8 ที่ DHCP Server แจกให้อัตโนมัติ"
+      },
+      {
+        "key": "ข",
+        "text": "เป็น APIPA หรือ Link-Local Address ที่ระบบอาจกำหนดเมื่อไม่สามารถรับ IPv4 Address จาก DHCP ได้"
+      },
+      {
+        "key": "ค",
+        "text": "เป็น Loopback Address ที่ใช้ทดสอบการสื่อสารกับ Router ภายนอก"
+      },
+      {
+        "key": "ง",
+        "text": "เป็น Public IP Address ที่สามารถเข้าถึงอินเทอร์เน็ตได้โดยตรงผ่าน DNS"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "เป็น APIPA หรือ Link-Local Address ที่ระบบอาจกำหนดเมื่อไม่สามารถรับ IPv4 Address จาก DHCP ได้",
+    "explanation": "ช่วง 169.254.0.0/16 เป็น IPv4 Link-Local Address ซึ่งในระบบปฏิบัติการทั่วไปอาจถูกกำหนดผ่านกลไก APIPA เมื่อไม่สามารถรับ Address จาก DHCP ได้ตามปกติ อุปกรณ์ที่ใช้ IP ช่วงนี้สามารถสื่อสารกับอุปกรณ์อื่นใน Link เดียวกันที่มี Link-Local Address ได้ แต่โดยทั่วไปไม่สามารถใช้เป็นเส้นทางสื่อสารข้ามเครือข่ายผ่าน Router ได้ ข้อ ก ช่วง 10.0.0.0/8 เป็น Private IP ตาม RFC 1918 ไม่ใช่ช่วงที่ตรวจพบ ข้อ ค Loopback ใช้ช่วง 127.0.0.0/8 โดย 127.0.0.1 เป็นตัวอย่างที่รู้จักกันดี ข้อ ง เป็นความเข้าใจผิด เพราะ 169.254.0.0/16 ไม่ใช่ Public IP ที่ใช้เชื่อมต่ออินเทอร์เน็ตโดยตรง และ DNS ไม่ได้เปลี่ยนข้อจำกัดนี้",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-116",
+    "number": 116,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - DNS Records",
+    "difficulty": "intermediate",
+    "question": "องค์กรต้องการตั้งค่า DNS ให้โดเมน example.com ชี้ไปยัง IPv4 Address 203.0.113.10 และต้องการกำหนด Mail Server เป็น mail.example.com โดยใช้ Priority 10 ควรใช้ DNS Record ประเภทใดตามลำดับ?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "AAAA และ CNAME"
+      },
+      {
+        "key": "ข",
+        "text": "A และ MX"
+      },
+      {
+        "key": "ค",
+        "text": "TXT และ PTR"
+      },
+      {
+        "key": "ง",
+        "text": "CNAME และ AAAA"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "A และ MX",
+    "explanation": "DNS A Record ใช้จับคู่ชื่อโดเมนกับ IPv4 Address เช่น example.com ไปยัง 203.0.113.10 ส่วน MX Record ใช้ระบุ Mail Exchanger ของโดเมน พร้อมค่า Priority เพื่อกำหนดลำดับความสำคัญของ Mail Server ดังนั้นจึงต้องใช้ A และ MX ตามลำดับ ข้อ ก AAAA ใช้กับ IPv6 Address ส่วน CNAME ใช้กำหนดชื่อแทนไปยังชื่อโดเมนอื่น ไม่ใช่ Record สำหรับกำหนด Mail Server ข้อ ค TXT ใช้เก็บข้อความ เช่น SPF, DKIM หรือการยืนยันโดเมน ส่วน PTR ใช้ทำ Reverse DNS ข้อ ง CNAME และ AAAA ไม่ตรงกับข้อกำหนด เพราะ AAAA ไม่ได้ใช้เชื่อมชื่อโดเมนกับ IPv4 และ CNAME ไม่ได้กำหนด MX Priority",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-117",
+    "number": 117,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - DNS Hierarchy",
+    "difficulty": "advanced",
+    "question": "เมื่อผู้ใช้ร้องขอให้ DNS Resolver ค้นหา IP Address ของ www.example.com และไม่มีข้อมูลใน Cache ลำดับการค้นหาแบบ Iterative Resolution จาก DNS Hierarchy โดยทั่วไปควรเป็นอย่างไร?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Root Server → Authoritative Server → TLD Server → Recursive Resolver"
+      },
+      {
+        "key": "ข",
+        "text": "Recursive Resolver → Root Server → TLD Server → Authoritative Server"
+      },
+      {
+        "key": "ค",
+        "text": "TLD Server → Recursive Resolver → Root Server → Authoritative Server"
+      },
+      {
+        "key": "ง",
+        "text": "Authoritative Server → Root Server → Recursive Resolver → TLD Server"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Recursive Resolver → Root Server → TLD Server → Authoritative Server",
+    "explanation": "โดยทั่วไปเครื่องลูกข่ายจะส่งคำถามไปยัง Recursive Resolver ก่อน หาก Resolver ไม่มีข้อมูลใน Cache จะเริ่มค้นหาแบบ Iterative โดยถาม Root Server เพื่อค้นหาข้อมูล Referral ไปยัง TLD Server จากนั้นถาม TLD Server เช่น .com เพื่อค้นหา Authoritative Name Server ของ example.com และสุดท้ายถาม Authoritative Server เพื่อรับคำตอบของ www.example.com เช่น A Record หรือ AAAA Record ข้อ ก เริ่มจาก Root Server ก่อน Resolver ทั้งที่ระบบโดยทั่วไปต้องมี Resolver รับคำขอจาก Client ก่อน และยังจัดลำดับ TLD กับ Authoritative สลับกัน ข้อ ค ให้ TLD มาก่อน Root ซึ่งไม่เป็นไปตามลำดับ DNS Hierarchy ข้อ ง เริ่มที่ Authoritative Server โดยไม่มีข้อมูลสำหรับค้นหา Name Server และจัดตำแหน่ง Resolver ผิด อย่างไรก็ตาม การทำงานจริงอาจมีการใช้ Cache และ Query Optimization ทำให้ไม่จำเป็นต้องสอบถามทุกชั้นทุกครั้ง",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-118",
+    "number": 118,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - Cloud Service Models",
+    "difficulty": "basic",
+    "question": "บริษัทต้องการพัฒนาและ Deploy Application บน Cloud โดยที่ผู้ให้บริการเป็นผู้ดูแลระบบปฏิบัติการ (OS), Runtime และโครงสร้างพื้นฐานทั้งหมด ส่วนผู้ใช้งานจัดการเพียง Application และ Data ของตนเอง ควรเลือกใช้บริการโมเดลใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "SaaS เพราะผู้ให้บริการจัดเตรียมสำเร็จรูปและควบคุมทุกอย่างจนผู้ใช้แก้โค้ดไม่ได้"
+      },
+      {
+        "key": "ข",
+        "text": "PaaS เพราะผู้ให้บริการดูแล Infrastructure และ OS ให้ ส่วนผู้ใช้พัฒนาและ Deploy Application เอง"
+      },
+      {
+        "key": "ค",
+        "text": "IaaS เพราะผู้ใช้ต้องเช่าและบริหารจัดการระบบปฏิบัติการรวมถึง Runtime ด้วยตนเอง"
+      },
+      {
+        "key": "ง",
+        "text": "On-Premises เพราะต้องซื้อเครื่องเซิร์ฟเวอร์กายภาพมาติดตั้งในองค์กร"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "PaaS เพราะผู้ให้บริการดูแล Infrastructure และ OS ให้ ส่วนผู้ใช้พัฒนาและ Deploy Application เอง",
+    "explanation": "PaaS (Platform as a Service) ให้บริการ Platform สำหรับพัฒนาและรัน Application โดยผู้ให้บริการดูแลโครงสร้างพื้นฐาน ฮาร์ดแวร์ ระบบปฏิบัติการ และ Runtime ตามขอบเขตบริการ ส่วนผู้ใช้รับผิดชอบ Application และข้อมูลของตนเอง ข้อ ก SaaS เป็นบริการซอฟต์แวร์สำเร็จรูปที่ผู้ใช้เข้าถึงผ่านเว็บ โดยไม่ต้องเขียนโค้ด ข้อ ค IaaS ให้ผู้ใช้ควบคุม Virtual Machine ระบบปฏิบัติการ และซอฟต์แวร์ที่ติดตั้งเองทั้งหมด ข้อ ง On-Premises หมายถึงการติดตั้งและดำเนินการระบบภายในองค์กร ไม่ใช่โมเดล Cloud",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-119",
+    "number": 119,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - Docker และ Virtual Machines",
+    "difficulty": "advanced",
+    "question": "ทีมพัฒนาต้องการ Deploy Application หลายชุดบน Linux Host โดยต้องการเริ่มต้นระบบได้รวดเร็ว ใช้หน่วยความจำน้อย และแยก Process กับ Resource ของแต่ละ Application ควรเลือกเทคโนโลยีใด และใช้กลไกใดในการแยกสภาพแวดล้อม?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Virtual Machine โดยใช้ Linux Namespace เพื่อจำลอง Guest Kernel แยกกันทุกเครื่อง"
+      },
+      {
+        "key": "ข",
+        "text": "Docker Container โดยใช้ Linux Namespaces สำหรับ Isolation และ cgroups สำหรับควบคุม Resource"
+      },
+      {
+        "key": "ค",
+        "text": "Dual Boot โดยใช้ Hypervisor และ cgroups เพื่อให้ทุก Application มี Kernel เป็นของตัวเอง"
+      },
+      {
+        "key": "ง",
+        "text": "Docker Container โดยใช้ Hypervisor จำลองฮาร์ดแวร์และติดตั้ง Guest OS แยกในทุก Container"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Docker Container โดยใช้ Linux Namespaces สำหรับ Isolation และ cgroups สำหรับควบคุม Resource",
+    "explanation": "Container มีน้ำหนักเบากว่า Virtual Machine โดยทั่วไป เพราะ Container บน Linux Host ใช้ Kernel ร่วมกัน แต่แยกมุมมองทรัพยากรและกระบวนการผ่าน Namespaces เช่น PID, Network และ Mount Namespace ส่วน cgroups ใช้จำกัดและติดตามการใช้ทรัพยากร เช่น CPU และ Memory ข้อ ก สับสนระหว่าง Container กับ VM เพราะ Namespace ไม่ได้สร้าง Guest Kernel แยกต่างหากทุกเครื่อง ข้อ ค Dual Boot เป็นการเลือกบูตระบบปฏิบัติการ ไม่ใช่วิธีรัน Application หลายสภาพแวดล้อมพร้อมกันด้วย Container ข้อ ง อธิบายสถาปัตยกรรม VM ที่ใช้ Hypervisor และ Guest OS มากกว่าสถาปัตยกรรม Container ทั้งนี้ Container ไม่ได้หมายความว่าไม่มีชั้น Isolation อื่นหรือปลอดภัยเทียบเท่า VM ในทุกสถานการณ์",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-120",
+    "number": 120,
+    "categoryId": "network-cloud",
+    "tag": "กลุ่ม 2 - CIDR และการวางแผนเครือข่าย",
+    "difficulty": "advanced",
+    "question": "องค์กรได้รับเครือข่าย 172.16.48.0/22 และต้องแบ่งเป็น Subnet ขนาดเท่ากัน โดยแต่ละ Subnet ต้องรองรับอุปกรณ์ที่ใช้งานได้จริงอย่างน้อย 120 เครื่อง จะสามารถแบ่งได้สูงสุดกี่ Subnet?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "4 Subnets"
+      },
+      {
+        "key": "ข",
+        "text": "8 Subnets"
+      },
+      {
+        "key": "ค",
+        "text": "16 Subnets"
+      },
+      {
+        "key": "ง",
+        "text": "32 Subnets"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "8 Subnets",
+    "explanation": "เริ่มจากต้องรองรับ Usable Hosts อย่างน้อย 120 เครื่อง ต้องมี Host Bits อย่างน้อย 7 บิต เพราะ 2^7 - 2 = 126 เครื่อง ดังนั้น Prefix ใหม่คือ /25 เนื่องจาก 32 - 7 = 25 เครือข่ายเดิมคือ /22 จึงมีการยืมบิตมาเป็น Subnet Bits จำนวน 25 - 22 = 3 บิต จำนวน Subnet ที่แบ่งได้เท่ากับ 2^3 = 8 Subnets ข้อ ก เท่ากับการยืม 2 บิต ซึ่งจะได้ /24 และแต่ละ Subnet มี Usable Hosts 254 เครื่อง แต่จำนวน Subnet ไม่ใช่จำนวนสูงสุด ข้อ ค ต้องยืม 4 บิตเป็น /26 ซึ่งรองรับได้เพียง 62 Hosts ต่อ Subnet จึงไม่ผ่านเงื่อนไข 120 เครื่อง ข้อ ง ต้องยืม 5 บิตเป็น /27 ซึ่งรองรับได้เพียง 30 Hosts ต่อ Subnet จึงไม่ผ่านเงื่อนไขเช่นกัน",
+    "sourcePage": 2
+  },
+  {
+    "id": "q-121",
+    "number": 121,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - สถาปัตยกรรม von Neumann และ Harvard",
+    "difficulty": "basic",
+    "question": "ข้อใดอธิบายข้อจำกัดสำคัญของสถาปัตยกรรม von Neumann เมื่อเปรียบเทียบกับ Harvard Architecture ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "von Neumann ใช้หน่วยความจำและบัสร่วมกันสำหรับคำสั่งและข้อมูล จึงอาจเกิด Von Neumann Bottleneck"
+      },
+      {
+        "key": "ข",
+        "text": "von Neumann ใช้บัสคำสั่งและบัสข้อมูลแยกกัน ทำให้ CPU ไม่สามารถเข้าถึงข้อมูลได้พร้อมกัน"
+      },
+      {
+        "key": "ค",
+        "text": "Harvard Architecture ใช้ RAM เพียงชุดเดียวและไม่มีพื้นที่จัดเก็บคำสั่ง"
+      },
+      {
+        "key": "ง",
+        "text": "Harvard Architecture ไม่สามารถทำงานกับ CPU ที่มี Cache Memory ได้"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "von Neumann ใช้หน่วยความจำและบัสร่วมกันสำหรับคำสั่งและข้อมูล จึงอาจเกิด Von Neumann Bottleneck",
+    "explanation": "von Neumann Architecture ใช้หน่วยความจำร่วมกันสำหรับเก็บคำสั่งและข้อมูล รวมถึงใช้เส้นทางสื่อสารร่วมกันในแบบจำลองพื้นฐาน ทำให้การดึงคำสั่งและการเข้าถึงข้อมูลอาจแข่งขันกันใช้แบนด์วิดท์ เกิดข้อจำกัดที่เรียกว่า Von Neumann Bottleneck ส่วน Harvard Architecture แยกหน่วยความจำหรือบัสของคำสั่งและข้อมูลออกจากกัน ทำให้สามารถเข้าถึงทั้งสองส่วนพร้อมกันได้ในเชิงสถาปัตยกรรม ข้อ ข อธิบายลักษณะของ Harvard มากกว่า von Neumann ข้อ ค ผิดเพราะ Harvard แยกพื้นที่คำสั่งและข้อมูล ไม่ได้หมายความว่าไม่มีพื้นที่จัดเก็บคำสั่ง ข้อ ง ผิดเพราะ Harvard Architecture สามารถใช้ Cache Memory ได้ และ CPU สมัยใหม่จำนวนมากใช้แนวคิด Modified Harvard ภายในระดับ Cache",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-122",
+    "number": 122,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - CPU Machine Cycle",
+    "difficulty": "basic",
+    "question": "ในการทำงานของ CPU ตาม Machine Cycle แบบพื้นฐาน ขั้นตอน Decode มีหน้าที่ใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "อ่านคำสั่งถัดไปจากหน่วยความจำและเพิ่มค่า Program Counter"
+      },
+      {
+        "key": "ข",
+        "text": "ตีความคำสั่งที่อยู่ใน Instruction Register เพื่อระบุชนิดคำสั่งและ Operand ที่ต้องใช้"
+      },
+      {
+        "key": "ค",
+        "text": "ดำเนินการคำนวณทางคณิตศาสตร์หรือทางตรรกะตามคำสั่ง"
+      },
+      {
+        "key": "ง",
+        "text": "บันทึกผลลัพธ์สุดท้ายลงในหน่วยความจำหรือ Register ปลายทาง"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "ตีความคำสั่งที่อยู่ใน Instruction Register เพื่อระบุชนิดคำสั่งและ Operand ที่ต้องใช้",
+    "explanation": "Decode คือขั้นตอนที่ Control Unit ตีความ Machine Instruction ที่ถูก Fetch เข้ามาและอยู่ใน Instruction Register เพื่อกำหนดว่าจะต้องทำงานอะไร ใช้ Operand ใด และต้องควบคุมส่วนใดของ CPU ข้อ ก เป็นลักษณะของ Fetch ซึ่งอ่านคำสั่งจากหน่วยความจำเข้าสู่ CPU ข้อ ค เป็นขั้นตอน Execute ซึ่งดำเนินการคำสั่งจริง เช่น การคำนวณผ่าน ALU ข้อ ง เป็นขั้นตอน Store หรือ Write Back ซึ่งเขียนผลลัพธ์กลับไปยัง Register หรือ Memory ตามชนิดของคำสั่ง",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-123",
+    "number": 123,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - CPU Registers",
+    "difficulty": "intermediate",
+    "question": "ขณะ CPU กำลังอ่านข้อมูลจากหน่วยความจำ ข้อใดอธิบายบทบาทของ MAR และ MDR ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "MAR เก็บคำสั่งที่กำลังประมวลผล ส่วน MDR เก็บตำแหน่งคำสั่งถัดไป"
+      },
+      {
+        "key": "ข",
+        "text": "MAR เก็บ Address ของตำแหน่งหน่วยความจำ ส่วน MDR เก็บข้อมูลที่อ่านมาหรือกำลังจะเขียน"
+      },
+      {
+        "key": "ค",
+        "text": "MAR ควบคุมความถี่นาฬิกา ส่วน MDR เก็บสถานะของ ALU"
+      },
+      {
+        "key": "ง",
+        "text": "MAR เก็บผลลัพธ์ทางคณิตศาสตร์ ส่วน MDR เก็บเฉพาะ Opcode ของคำสั่ง"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "MAR เก็บ Address ของตำแหน่งหน่วยความจำ ส่วน MDR เก็บข้อมูลที่อ่านมาหรือกำลังจะเขียน",
+    "explanation": "Memory Address Register (MAR) ใช้เก็บที่อยู่ของตำแหน่งหน่วยความจำที่ CPU ต้องการเข้าถึง ส่วน Memory Data Register (MDR) หรือ Memory Buffer Register (MBR) ใช้พักข้อมูลที่กำลังรับมาจากหน่วยความจำหรือเตรียมเขียนกลับไปยังหน่วยความจำ ข้อ ก สลับหน้าที่กับ Instruction Register และ Program Counter โดย IR เก็บคำสั่งที่กำลังประมวลผล ส่วน PC เก็บ Address ของคำสั่งถัดไปตามสถานะการทำงาน ข้อ ค ไม่ใช่หน้าที่ของ MAR และ MDR เพราะการควบคุม Clock และการเก็บผลการดำเนินการ ALU มีองค์ประกอบเฉพาะอื่น ข้อ ง สับสนระหว่าง Register สำหรับพักข้อมูลหน่วยความจำกับ Register ที่ใช้ในการประมวลผลคำสั่ง",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-124",
+    "number": 124,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - Memory Hierarchy และ AMAT",
+    "difficulty": "advanced",
+    "question": "CPU มี Cache Memory ที่มี Hit Time เท่ากับ 4 ns และมี Miss Rate 5% โดยเมื่อเกิด Cache Miss จะมี Miss Penalty เพิ่มอีก 80 ns จงคำนวณค่า Average Memory Access Time (AMAT) ตามสูตรพื้นฐาน",
+    "options": [
+      {
+        "key": "ก",
+        "text": "4 ns"
+      },
+      {
+        "key": "ข",
+        "text": "8 ns"
+      },
+      {
+        "key": "ค",
+        "text": "84 ns"
+      },
+      {
+        "key": "ง",
+        "text": "88 ns"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "8 ns",
+    "explanation": "ใช้สูตร AMAT = Hit Time + (Miss Rate × Miss Penalty) แทนค่าได้เป็น 4 + (0.05 × 80) = 4 + 4 = 8 ns ดังนั้นคำตอบคือ 8 ns ข้อ ก คิดเฉพาะ Hit Time โดยละเลยผลกระทบจาก Cache Miss ข้อ ค นำ Miss Penalty มาบวกกับ Hit Time โดยไม่คูณด้วย Miss Rate ซึ่งจะทำให้ประเมินเวลาเกินจริง ข้อ ง บวกค่า Hit Time กับ Miss Penalty โดยตรงและไม่พิจารณาความน่าจะเป็นในการเกิด Cache Miss",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-125",
+    "number": 125,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - Storage Architecture",
+    "difficulty": "intermediate",
+    "question": "ข้อใดอธิบายความแตกต่างด้านสถาปัตยกรรมการจัดการคำสั่งระหว่าง NVMe และ SATA AHCI ได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "NVMe รองรับได้สูงสุด 64,000 I/O Queues และมีความลึกสูงสุด 64,000 Commands ต่อ Queue ส่วน AHCI มี 1 Queue ที่รองรับสูงสุด 32 Commands"
+      },
+      {
+        "key": "ข",
+        "text": "NVMe ใช้ 1 I/O Queue ที่รองรับ 32 Commands ส่วน AHCI ใช้ 64,000 Queues"
+      },
+      {
+        "key": "ค",
+        "text": "NVMe รองรับคำสั่งได้เพียง 32 รายการต่อ Queue ส่วน AHCI รองรับคำสั่ง 64,000 รายการต่อ Queue"
+      },
+      {
+        "key": "ง",
+        "text": "NVMe และ AHCI มีโครงสร้าง Queue เท่ากัน แต่ NVMe เร็วกว่าเพราะใช้ไฟเลี้ยงมากกว่า"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "NVMe รองรับได้สูงสุด 64,000 I/O Queues และมีความลึกสูงสุด 64,000 Commands ต่อ Queue ส่วน AHCI มี 1 Queue ที่รองรับสูงสุด 32 Commands",
+    "explanation": "NVMe ถูกออกแบบมาเพื่อใช้ประโยชน์จากหน่วยเก็บข้อมูลที่เชื่อมต่อผ่าน PCIe โดยรองรับได้สูงสุด 65,535 I/O Queues และแต่ละ Queue รองรับได้สูงสุด 65,536 Commands ตามข้อกำหนด ซึ่งมักอธิบายโดยประมาณว่า 64,000 Queues และ 64,000 Commands ต่อ Queue ส่วน SATA AHCI มี Native Command Queue เดียวที่รองรับได้สูงสุด 32 Commands ข้อ ข สลับโครงสร้าง Queue ระหว่างสองเทคโนโลยี ข้อ ค สลับจำนวนคำสั่งที่รองรับต่อ Queue ข้อ ง ผิดเพราะความแตกต่างหลักอยู่ที่สถาปัตยกรรมและการจัดการ I/O Queue รวมถึงการเชื่อมต่อ ไม่ใช่โครงสร้าง Queue ที่เหมือนกันหรือปริมาณไฟเลี้ยง",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-126",
+    "number": 126,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - RAID Technology",
+    "difficulty": "intermediate",
+    "question": "องค์กรติดตั้ง RAID 5 ด้วย Hard Disk จำนวน 4 ลูก แต่ละลูกมีความจุ 4 TB ระบบจะมีความจุใช้งานสำหรับจัดเก็บข้อมูลโดยประมาณเท่าใด และสามารถทนต่อความเสียหายของดิสก์ได้กี่ลูก?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "16 TB และทนดิสก์เสียได้ 2 ลูก"
+      },
+      {
+        "key": "ข",
+        "text": "12 TB และทนดิสก์เสียได้ 1 ลูก"
+      },
+      {
+        "key": "ค",
+        "text": "8 TB และทนดิสก์เสียได้ 1 ลูก"
+      },
+      {
+        "key": "ง",
+        "text": "8 TB และทนดิสก์เสียได้ 2 ลูก"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "12 TB และทนดิสก์เสียได้ 1 ลูก",
+    "explanation": "RAID 5 ใช้ Distributed Parity กระจายข้อมูล Parity ไปยังดิสก์ทุกลูก โดยความจุใช้งานตามทฤษฎีคำนวณจาก (N - 1) × ความจุดิสก์ที่มีขนาดเท่ากัน เมื่อ N = 4 และความจุ 4 TB จะได้ (4 - 1) × 4 = 12 TB RAID 5 สามารถทนต่อการเสียของดิสก์หนึ่งลูกได้โดยใช้ Parity ในการสร้างข้อมูลกลับมา ข้อ ก ใช้ความจุรวมโดยไม่หักพื้นที่ Parity และให้ความสามารถทนดิสก์เสียเกินจริง ข้อ ค ใช้สูตรลักษณะ RAID 10 บางกรณี แต่ไม่ได้ตรงกับ RAID 5 ข้อ ง ใช้ความจุผิดและนำความสามารถทนความเสียหายของ RAID 6 มาใช้กับ RAID 5",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-127",
+    "number": 127,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - RAID 6",
+    "difficulty": "advanced",
+    "question": "ระบบจัดเก็บข้อมูลติดตั้ง RAID 6 ด้วยดิสก์ขนาด 8 TB จำนวน 6 ลูก ข้อใดระบุความจุใช้งานตามทฤษฎีและความสามารถในการทนต่อความเสียหายของดิสก์ได้ถูกต้อง?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "48 TB และทนดิสก์เสียได้ 1 ลูก"
+      },
+      {
+        "key": "ข",
+        "text": "40 TB และทนดิสก์เสียได้ 2 ลูก"
+      },
+      {
+        "key": "ค",
+        "text": "32 TB และทนดิสก์เสียได้ 2 ลูก"
+      },
+      {
+        "key": "ง",
+        "text": "24 TB และทนดิสก์เสียได้ 3 ลูก"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "32 TB และทนดิสก์เสียได้ 2 ลูก",
+    "explanation": "RAID 6 ใช้ Double Distributed Parity โดยมีพื้นที่เทียบเท่าดิสก์ 2 ลูกสำหรับ Parity ทำให้ความจุใช้งานคำนวณจาก (N - 2) × ความจุต่อดิสก์ สำหรับดิสก์ 6 ลูก ขนาดลูกละ 8 TB จะได้ (6 - 2) × 8 = 32 TB และสามารถทนดิสก์เสียพร้อมกันได้สูงสุด 2 ลูก จึงตรงกับตัวเลือก ค",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-128",
+    "number": 128,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - Process State",
+    "difficulty": "intermediate",
+    "question": "ในระบบปฏิบัติการ Process หนึ่งกำลังอยู่ในสถานะ Running และร้องขออ่านข้อมูลจาก Disk ซึ่งต้องรอ I/O Completion ก่อนจึงจะทำงานต่อได้ Process จะเปลี่ยนไปอยู่ในสถานะใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "New"
+      },
+      {
+        "key": "ข",
+        "text": "Ready"
+      },
+      {
+        "key": "ค",
+        "text": "Waiting หรือ Blocked"
+      },
+      {
+        "key": "ง",
+        "text": "Terminated"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "Waiting หรือ Blocked",
+    "explanation": "เมื่อ Process ในสถานะ Running ต้องรอเหตุการณ์ภายนอก เช่น การอ่านข้อมูลจาก Disk หรือการรับข้อมูลจากอุปกรณ์ I/O ระบบปฏิบัติการจะเปลี่ยนสถานะเป็น Waiting หรือ Blocked เพื่อไม่ให้ Process ใช้ CPU ระหว่างรอ เมื่อ I/O เสร็จสิ้นจึงเปลี่ยนกลับไปเป็น Ready เพื่อรอการจัดสรร CPU ข้อ ก New ใช้กับ Process ที่เพิ่งถูกสร้าง ข้อ ข Ready หมายถึง Process พร้อมทำงานและรอ CPU ไม่ได้กำลังรอ I/O Completion ข้อ ง Terminated หมายถึง Process จบการทำงานหรือถูกยุติแล้ว ไม่ใช่การหยุดชั่วคราวเพื่อรออุปกรณ์",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-129",
+    "number": 129,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - Linux File Permissions",
+    "difficulty": "intermediate",
+    "question": "ผู้ดูแลระบบใช้คำสั่ง chmod 750 project.sh เพื่อกำหนดสิทธิ์ไฟล์ใน Linux ข้อใดแสดงสิทธิ์ของ Owner, Group และ Others ได้ถูกต้อง?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Owner = rwx, Group = r-x, Others = ---"
+      },
+      {
+        "key": "ข",
+        "text": "Owner = rw-, Group = r-x, Others = r--"
+      },
+      {
+        "key": "ค",
+        "text": "Owner = rwx, Group = rw-, Others = ---"
+      },
+      {
+        "key": "ง",
+        "text": "Owner = r-x, Group = rwx, Others = ---"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "Owner = rwx, Group = r-x, Others = ---",
+    "explanation": "Linux ใช้เลขฐานแปดแทนสิทธิ์ โดย Read = 4, Write = 2 และ Execute = 1 ดังนั้น 7 = 4 + 2 + 1 คือ rwx, 5 = 4 + 1 คือ r-x และ 0 คือไม่มีสิทธิ์ใด ๆ --- เมื่อนำไปใช้กับ chmod 750 จึงได้ Owner = rwx, Group = r-x และ Others = --- ข้อ ข แทนค่า 6, 5, 4 หรือ rw-, r-x, r-- ซึ่งตรงกับ chmod 654 ข้อ ค เป็น 7, 6, 0 หรือ rwx, rw-, --- ซึ่งตรงกับ chmod 760 ข้อ ง เป็น 5, 7, 0 หรือ r-x, rwx, --- ซึ่งตรงกับ chmod 570",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-130",
+    "number": 130,
+    "categoryId": "hardware-os",
+    "tag": "กลุ่ม 3 - Memory Hierarchy",
+    "difficulty": "advanced",
+    "question": "ระบบคอมพิวเตอร์มี Cache 2 ระดับ โดย L1 มี Hit Time 1 ns, Miss Rate 10% และ L2 มี Hit Time 5 ns, Local Miss Rate 20% หาก L2 Miss จะต้องใช้เวลาเข้าถึง Main Memory เพิ่มอีก 100 ns ค่า AMAT เท่ากับเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "1.5 ns"
+      },
+      {
+        "key": "ข",
+        "text": "2.5 ns"
+      },
+      {
+        "key": "ค",
+        "text": "3.5 ns"
+      },
+      {
+        "key": "ง",
+        "text": "6.0 ns"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "3.5 ns",
+    "explanation": "ใช้สูตร AMAT สำหรับ Cache สองระดับ: AMAT = L1 Hit Time + (L1 Miss Rate × (L2 Hit Time + L2 Local Miss Rate × Main Memory Penalty)) แทนค่าได้เป็น 1 + (0.10 × (5 + 0.20 × 100)) = 1 + (0.10 × 25) = 1 + 2.5 = 3.5 ns ดังนั้นคำตอบที่ถูกต้องคือ 3.5 ns",
+    "sourcePage": 3
+  },
+  {
+    "id": "q-131",
+    "number": 131,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Flowchart ISO 5807",
+    "difficulty": "basic",
+    "question": "ตามมาตรฐานสัญลักษณ์ Flowchart ISO 5807 หากต้องการแสดงขั้นตอนที่โปรแกรมต้องตรวจสอบเงื่อนไขและแยกเส้นทางการทำงานตามผล True หรือ False ควรใช้สัญลักษณ์ใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "วงรี (Oval)"
+      },
+      {
+        "key": "ข",
+        "text": "สี่เหลี่ยมผืนผ้า (Rectangle)"
+      },
+      {
+        "key": "ค",
+        "text": "สี่เหลี่ยมขนมเปียกปูน (Diamond)"
+      },
+      {
+        "key": "ง",
+        "text": "สี่เหลี่ยมด้านขนาน (Parallelogram)"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "สี่เหลี่ยมขนมเปียกปูน (Diamond)",
+    "explanation": "สัญลักษณ์ Decision ใน Flowchart ตามธรรมเนียมมาตรฐาน ISO 5807 ใช้รูปสี่เหลี่ยมขนมเปียกปูนหรือ Diamond เพื่อแสดงจุดตรวจสอบเงื่อนไขและแยกเส้นทางการทำงานตามผลการตัดสินใจ เช่น Yes/No หรือ True/False ข้อ ก วงรีใช้เป็น Terminator สำหรับเริ่มต้นหรือสิ้นสุดกระบวนการ ข้อ ข สี่เหลี่ยมผืนผ้าใช้แสดง Process หรือการประมวลผลทั่วไป เช่น การคำนวณหรือกำหนดค่า ข้อ ง สี่เหลี่ยมด้านขนานใช้แสดง Input/Output เช่น รับค่าจากผู้ใช้หรือแสดงผลลัพธ์",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-132",
+    "number": 132,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Boolean Algebra",
+    "difficulty": "intermediate",
+    "question": "กำหนดให้ A และ B เป็นตัวแปร Boolean ตามกฎ De Morgan's Law นิพจน์ NOT(A AND B) มีค่าเทียบเท่ากับนิพจน์ใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "NOT A AND NOT B"
+      },
+      {
+        "key": "ข",
+        "text": "NOT A OR NOT B"
+      },
+      {
+        "key": "ค",
+        "text": "A OR B"
+      },
+      {
+        "key": "ง",
+        "text": "A AND NOT B"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "NOT A OR NOT B",
+    "explanation": "De Morgan's Law ระบุว่า NOT(A AND B) เทียบเท่ากับ (NOT A) OR (NOT B) โดยการกระจาย NOT เข้าไปในวงเล็บจะต้องเปลี่ยน AND เป็น OR และกลับค่าของตัวแปรแต่ละตัว หากทั้ง A และ B เป็น True นิพจน์ดั้งเดิมจะเป็น False ซึ่งสอดคล้องกับ NOT A OR NOT B ข้อ ก เปลี่ยนค่าตัวแปรถูกต้องแต่ไม่ได้เปลี่ยน AND เป็น OR จึงไม่เทียบเท่าเสมอไป ข้อ ค ละเลยการปฏิเสธเงื่อนไขเดิม ข้อ ง กลับค่าเฉพาะ B ทำให้ผลลัพธ์ไม่ตรงกับกฎ De Morgan",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-133",
+    "number": 133,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Algorithm Complexity",
+    "difficulty": "intermediate",
+    "question": "นักพัฒนามีอัลกอริทึม 4 ตัวสำหรับจัดการข้อมูลจำนวน N รายการ โดยมี Time Complexity เป็น O(log N), O(N), O(N log N) และ O(N²) ตามลำดับ หาก N มีค่ามากขึ้นอย่างต่อเนื่อง อัลกอริทึมใดมีแนวโน้มขยายระยะเวลาการทำงานช้าที่สุดเมื่อพิจารณาเฉพาะอัตราการเติบโตของ Complexity?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "O(log N)"
+      },
+      {
+        "key": "ข",
+        "text": "O(N)"
+      },
+      {
+        "key": "ค",
+        "text": "O(N log N)"
+      },
+      {
+        "key": "ง",
+        "text": "O(N²)"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "O(log N)",
+    "explanation": "เมื่อ N เพิ่มขึ้น O(log N) เติบโตช้ากว่า O(N), O(N log N) และ O(N²) อย่างมาก เพราะจำนวนขั้นตอนเพิ่มขึ้นตามลอการิทึมของขนาดข้อมูล ไม่ได้เพิ่มตามจำนวนข้อมูลโดยตรง ตัวอย่างเช่น การเพิ่ม N เป็นสองเท่าทำให้ log N เพิ่มขึ้นเพียงค่าคงที่ตามฐานของลอการิทึม ข้อ ข O(N) เพิ่มเป็นสัดส่วนตรงกับ N ข้อ ค O(N log N) เพิ่มเร็วกว่า O(N) เนื่องจากมีปัจจัย log N เพิ่มเข้ามา ข้อ ง O(N²) มีการเติบโตแบบกำลังสอง จึงมีแนวโน้มใช้เวลามากที่สุดเมื่อ N มีขนาดใหญ่",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-134",
+    "number": 134,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Binary Search",
+    "difficulty": "intermediate",
+    "question": "อาร์เรย์ที่เรียงจากน้อยไปมากมีข้อมูล 64 รายการ หากใช้ Binary Search เพื่อค้นหาค่าหนึ่งในกรณีเลวร้ายที่สุด จำนวนรอบการแบ่งช่วงค้นหาประมาณเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "6 รอบ"
+      },
+      {
+        "key": "ข",
+        "text": "7 รอบ"
+      },
+      {
+        "key": "ค",
+        "text": "32 รอบ"
+      },
+      {
+        "key": "ง",
+        "text": "64 รอบ"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "7 รอบ",
+    "explanation": "Binary Search แบ่งช่วงข้อมูลออกเป็นประมาณครึ่งหนึ่งในแต่ละรอบ ดังนั้นสำหรับ N = 64 จำนวนรอบในกรณีเลวร้ายที่สุดเมื่อใช้การเทียบค่ากับตำแหน่งกลางประมาณ log2(64) + 1 = 6 + 1 = 7 รอบ เนื่องจากเมื่อผ่าน 6 รอบยังอาจเหลือช่วงที่ต้องตรวจสอบอีกหนึ่งตำแหน่ง ข้อ ก คือค่า log2(64) ซึ่งมักใช้เป็นการประมาณจำนวนขั้นตอนของการลดขนาดข้อมูลจนเหลือประมาณหนึ่งรายการ แต่ไม่ได้นับการตรวจสอบตำแหน่งสุดท้ายในกรณีเลวร้ายที่สุด ข้อ ค และ ง มีลักษณะใกล้เคียงกับการค้นหาเชิงเส้น ไม่ใช่ Binary Search",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-135",
+    "number": 135,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Sorting Algorithms",
+    "difficulty": "advanced",
+    "question": "ระบบต้องเรียงข้อมูลจำนวนมากโดยต้องการ Time Complexity แบบ O(N log N) ทั้งในกรณีเฉลี่ยและกรณีเลวร้ายที่สุด และยอมรับการใช้หน่วยความจำเพิ่มเติม O(N) ได้ ควรเลือกอัลกอริทึมใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "QuickSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด"
+      },
+      {
+        "key": "ข",
+        "text": "MergeSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด โดยทั่วไปใช้หน่วยความจำเพิ่มเติม O(N) สำหรับการเรียงแบบ Array"
+      },
+      {
+        "key": "ค",
+        "text": "Bubble Sort เพราะใช้การเปรียบเทียบทีละคู่ จึงมี Time Complexity O(N log N)"
+      },
+      {
+        "key": "ง",
+        "text": "Selection Sort เพราะมีจำนวนการสลับข้อมูลต่ำและมี Time Complexity O(N log N)"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "MergeSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด โดยทั่วไปใช้หน่วยความจำเพิ่มเติม O(N) สำหรับการเรียงแบบ Array",
+    "explanation": "MergeSort ใช้แนวคิด Divide and Conquer โดยแบ่งข้อมูลเป็นส่วนย่อย เรียงแต่ละส่วน และรวมผลลัพธ์เข้าด้วยกัน มี Time Complexity O(N log N) ทั้งกรณีดีที่สุด กรณีเฉลี่ย และกรณีเลวร้ายที่สุด สำหรับการเรียง Array ทั่วไปมักใช้ Auxiliary Space O(N) ซึ่งตรงกับข้อกำหนดของโจทย์ ข้อ ก QuickSort มีค่าเฉลี่ย O(N log N) แต่กรณีเลวร้ายที่สุด O(N²) เมื่อเลือก Pivot ทำให้เกิดการแบ่งข้อมูลไม่สมดุล ข้อ ค Bubble Sort มี Time Complexity โดยทั่วไป O(N²) ข้อ ง Selection Sort มี Time Complexity O(N²) ทั้งกรณีเฉลี่ยและเลวร้ายที่สุด",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-136",
+    "number": 136,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Stack และ Queue",
+    "difficulty": "basic",
+    "question": "ระบบจัดการประวัติการทำงานของโปรแกรมต้องการให้ผู้ใช้กด Undo เพื่อย้อนกลับไปยังการกระทำล่าสุดก่อนหน้า โครงสร้างข้อมูลใดเหมาะสมที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Queue เพราะข้อมูลที่เพิ่มเข้าก่อนจะถูกนำออกก่อน"
+      },
+      {
+        "key": "ข",
+        "text": "Stack เพราะข้อมูลที่เพิ่มเข้าล่าสุดจะถูกนำออกก่อน"
+      },
+      {
+        "key": "ค",
+        "text": "Binary Search Tree เพราะค้นหาการกระทำล่าสุดได้ด้วย O(log N) เสมอ"
+      },
+      {
+        "key": "ง",
+        "text": "Hash Table เพราะสามารถเรียกคืนข้อมูลตามลำดับการเพิ่มได้โดยอัตโนมัติ"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Stack เพราะข้อมูลที่เพิ่มเข้าล่าสุดจะถูกนำออกก่อน",
+    "explanation": "Stack ใช้หลักการ Last In, First Out (LIFO) โดยการกระทำล่าสุดจะอยู่บนสุดของ Stack และสามารถนำออกด้วย Pop เพื่อย้อนกลับได้ทันที จึงเหมาะกับระบบ Undo และ Call Stack ข้อ ก Queue ใช้หลัก First In, First Out (FIFO) ซึ่งจะนำข้อมูลที่เก่าที่สุดออกก่อน เหมาะกับระบบจัดคิวงาน ข้อ ค Binary Search Tree ใช้สำหรับจัดเรียงและค้นหาข้อมูลตาม Key ไม่ได้ออกแบบมาเพื่อจัดการลำดับ Undo โดยตรง ข้อ ง Hash Table ให้การค้นหาตาม Key โดยเฉลี่ยรวดเร็ว แต่ไม่ได้รักษาลำดับการเข้าถึงแบบ LIFO โดยธรรมชาติ",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-137",
+    "number": 137,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Binary Search Tree",
+    "difficulty": "intermediate",
+    "question": "กำหนดให้ Binary Search Tree มีโครงสร้างดังนี้: Root = 50, Left Child = 30, Right Child = 70, Node 30 มีลูกเป็น 20 และ 40 ส่วน Node 70 มีลูกเป็น 60 และ 80 หากทำ In-Order Traversal จะได้ลำดับข้อมูลใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "50, 30, 20, 40, 70, 60, 80"
+      },
+      {
+        "key": "ข",
+        "text": "20, 30, 40, 50, 60, 70, 80"
+      },
+      {
+        "key": "ค",
+        "text": "20, 40, 30, 60, 80, 70, 50"
+      },
+      {
+        "key": "ง",
+        "text": "50, 70, 80, 60, 30, 40, 20"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "20, 30, 40, 50, 60, 70, 80",
+    "explanation": "In-Order Traversal ใช้ลำดับการเยี่ยมชม Left Subtree → Node → Right Subtree เมื่อใช้กับ Binary Search Tree ที่มีคุณสมบัติ Left < Root < Right จะได้ผลลัพธ์เรียงจากน้อยไปมาก เริ่มจาก 20 → 30 → 40 จากนั้น Root 50 ต่อด้วย 60 → 70 → 80 ข้อ ก เป็นลำดับการเดินแบบ Root ก่อน ซึ่งไม่ใช่ In-Order ข้อ ค มีลักษณะคล้ายการเดินแบบ Post-Order ที่เยี่ยมชมลูกก่อน Root ข้อ ง มีการเยี่ยมชม Root ก่อนและเดิน Subtree ด้านขวาก่อน จึงไม่ใช่ In-Order",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-138",
+    "number": 138,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Flowchart และการติดตามการทำงาน",
+    "difficulty": "advanced",
+    "question": "พิจารณา Pseudocode ต่อไปนี้: x = 2, y = 5 จากนั้นทำซ้ำ 3 ครั้ง โดยแต่ละครั้งกำหนด x = x + y และ y = y - 1 เมื่อจบการทำซ้ำ x และ y มีค่าเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "x = 14, y = 2"
+      },
+      {
+        "key": "ข",
+        "text": "x = 15, y = 2"
+      },
+      {
+        "key": "ค",
+        "text": "x = 17, y = 3"
+      },
+      {
+        "key": "ง",
+        "text": "x = 18, y = 1"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "x = 14, y = 2",
+    "explanation": "เริ่มต้น x = 2 และ y = 5 รอบที่ 1: x = 2 + 5 = 7 และ y = 5 - 1 = 4 รอบที่ 2: x = 7 + 4 = 11 และ y = 4 - 1 = 3 รอบที่ 3: x = 11 + 3 = 14 และ y = 3 - 1 = 2 ดังนั้นผลลัพธ์ที่ถูกต้องคือ x = 14 และ y = 2 จึงตรงกับตัวเลือก ก",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-139",
+    "number": 139,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Queue และระบบจัดการงาน",
+    "difficulty": "intermediate",
+    "question": "ระบบ Print Server รับงานพิมพ์ 3 งานตามลำดับ Job A, Job B และ Job C โดยใช้นโยบาย FIFO เมื่องานถูกเลือกไปพิมพ์ตามลำดับ งานแรกที่จะถูกพิมพ์คือข้อใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Job C เพราะถูกเพิ่มเข้ามาล่าสุด"
+      },
+      {
+        "key": "ข",
+        "text": "Job B เพราะอยู่ตรงกลางของคิว"
+      },
+      {
+        "key": "ค",
+        "text": "Job A เพราะถูกเพิ่มเข้าคิวก่อนสุด"
+      },
+      {
+        "key": "ง",
+        "text": "สุ่มเลือกงานจากคิวเพื่อกระจายภาระงาน"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "Job A เพราะถูกเพิ่มเข้าคิวก่อนสุด",
+    "explanation": "Queue ใช้หลักการ First In, First Out (FIFO) หมายถึงข้อมูลที่เข้ามาก่อนจะถูกนำออกก่อน ดังนั้นเมื่อ Job A, Job B และ Job C ถูกเพิ่มเข้าคิวตามลำดับ Job A จะเป็นงานที่ถูกเลือกก่อน ข้อ ก เป็นลักษณะของ Stack ที่ใช้ LIFO ข้อ ข ผิดเพราะคิวไม่ได้เลือกข้อมูลจากตำแหน่งกลาง ข้อ ง เป็นนโยบายการจัดตารางงานแบบสุ่ม ไม่ใช่ FIFO ตามที่กำหนด",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-140",
+    "number": 140,
+    "categoryId": "programming-algo",
+    "tag": "กลุ่ม 4 - Algorithm Complexity",
+    "difficulty": "advanced",
+    "question": "นักพัฒนาต้องการประเมินอัลกอริทึมที่มีการเรียกฟังก์ชันแบบ Recursive โดยแบ่งปัญหาขนาด N ออกเป็น 2 ปัญหาย่อยขนาด N/2 และใช้เวลา O(N) สำหรับการรวมผลลัพธ์ในแต่ละระดับ ความสัมพันธ์เวลาเป็น T(N) = 2T(N/2) + O(N) อัลกอริทึมนี้มี Time Complexity ใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "O(log N)"
+      },
+      {
+        "key": "ข",
+        "text": "O(N)"
+      },
+      {
+        "key": "ค",
+        "text": "O(N log N)"
+      },
+      {
+        "key": "ง",
+        "text": "O(N²)"
+      }
+    ],
+    "answer": "ค",
+    "answerText": "O(N log N)",
+    "explanation": "ใช้ Master Theorem กับ T(N) = 2T(N/2) + O(N) จะได้ a = 2, b = 2 และ f(N) = O(N) เปรียบเทียบ N^(log_b a) = N^(log2 2) = N จึงอยู่ในกรณีที่ f(N) มีอัตราเติบโตเท่ากับ N^(log_b a) ส่งผลให้ T(N) = O(N log N) เช่นเดียวกับ MergeSort ข้อ ก O(log N) มักเกิดกับกระบวนการที่ลดขนาดปัญหาโดยไม่ต้องประมวลผลข้อมูลทั้งหมดในทุกระดับ ข้อ ข O(N) จะเหมาะกับกรณีที่แต่ละระดับใช้เวลารวม O(N) เพียงระดับเดียว ข้อ ง O(N²) สูงกว่าผลลัพธ์ของ Recurrence นี้",
+    "sourcePage": 4
+  },
+  {
+    "id": "q-141",
+    "number": 141,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Machine Learning Paradigms",
+    "difficulty": "basic",
+    "question": "บริษัทต้องการสร้างโมเดล AI เพื่อจำแนกอีเมลว่าเป็น Spam หรือ Not Spam โดยมีชุดข้อมูลฝึกที่ระบุ Label ของอีเมลแต่ละรายการไว้อย่างชัดเจน ควรใช้แนวทาง Machine Learning ประเภทใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Supervised Learning เพราะโมเดลเรียนรู้จากข้อมูลที่มี Label กำกับ"
+      },
+      {
+        "key": "ข",
+        "text": "Unsupervised Learning เพราะโมเดลต้องค้นหากลุ่มข้อมูลโดยไม่มี Label"
+      },
+      {
+        "key": "ค",
+        "text": "Reinforcement Learning เพราะต้องให้ Agent รับ Reward ทุกครั้งที่พบคำว่า Spam"
+      },
+      {
+        "key": "ง",
+        "text": "Self-Supervised Learning เพราะต้องลบ Label ทั้งหมดก่อนฝึกโมเดลเสมอ"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "Supervised Learning เพราะโมเดลเรียนรู้จากข้อมูลที่มี Label กำกับ",
+    "explanation": "Supervised Learning เป็นแนวทางที่ใช้ข้อมูลฝึกซึ่งมี Input และ Target Label กำกับ เพื่อให้โมเดลเรียนรู้ความสัมพันธ์ระหว่างข้อมูลกับผลลัพธ์ที่ต้องการ การจำแนกอีเมล Spam และ Not Spam จัดเป็น Classification ซึ่งเป็นงานในกลุ่ม Supervised Learning ข้อ ข Unsupervised Learning ใช้ข้อมูลที่ไม่มี Label เพื่อค้นหาโครงสร้างหรือกลุ่มข้อมูล ข้อ ค Reinforcement Learning ใช้ Agent เรียนรู้ผ่านการโต้ตอบกับ Environment และรับ Reward หรือ Penalty ข้อ ง Self-Supervised Learning สร้างเป้าหมายการเรียนรู้จากข้อมูลเอง ไม่ใช่การฝึกจาก Label ที่มีอยู่แล้วโดยตรง",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-142",
+    "number": 142,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Unsupervised Learning",
+    "difficulty": "intermediate",
+    "question": "นักวิเคราะห์ข้อมูลต้องการแบ่งกลุ่มลูกค้าตามพฤติกรรมการซื้อ โดยไม่มีข้อมูล Label ว่าลูกค้าแต่ละคนอยู่ในกลุ่มใดล่วงหน้า และต้องการกำหนดจำนวนกลุ่มเป็น 5 กลุ่ม ควรใช้วิธีใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Linear Regression เพราะทำนายค่าตัวเลขของสมาชิกแต่ละกลุ่ม"
+      },
+      {
+        "key": "ข",
+        "text": "K-Means Clustering เพราะสามารถแบ่งข้อมูลออกเป็น K กลุ่มตามความคล้ายคลึง"
+      },
+      {
+        "key": "ค",
+        "text": "Decision Tree Classification เพราะจำเป็นต้องใช้ Label ที่กำหนดไว้ล่วงหน้า"
+      },
+      {
+        "key": "ง",
+        "text": "Logistic Regression เพราะเหมาะกับการเรียนรู้แบบไม่มี Target Variable"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "K-Means Clustering เพราะสามารถแบ่งข้อมูลออกเป็น K กลุ่มตามความคล้ายคลึง",
+    "explanation": "K-Means เป็นอัลกอริทึม Unsupervised Learning ที่แบ่งข้อมูลออกเป็น K Clusters โดยปรับตำแหน่ง Centroid ให้ลดผลรวมระยะห่างกำลังสองระหว่างจุดข้อมูลกับ Centroid ของกลุ่ม เหมาะกับสถานการณ์ที่ต้องการแบ่งลูกค้าตามความคล้ายคลึงโดยไม่มี Label ข้อ ก Linear Regression เป็น Supervised Learning สำหรับทำนายค่าตัวเลขต่อเนื่อง ข้อ ค Decision Tree Classification เป็น Supervised Learning ที่ต้องเรียนรู้จากข้อมูลตัวอย่างและ Label ข้อ ง Logistic Regression ใช้สำหรับ Classification แบบ Supervised",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-143",
+    "number": 143,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Reinforcement Learning",
+    "difficulty": "intermediate",
+    "question": "ในระบบ Reinforcement Learning สำหรับฝึกหุ่นยนต์เดินหลบสิ่งกีดขวาง ข้อใดอธิบายความสัมพันธ์ของ Agent, Environment, Action และ Reward ได้ถูกต้อง?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "Environment เป็นผู้เลือก Action ส่วน Agent มีหน้าที่ให้ Reward เท่านั้น"
+      },
+      {
+        "key": "ข",
+        "text": "Agent รับรู้ State เลือก Action เพื่อโต้ตอบกับ Environment และได้รับ Reward จากผลลัพธ์"
+      },
+      {
+        "key": "ค",
+        "text": "Reward คือข้อมูล Label ที่มนุษย์กำหนดให้ทุกภาพก่อนเริ่มฝึกเท่านั้น"
+      },
+      {
+        "key": "ง",
+        "text": "Action คือผลลัพธ์สุดท้ายของโมเดล ส่วน State คือค่าคะแนนความแม่นยำของระบบ"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "Agent รับรู้ State เลือก Action เพื่อโต้ตอบกับ Environment และได้รับ Reward จากผลลัพธ์",
+    "explanation": "Reinforcement Learning เป็นกระบวนการเรียนรู้ผ่านการโต้ตอบ โดย Agent สังเกต State หรือ Observation จาก Environment จากนั้นเลือก Action เพื่อเปลี่ยนแปลงสถานะของ Environment และได้รับ Reward ซึ่งเป็นสัญญาณบอกคุณค่าของผลลัพธ์ Agent ใช้ประสบการณ์สะสมเพื่อปรับ Policy ให้ได้ผลตอบแทนสะสมที่ดีในระยะยาว ข้อ ก สลับหน้าที่ของ Agent และ Environment ข้อ ค อธิบายการใช้ Label ใน Supervised Learning ข้อ ง สับสนระหว่าง State, Action และ Evaluation Metric",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-144",
+    "number": 144,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Confusion Matrix",
+    "difficulty": "intermediate",
+    "question": "โมเดลตรวจจับโรคมีผลการทำนายดังนี้ TP = 80, TN = 900, FP = 20 และ FN = 100 หากต้องการคำนวณ Recall หรือ Sensitivity จะได้ค่าเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "40%"
+      },
+      {
+        "key": "ข",
+        "text": "44.44%"
+      },
+      {
+        "key": "ค",
+        "text": "80%"
+      },
+      {
+        "key": "ง",
+        "text": "97.78%"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "44.44%",
+    "explanation": "Recall หรือ Sensitivity คำนวณจาก TP / (TP + FN) ซึ่งวัดสัดส่วนของผู้ที่เป็นโรคจริงและโมเดลสามารถตรวจพบได้ แทนค่าเป็น 80 / (80 + 100) = 80 / 180 = 0.4444 หรือประมาณ 44.44% ตรงกับตัวเลือก ข",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-145",
+    "number": 145,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Confusion Matrix และ Precision",
+    "difficulty": "intermediate",
+    "question": "โมเดลตรวจจับการฉ้อโกงมี TP = 90, FP = 30, TN = 870 และ FN = 10 ค่า Precision ของโมเดลเท่ากับเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "75%"
+      },
+      {
+        "key": "ข",
+        "text": "90%"
+      },
+      {
+        "key": "ค",
+        "text": "96.67%"
+      },
+      {
+        "key": "ง",
+        "text": "98.89%"
+      }
+    ],
+    "answer": "ก",
+    "answerText": "75%",
+    "explanation": "Precision คำนวณจาก TP / (TP + FP) เพื่อวัดว่าในบรรดารายการที่โมเดลทำนายว่าเป็น Positive มีสัดส่วนเท่าใดที่เป็น Positive จริง แทนค่าเป็น 90 / (90 + 30) = 90 / 120 = 0.75 หรือ 75% ข้อ ข 90% เป็นค่า Recall เพราะ 90 / (90 + 10) = 90%",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-146",
+    "number": 146,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - F1-Score",
+    "difficulty": "advanced",
+    "question": "โมเดลจำแนกข้อมูลมี Precision = 0.80 และ Recall = 0.60 ค่า F1-Score ซึ่งเป็น Harmonic Mean ของ Precision และ Recall มีค่าเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "0.60"
+      },
+      {
+        "key": "ข",
+        "text": "0.69 (0.6857)"
+      },
+      {
+        "key": "ค",
+        "text": "0.75"
+      },
+      {
+        "key": "ง",
+        "text": "0.80"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "0.69 (0.6857)",
+    "explanation": "ใช้สูตร F1 = 2 × (Precision × Recall) / (Precision + Recall) แทนค่าได้เป็น 2 × (0.80 × 0.60) / (0.80 + 0.60) = 0.96 / 1.40 = 0.6857 หรือประมาณ 0.69 ตรงกับตัวเลือก ข",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-147",
+    "number": 147,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Activation Functions",
+    "difficulty": "intermediate",
+    "question": "ในการฝึก Deep Neural Network แบบหลายชั้น หากใช้ Sigmoid Activation Function ในหลายชั้นต่อเนื่องกัน อาจพบปัญหา Vanishing Gradient สาเหตุหลักคือข้อใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงมากจน Gradient ระเบิดในทุกชั้น"
+      },
+      {
+        "key": "ข",
+        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ที่ส่งย้อนกลับผ่านหลายชั้นอาจลดลงอย่างรวดเร็ว"
+      },
+      {
+        "key": "ค",
+        "text": "Sigmoid ไม่สามารถให้ผลลัพธ์ที่อยู่ในช่วง 0 ถึง 1 ได้"
+      },
+      {
+        "key": "ง",
+        "text": "Sigmoid ทำให้ Neural Network ไม่สามารถคำนวณค่า Weight ได้เลย"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ที่ส่งย้อนกลับผ่านหลายชั้นอาจลดลงอย่างรวดเร็ว",
+    "explanation": "Sigmoid มีรูปแบบ f(x) = 1 / (1 + e^-x) และอนุพันธ์ f'(x) = f(x)(1-f(x)) ซึ่งมีค่าสูงสุดเท่ากับ 0.25 เมื่อ x = 0 และจะเข้าใกล้ศูนย์ในบริเวณที่อิ่มตัว เมื่อใช้หลายชั้นและคำนวณ Gradient ด้วย Backpropagation การคูณอนุพันธ์ที่มีค่าน้อยต่อเนื่องกันทำให้ Gradient ลดลงจนชั้นต้น ๆ ได้รับสัญญาณการเรียนรู้น้อย เกิด Vanishing Gradient ข้อ ก ผิดเพราะอนุพันธ์ของ Sigmoid ไม่ได้มีค่าสูงมาก ข้อ ค ผิดเพราะ Sigmoid ให้ผลลัพธ์อยู่ในช่วง 0 ถึง 1 ข้อ ง ผิดเพราะ Neural Network ยังคำนวณและปรับ Weight ได้ แต่ประสิทธิภาพในการเรียนรู้อาจลดลง",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-148",
+    "number": 148,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Transformer Architecture",
+    "difficulty": "advanced",
+    "question": "ใน Transformer Architecture กลไก Self-Attention ใช้ Query (Q), Key (K) และ Value (V) เพื่อคำนวณความสัมพันธ์ระหว่าง Token ข้อใดอธิบายกระบวนการได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "นำ Q ไปบวกกับ K เพื่อสร้าง Token ใหม่ จากนั้นใช้ V เป็นค่า Learning Rate"
+      },
+      {
+        "key": "ข",
+        "text": "คำนวณคะแนนความสัมพันธ์จาก Q และ K หารด้วยรากที่สองของมิติของ K จากนั้นใช้ Softmax เพื่อสร้างน้ำหนักและนำไปถ่วงน้ำหนัก V"
+      },
+      {
+        "key": "ค",
+        "text": "ใช้ V คำนวณคะแนน Attention โดยตรง ส่วน Q และ K มีหน้าที่เก็บข้อมูลตำแหน่งเท่านั้น"
+      },
+      {
+        "key": "ง",
+        "text": "ใช้ Q, K และ V เพื่อแปลงข้อมูลทั้งหมดเป็น Binary Encoding ก่อนส่งเข้า Convolution Layer"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "คำนวณคะแนนความสัมพันธ์จาก Q และ K หารด้วยรากที่สองของมิติของ K จากนั้นใช้ Softmax เพื่อสร้างน้ำหนักและนำไปถ่วงน้ำหนัก V",
+    "explanation": "Scaled Dot-Product Attention มีรูปแบบ Attention(Q,K,V) = softmax(QK^T / √d_k)V โดย Query ใช้ค้นหาข้อมูลที่เกี่ยวข้อง Key ใช้แสดงคุณลักษณะที่ใช้เปรียบเทียบความสัมพันธ์ และ Value เป็นข้อมูลที่ถูกนำมาถ่วงน้ำหนักตามคะแนน Attention การหารด้วย √d_k ช่วยควบคุมขนาดคะแนนก่อนผ่าน Softmax",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-149",
+    "number": 149,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Retrieval-Augmented Generation",
+    "difficulty": "advanced",
+    "question": "องค์กรต้องการสร้าง RAG System เพื่อให้ Large Language Model ตอบคำถามจากเอกสารภายในบริษัท ขั้นตอนใดเรียงลำดับการเตรียมข้อมูลและการค้นคืนข้อมูลได้ถูกต้องที่สุด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "สร้างคำตอบด้วย LLM → แบ่งเอกสาร → สร้าง Embedding → เก็บข้อมูลใน Vector Database"
+      },
+      {
+        "key": "ข",
+        "text": "แบ่งเอกสารเป็น Chunk → สร้าง Embedding → จัดเก็บใน Vector Database → ค้นคืนด้วย Similarity → ส่งบริบทให้ LLM"
+      },
+      {
+        "key": "ค",
+        "text": "เก็บเอกสารใน Vector Database → ลบข้อมูลต้นฉบับ → ใช้ Softmax ค้นคืน → ฝึก LLM ใหม่ทุกครั้ง"
+      },
+      {
+        "key": "ง",
+        "text": "แบ่งเอกสารเป็น Chunk → ใช้ Tokenizer สร้างคำตอบ → ส่งเข้า SQL Database → ให้ LLM สร้าง Embedding ภายหลัง"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "แบ่งเอกสารเป็น Chunk → สร้าง Embedding → จัดเก็บใน Vector Database → ค้นคืนด้วย Similarity → ส่งบริบทให้ LLM",
+    "explanation": "RAG ประกอบด้วยขั้นตอน Ingestion และ Retrieval ในขั้นตอนเตรียมข้อมูลจะนำเอกสารมาแบ่งเป็น Chunk เพื่อจัดการขนาดข้อมูล จากนั้นใช้ Embedding Model แปลงแต่ละ Chunk เป็น Vector แล้วจัดเก็บใน Vector Database เมื่อผู้ใช้ถามคำถาม ระบบจะสร้าง Embedding ของคำถามและค้นหา Chunk ที่มีความใกล้เคียง เช่น Cosine Similarity จากนั้นนำเนื้อหาที่ค้นคืนได้เข้าไปเป็น Context ใน Prompt ก่อนส่งให้ LLM สร้างคำตอบ",
+    "sourcePage": 5
+  },
+  {
+    "id": "q-150",
+    "number": 150,
+    "categoryId": "ai-datascience",
+    "tag": "กลุ่ม 5 - Model Quantization และ VRAM",
+    "difficulty": "advanced",
+    "question": "นักพัฒนาต้องการโหลดโมเดล AI ที่มีพารามิเตอร์ 7 พันล้านตัว (7B Parameters) ด้วยการ Quantize เป็น INT4 โดยสมมติให้ใช้หน่วยความจำ 0.5 Byte ต่อ Parameter และมี Overhead เพิ่มเติม 20% ต้องใช้ VRAM สำหรับน้ำหนักโมเดลโดยประมาณเท่าใด?",
+    "options": [
+      {
+        "key": "ก",
+        "text": "3.5 GB"
+      },
+      {
+        "key": "ข",
+        "text": "4.2 GB"
+      },
+      {
+        "key": "ค",
+        "text": "7.0 GB"
+      },
+      {
+        "key": "ง",
+        "text": "8.4 GB"
+      }
+    ],
+    "answer": "ข",
+    "answerText": "4.2 GB",
+    "explanation": "INT4 ใช้หน่วยความจำ 4 บิตต่อ Parameter หรือเท่ากับ 0.5 Byte ต่อ Parameter ดังนั้นโมเดล 7 พันล้าน Parameters ต้องใช้หน่วยความจำพื้นฐาน 7,000,000,000 × 0.5 = 3,500,000,000 Bytes หรือประมาณ 3.5 GB จากนั้นเพิ่ม Overhead 20% โดยคำนวณ 3.5 × 1.2 = 4.2 GB ข้อ ก เป็นขนาดน้ำหนักโมเดลก่อนเพิ่ม Overhead ข้อ ค ใช้หน่วยความจำ 1 Byte ต่อ Parameter ซึ่งตรงกับ INT8 ข้อ ง เป็นการใช้หน่วยความจำ 1 Byte ต่อ Parameter พร้อมเพิ่ม Overhead 20%",
+    "sourcePage": 5
   }
 ];

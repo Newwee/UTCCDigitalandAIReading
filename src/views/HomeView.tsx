@@ -86,7 +86,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           </h1>
 
           <p className="text-base sm:text-lg text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
-            รวบรวมเนื้อหาครบถ้วนจากคู่มือเตรียมสอบฉบับสมบูรณ์ (57 หน้า) ทั้ง 5 กลุ่มความรู้, 100 ข้อสอบจำลองพร้อมเฉลยละเอียด, 40 คำศัพท์เทคนิค และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
+            รวบรวมเนื้อหาครบถ้วนจากคู่มือเตรียมสอบฉบับสมบูรณ์ (57 หน้า) ทั้ง 5 กลุ่มความรู้, 150 ข้อสอบจำลองพร้อมเฉลยละเอียด, 40 คำศัพท์เทคนิค และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
           </p>
 
           {/* Action CTAs */}
@@ -336,10 +336,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                         else onSelectTab('revision');
                       }}
                       className="px-2.5 py-1 rounded-md bg-[#35D5F2]/10 hover:bg-[#35D5F2] text-[#35D5F2] hover:text-[#080D1B] border border-[#35D5F2]/30 text-[11px] font-bold transition-all flex items-center gap-1"
-                      title="ทำข้อสอบ 20 ข้อของหน่วยนี้"
+                      title="ทำข้อสอบ 30 ข้อของหน่วยนี้"
                     >
                       <Target className="w-3 h-3" />
-                      <span>สอบ 20 ข้อ</span>
+                      <span>สอบ 30 ข้อ</span>
                     </button>
                   </div>
                 </div>
@@ -365,7 +365,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
           >
             <Target className="w-5 h-5 text-[#35D5F2] mb-2 group-hover:scale-110 transition-transform" />
             <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ข้อสอบแยก 5 หน่วย</h4>
-            <p className="text-[11px] text-[var(--text-muted)] mt-1">เจาะลึกหน่วยละ 20 ข้อ</p>
+            <p className="text-[11px] text-[var(--text-muted)] mt-1">เจาะลึกหน่วยละ 30 ข้อ</p>
           </button>
 
           <button
@@ -382,7 +382,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             className="p-4 rounded-xl bg-[var(--bg-card)] hover:bg-[var(--bg-elevated)] border border-[var(--border-color)] hover:border-[#35D5F2]/40 text-left transition-all group"
           >
             <Sparkles className="w-5 h-5 text-[#35D5F2] mb-2 group-hover:scale-110 transition-transform" />
-            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ข้อสอบรวม 100 ข้อ</h4>
+            <h4 className="text-xs sm:text-sm font-bold text-[var(--text-primary)]">ข้อสอบรวม 150 ข้อ</h4>
             <p className="text-[11px] text-[var(--text-muted)] mt-1">Full Mock Exam จับเวลา</p>
           </button>
 

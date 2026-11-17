@@ -67,7 +67,7 @@ export const UNIT_SUMMARIES: UnitSummary[] = [
     nameEn: 'General IT, History, Emerging Tech & Ethics',
     color: '#35D5F2',
     sourcePages: 'หน้า 2–5, 20–24',
-    questionRange: 'ข้อ 1–20 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 1–20, 101–110)',
     oneLiner: 'จำยุคคอมพิวเตอร์ (หลอดสูญญากาศ→ทรานซิสเตอร์→IC→VLSI), 4 บุคคลสำคัญ, สเปก Wi-Fi 7 (802.11be), หลักการควอนตัม (Superposition/Entanglement) และกฎหมาย PDPA',
     mustRememberPoints: [
       'ยุคคอมพิวเตอร์: ยุค 1 = หลอดสูญญากาศ (ENIAC), ยุค 2 = ทรานซิสเตอร์, ยุค 3 = แผงวงจรรวม (IC), ยุค 4 = ไมโครโพรเซสเซอร์ (VLSI/Intel 4004), ยุค 5 = ปัญญาประดิษฐ์และควอนตัม',
@@ -184,7 +184,7 @@ export const UNIT_SUMMARIES: UnitSummary[] = [
     nameEn: 'Computer Networks, Protocols, Subnetting & Cloud',
     color: '#8B7CFF',
     sourcePages: 'หน้า 5–8, 20–24',
-    questionRange: 'ข้อ 21–40 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 21–40, 111–120)',
     oneLiner: 'จำ OSI 7 เลเยอร์และ PDU ให้แม่น, คำนวณ Subnetting /24 ถึง /30 ให้ไวใน 10 วินาที, จำ Private IP ทั้ง 3 คลาส และแยกความต่างของ IaaS/PaaS/SaaS และ Container',
     mustRememberPoints: [
       'OSI 7 Layers (บนลงล่าง): Application(7) -> Presentation(6) -> Session(5) -> Transport(4) -> Network(3) -> Data Link(2) -> Physical(1)',
@@ -320,7 +320,7 @@ export const UNIT_SUMMARIES: UnitSummary[] = [
     nameEn: 'Computer Architecture, Memory Hierarchy, RAID & OS Internals',
     color: '#53DBAB',
     sourcePages: 'หน้า 8–11, 20–24',
-    questionRange: 'ข้อ 41–60 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 41–60, 121–130)',
     oneLiner: 'คำนวณ AMAT แคชให้เป็น, ท่องวงรอบคำสั่ง Fetch-Decode-Execute, แยกสถาปัตยกรรม von Neumann กับ Harvard, จำระดับ RAID 0/1/5/6/10 และคำนวณสิทธิ์ไฟล์ Linux (chmod)',
     mustRememberPoints: [
       'von Neumann vs Harvard: von Neumann ใช้บัสและหน่วยความจำชุดเดียวกันเก็บทั้ง Code และ Data เกิด von Neumann Bottleneck ส่วน Harvard แยกบัสคำสั่งและบัสข้อมูลอิสระ ดึงพร้อมกันได้',
@@ -453,7 +453,7 @@ export const UNIT_SUMMARIES: UnitSummary[] = [
     nameEn: 'Data Structures, Big-O Complexity, Algorithms & Logic',
     color: '#EC4899',
     sourcePages: 'หน้า 11–14, 20–24',
-    questionRange: 'ข้อ 61–80 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 61–80, 131–140)',
     oneLiner: 'จำลำดับ Big-O (O(1) < O(log N) < O(N) < O(N log N) < O(N²)), สัญลักษณ์ผังงาน Flowchart, กฎเดอมอร์แกนของบูลีน และคุณสมบัติ In-Order Traversal ของ Binary Search Tree',
     mustRememberPoints: [
       'สัญลักษณ์ Flowchart (ISO 5807): สี่เหลี่ยมมุมมน/วงรี = Start/End, สี่เหลี่ยมผืนผ้า = Process/การคำนวณ, สี่เหลี่ยมขนมเปียกปูน = Input/Output, สี่เหลี่ยมข้าวหลามตัด (Diamond) = Decision/เงื่อนไข, วงกลม = จุดเชื่อมต่อ (Connector)',
@@ -570,7 +570,7 @@ export const UNIT_SUMMARIES: UnitSummary[] = [
     nameEn: 'AI, Machine Learning, Deep Learning & LLMs',
     color: '#F59E0B',
     sourcePages: 'หน้า 14–18, 20–24',
-    questionRange: 'ข้อ 81–100 (20 ข้อ)',
+    questionRange: '30 ข้อ (ข้อ 81–100, 141–150)',
     oneLiner: 'จำ 3 เสาหลัก ML, คำนวณ Confusion Matrix (Accuracy, Precision, Recall, F1), เข้าใจ Self-Attention ใน Transformer, ขั้นตอน RAG และคำนวณ VRAM ของ Quantization (FP16/INT8/INT4)',
     mustRememberPoints: [
       '3 กลุ่มหลักของ ML: Supervised (มี Label: Classification และ Regression), Unsupervised (ไม่มี Label: k-Means Clustering และ PCA ลดมิติ), Reinforcement (Agent เรียนรู้ผ่าน Action-Reward)',
