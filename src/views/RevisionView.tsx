@@ -33,6 +33,7 @@ import { GradientText } from '../components/ui/GradientText';
 import { UnitExamEngine } from '../components/UnitExamEngine';
 import { EasySummariesView } from '../components/EasySummariesView';
 import { CategoryId } from '../types';
+import { NavTab } from '../components/Header';
 
 export type RevisionTab = 'unit-tests' | 'summaries' | 'quiz' | 'flashcards' | 'traps' | 'advanced' | 'strategy';
 
@@ -40,12 +41,14 @@ interface RevisionViewProps {
   onOpenTopic: (topicId: string) => void;
   initialTab?: RevisionTab;
   initialCategoryId?: CategoryId;
+  onSelectTab?: (tab: NavTab) => void;
 }
 
 export const RevisionView: React.FC<RevisionViewProps> = ({ 
   onOpenTopic, 
   initialTab = 'unit-tests',
-  initialCategoryId
+  initialCategoryId,
+  onSelectTab
 }) => {
   const [activeTab, setActiveTab] = useState<RevisionTab>(initialTab);
   const [currentCategoryId, setCurrentCategoryId] = useState<CategoryId | undefined>(initialCategoryId);
@@ -748,20 +751,36 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
       {/* ======================================================== */}
       {activeTab === 'advanced' && (
         <div className="space-y-6">
-          <div className="p-4 rounded-2xl bg-[#EC4899]/10 border border-[#EC4899]/30 text-xs text-[var(--text-secondary)]">
-            <h4 className="font-bold text-[#EC4899]">โจทย์วิเคราะห์และบูรณาการระดับสูง (รอบชิงชนะเลิศ 10 ข้ออัตนัย)</h4>
-            <p className="mt-0.5 leading-relaxed">
-              จำลองแนวข้อสอบอัตนัย 3 ข้อใหญ่จากคู่มือเตรียมสอบ (หน้า 52–54) เพื่อฝึกทักษะการคำนวณและวิเคราะห์อย่างเป็นขั้นตอน
-            </p>
+          <div className="p-4 rounded-2xl bg-[#EC4899]/10 border border-[#EC4899]/30 text-xs text-[var(--text-secondary)] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h4 className="font-bold text-[#EC4899]">โจทย์วิเคราะห์และบูรณาการรอบชิงชนะเลิศ (10 ข้ออัตนัย ครบ 5 หมวดความรู้)</h4>
+              <p className="mt-0.5 leading-relaxed">
+                ชุดข้อสอบข้อเขียนอัตนัย 10 ข้อสำหรับรอบชิงชนะเลิศ อ้างอิงตามระเบียบการแข่งขัน UTCC Digital and AI Challenge 2026 (ข้อ 3.3 แข่งขันแบบทีม 10 ข้อ หากคะแนนเท่ากันตัดสินจากเวลา) พร้อมเกณฑ์ Rubric และแนวทางการวิเคราะห์ทีละขั้นตอน
+              </p>
+            </div>
+            {onSelectTab && (
+              <button
+                onClick={() => onSelectTab('must-remember')}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#EC4899] hover:bg-[#d63384] text-white font-bold text-xs shrink-0 transition-all shadow-md active:scale-95 cursor-pointer"
+              >
+                <Flame className="w-4 h-4" />
+                <span>ซ้อมจับเวลาใน "จำก่อนสอบ"</span>
+              </button>
+            )}
           </div>
 
           <div className="space-y-6">
             {ADVANCED_QUESTIONS.map(adv => (
               <SpotlightCard key={adv.id} className="p-6 sm:p-8 space-y-5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EC4899]/15 text-[#EC4899] border border-[#EC4899]/30">
-                    {adv.topic}
-                  </span>
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#EC4899]/15 text-[#EC4899] border border-[#EC4899]/30">
+                      หมวด {adv.categoryNumber}: {adv.categoryName}
+                    </span>
+                    <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                      คะแนนเต็ม {adv.maxScore} คะแนน
+                    </span>
+                  </div>
                   <span className="text-xs font-mono text-[var(--text-muted)]">
                     หน้า {adv.sourcePage} ใน Study Guide
                   </span>
@@ -774,7 +793,25 @@ export const RevisionView: React.FC<RevisionViewProps> = ({
                   <div className="p-4 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border-color)] text-xs text-[var(--text-secondary)] leading-relaxed whitespace-pre-line font-mono">
                     {adv.scenario}
                   </div>
+                  <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/20 text-xs text-blue-300 whitespace-pre-line leading-relaxed">
+                    <strong className="text-blue-200 block mb-1">คำถามและประเด็นที่ต้องตอบ:</strong>
+                    {adv.questionPrompt}
+                  </div>
                 </div>
+
+                {adv.rubric && adv.rubric.length > 0 && (
+                  <div className="p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/20 space-y-1.5 text-xs">
+                    <div className="font-bold text-amber-300">เกณฑ์การให้คะแนน (Scoring Rubric):</div>
+                    <ul className="space-y-1 pl-4 text-[var(--text-secondary)]">
+                      {adv.rubric.map((r, rIdx) => (
+                        <li key={rIdx} className="flex items-start justify-between gap-2">
+                          <span>• {r.criterion}</span>
+                          <span className="font-bold text-amber-400 shrink-0">{r.points} คะแนน</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <div className="space-y-3 pt-2">
                   <h4 className="text-xs font-bold uppercase tracking-wider text-[#35D5F2]">

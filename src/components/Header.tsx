@@ -45,7 +45,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'library', label: 'คลังเนื้อหา', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
     { id: 'revision', label: 'ข้อสอบ & สรุปย่อ', icon: Award, tag: 'NEW 150 ข้อ' },
-    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, tag: 'HOT' },
+    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, tag: 'HOT 10 ข้อ' },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2 },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles },

@@ -45,11 +45,11 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
     { id: 'library', label: 'คลังบทเรียน', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
     { id: 'revision', label: 'ข้อสอบ', icon: Award, badge: '150 ข้อ' },
-    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, badge: 'HOT' },
+    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, badge: '10 ข้อ' },
   ];
 
   const moreItems: { id: NavTab; label: string; icon: React.ElementType; desc: string; badge?: number }[] = [
-    { id: 'must-remember', label: 'จำก่อนสอบ (ติวเข้ม & ม็อกสอบ 100 ข้อ)', icon: Flame, desc: 'สรุป 5 หมวด + สนามสอบจำลองพร้อมเฉลยละเอียด' },
+    { id: 'must-remember', label: 'จำก่อนสอบ (ข้อเขียน 10 ข้อ + ม็อก 100 ข้อ)', icon: Flame, desc: 'ข้อเขียนรอบชิง 10 ข้อ กติกาข้อ 3.3 + ม็อกสอบ 100 ข้อ' },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2, desc: 'ตรวจสอบความถูกต้องและครอบคลุมครบ 100%' },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, desc: 'บทเรียนที่คั่นหน้าและประวัติการอ่านล่าสุด', badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles, desc: 'กำหนดการ รางวัล และเกณฑ์การสอบ UTCC' },

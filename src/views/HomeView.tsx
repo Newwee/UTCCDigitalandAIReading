@@ -30,7 +30,7 @@ import { CONTENT_AUDIT_REPORT } from '../data/contentAudit';
 import { COMPETITION_DATA } from '../data/competitionInfo';
 import { NavTab } from '../components/Header';
 import { CategoryId } from '../types';
-import { Target, Lightbulb } from 'lucide-react';
+import { Target, Lightbulb, FileText } from 'lucide-react';
 
 interface HomeViewProps {
   onSelectTab: (tab: NavTab) => void;
@@ -95,9 +95,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
               className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white text-sm sm:text-base font-black transition-all shadow-lg shadow-orange-500/30 transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
             >
               <Flame className="w-5 h-5 text-amber-200 fill-amber-200 shrink-0" />
-              <span>🔥 จำก่อนสอบ (สรุปเข้ม + ม็อกสอบ)</span>
+              <span>🔥 จำก่อนสอบ (ข้อเขียน 10 ข้อ + ม็อก 100 ข้อ)</span>
               <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-white text-rose-600 uppercase tracking-wider shrink-0 animate-pulse shadow-sm">
-                HOT 100 ข้อ
+                HOT รอบชิง 10 ข้อ
               </span>
             </button>
 
@@ -267,8 +267,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               </span>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {/* Feature 1: Unit Drill 150 ข้อ */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               <div 
                 onClick={() => onOpenRevision ? onOpenRevision('unit-tests') : onSelectTab('revision')}
                 className="p-6 rounded-2xl bg-[var(--bg-elevated)]/90 hover:bg-[var(--bg-elevated)] border-2 border-[#35D5F2]/40 hover:border-[#35D5F2] transition-all cursor-pointer group shadow-card-elevated space-y-4 hover:shadow-glow-cyan transform hover:-translate-y-1"
@@ -297,7 +296,6 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 </div>
               </div>
 
-              {/* Feature 2: Easy Summaries & Cheat Sheets */}
               <div 
                 onClick={() => onOpenRevision ? onOpenRevision('summaries') : onSelectTab('revision')}
                 className="p-6 rounded-2xl bg-[var(--bg-elevated)]/90 hover:bg-[var(--bg-elevated)] border-2 border-[#8B7CFF]/40 hover:border-[#8B7CFF] transition-all cursor-pointer group shadow-card-elevated space-y-4 hover:shadow-glow-violet transform hover:-translate-y-1"
@@ -322,6 +320,34 @@ export const HomeView: React.FC<HomeViewProps> = ({
 
                 <div className="pt-2 flex items-center justify-between text-xs font-black text-[#8B7CFF]">
                   <span>เปิดอ่านสรุปฉบับเข้าใจง่ายทันที</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                </div>
+              </div>
+
+              <div 
+                onClick={() => onSelectTab('must-remember')}
+                className="p-6 rounded-2xl bg-[var(--bg-elevated)]/90 hover:bg-[var(--bg-elevated)] border-2 border-[#EC4899]/40 hover:border-[#EC4899] transition-all cursor-pointer group shadow-card-elevated space-y-4 hover:shadow-pink-500/20 transform hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="w-12 h-12 rounded-2xl bg-[#EC4899]/15 text-[#EC4899] border border-[#EC4899]/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <FileText className="w-6 h-6 text-[#EC4899]" />
+                  </div>
+                  <span className="px-3 py-1 rounded-full text-[11px] font-black bg-[#EC4899] text-white shadow-sm">
+                    กติกาข้อ 3.3 • 100 คะแนน
+                  </span>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-black text-[var(--text-primary)] group-hover:text-[#EC4899] transition-colors flex items-center gap-2">
+                    <span>📝 ข้อเขียนรอบชิง 10 ข้อ (Team Subjective)</span>
+                  </h3>
+                  <p className="text-xs text-[var(--text-secondary)] mt-2 leading-relaxed">
+                    ตอบคำถามอัตนัย 10 ข้อแบบทีม (ครบ 5 หมวด หมวดละ 2 ข้อ) หากคะแนนเท่ากันตัดสินจากเวลา พร้อมระบบจับเวลาซ้อมทีม ช่องพิมพ์ตอบ และ Rubric เต็ม 10/10
+                  </p>
+                </div>
+
+                <div className="pt-2 flex items-center justify-between text-xs font-black text-[#EC4899]">
+                  <span>เปิดซ้อมข้อเขียนรอบชิง 10 ข้อทันที</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
                 </div>
               </div>

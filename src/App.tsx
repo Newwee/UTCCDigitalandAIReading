@@ -164,6 +164,7 @@ export function App() {
             onOpenTopic={handleOpenTopic} 
             initialTab={revisionSubTab}
             initialCategoryId={revisionCategory}
+            onSelectTab={handleSelectTab}
           />
         )}
 
