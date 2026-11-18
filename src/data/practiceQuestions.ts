@@ -36,11 +36,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Charles Babbage"
+        "text": "Ada Lovelace"
       },
       {
         "key": "ข",
-        "text": "Ada Lovelace"
+        "text": "Charles Babbage"
       },
       {
         "key": "ค",
@@ -51,7 +51,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "Alan Turing"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "Ada Lovelace",
     "explanation": "Charles Babbage เป็นผู้ออกแบบเครื่อง Analytical Engine ส่วน Ada Lovelace เป็นผู้เขียนบันทึกขั้นตอนการทำงาน (Algorithm/Program) สำหรับเครื่องดังกล่าวในปี ค.ศ. 1843 จึงได้รับ การยกย่องเป็นโปรแกรมเมอร์คนแรกของโลก",
     "sourcePage": 24
@@ -104,14 +104,14 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ค",
-        "text": "Availability (ความพร้อมใช้งาน)"
+        "text": "Authentication (การพิสูจน์ตัวตน)"
       },
       {
         "key": "ง",
-        "text": "Authentication (การพิสูจน์ตัวตน)"
+        "text": "Availability (ความพร้อมใช้งาน)"
       }
     ],
-    "answer": "ค",
+    "answer": "ง",
     "answerText": "Availability (ความพร้อมใช้งาน)",
     "explanation": "ตามหลักการ CIA Triad ของ NIST Availability คือการรับ ประกันว่าระบบและข้อมูลพร้อมให้ผู้มีสิทธิ์เข้าถึงได้ตลอดเวลาที่ต้องการ",
     "sourcePage": 25
@@ -156,11 +156,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Demis Hassabis และ John Jumper"
+        "text": "John Hopfield และ Geoffrey Hinton"
       },
       {
         "key": "ข",
-        "text": "John Hopfield และ Geoffrey Hinton"
+        "text": "Demis Hassabis และ John Jumper"
       },
       {
         "key": "ค",
@@ -171,7 +171,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "Jensen Huang และ Sam Altman"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "John Hopfield และ Geoffrey Hinton",
     "explanation": "John Hopfield และ Geoffrey Hinton ได้รับรางวัล โนเบลสาขาฟิสิกส์ปี 2024 จากผลงาน Hopfield Network และ Boltzmann Machine ส่วน Demis Hassabis และ John Jumper ได้รับรางวัลโนเบลสาขาเคมีจากผลงาน AlphaFold",
     "sourcePage": 25
@@ -190,7 +190,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller)"
+        "text": "ผู้ตรวจสอบข้อมูลส่วนบุคคล (Data Auditor)"
       },
       {
         "key": "ค",
@@ -198,10 +198,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "ผู้ตรวจสอบข้อมูลส่วนบุคคล (Data Auditor)"
+        "text": "ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller)"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller)",
     "explanation": "โรงเรียนเป็นผู้มีอำนาจหน้าที่ตัดสินใจเกี่ยวกับการ เก็บรวบรวม ใช้ หรือเปิดเผยข้อมูลของนักเรียน จึงมีสถานะเป็น Data Controller ส่วนนักเรียนคือ Data Subject (ThaiJo PDPA Analysis)",
     "sourcePage": 25
@@ -216,11 +216,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "PAN (Personal Area Network)"
+        "text": "LAN (Local Area Network)"
       },
       {
         "key": "ข",
-        "text": "LAN (Local Area Network)"
+        "text": "PAN (Personal Area Network)"
       },
       {
         "key": "ค",
@@ -231,7 +231,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "WAN (Wide Area Network)"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "LAN (Local Area Network)",
     "explanation": "LAN คือเครือข่ายท้องถิ่นที่ครอบคลุมพื้นที่จำกัด เช่น บ้าน อาคาร หรือโรงเรียน ส่วน WAN ครอบคลุมระดับประเทศหรือทั่วโลก",
     "sourcePage": 26
@@ -280,7 +280,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "DNS"
+        "text": "ICMP"
       },
       {
         "key": "ค",
@@ -288,10 +288,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "ICMP"
+        "text": "DNS"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "DNS",
     "explanation": "DNS (Domain Name System) ทำหน้าที่เสมือนสมุดโทรศัพท์ของอินเทอร์เน็ตในการแปลง Domain Name เป็น IP Address (ทำงานที่พอร์ต 53)",
     "sourcePage": 26
@@ -408,7 +408,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "Flash Drive"
+        "text": "Flash Drive (USB Memory)"
       }
     ],
     "answer": "ค",
@@ -426,11 +426,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Control Unit (CU)"
+        "text": "Arithmetic Logic Unit (ALU)"
       },
       {
         "key": "ข",
-        "text": "Arithmetic Logic Unit (ALU)"
+        "text": "Control Unit (CU)"
       },
       {
         "key": "ค",
@@ -441,7 +441,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "Bus Interface Unit (BIU)"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "Arithmetic Logic Unit (ALU)",
     "explanation": "ALU คือหน่วยคำนวณและตรรกะ ส่วน Control Unit ทำหน้าที่ ถอดรหัสคำสั่งและควบคุมจังหวะการทำงาน",
     "sourcePage": 27
@@ -486,23 +486,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "ใช้จานแม่เหล็กที่หมุนด้วยความเร็วสูงกว่าทำให้เก็บข้อมูลได้ถาวรกว่า"
+        "text": "มีจานแม่เหล็กหมุนด้วยรอบสูงทำให้ทนแรงสั่นสะเทือนได้ดีกว่า"
       },
       {
         "key": "ข",
-        "text": "ไม่มีชิ้นส่วนกลไกที่เคลื่อนไหว ทนแรงกระแทก และมีความเร็วในการอ่าน/เขียนข้อมูลสูงกว่ามาก"
+        "text": "ไม่มีชิ้นส่วนกลไกเคลื่อนไหว ทนแรงกระแทก และอ่านเขียนได้เร็วกว่า"
       },
       {
         "key": "ค",
-        "text": "มีราคาต่อกิกะไบต์ถูกกว่า HDD เสมอในทุกความจุ"
+        "text": "มีต้นทุนการผลิตและราคาจำหน่ายต่อความจุต่ำกว่า HDD เสมอ"
       },
       {
         "key": "ง",
-        "text": "ไม่ต้องใช้พลังงานไฟฟ้าในการทำงาน"
+        "text": "ต้องใช้พลังงานไฟฟ้าเลี้ยงวงจรตลอดเวลาเพื่อรักษาข้อมูลในชิป"
       }
     ],
-    "answer": "ข",
-    "answerText": "ไม่มีชิ้นส่วนกลไกที่เคลื่อนไหว ทนแรงกระแทก และมีความเร็วในการอ่าน/เขียนข้อมูลสูงกว่ามาก",
+    "answer": "ง",
+    "answerText": "ต้องใช้พลังงานไฟฟ้าเลี้ยงวงจรตลอดเวลาเพื่อรักษาข้อมูลในชิป",
     "explanation": "SSD ใช้ชิปหน่วยความจำ NAND Flash จึงไม่มีจานหมุนหรือหัวอ่านเชิงกล ทำให้เข้าถึงข้อมูลได้เร็วและทนต่อการสั่นสะเทือน",
     "sourcePage": 27
   },
@@ -644,14 +644,14 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ค",
-        "text": "42"
+        "text": "59"
       },
       {
         "key": "ง",
-        "text": "59"
+        "text": "42"
       }
     ],
-    "answer": "ค",
+    "answer": "ง",
     "answerText": "42",
     "explanation": "ดัชนีเริ่มนับจาก 0 ได้แก่ scores[0]=15, scores[1]=28, scores[2]=34, และ scores[3]=42",
     "sourcePage": 29
@@ -760,7 +760,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "Artificial Intelligence → Machine Learning → Deep Learning → Generative AI"
+        "text": "Generative AI → Deep Learning → Machine Learning → Artificial Intelligence"
       },
       {
         "key": "ค",
@@ -768,10 +768,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "Generative AI → Deep Learning → Machine Learning → Artificial Intelligence"
+        "text": "Artificial Intelligence → Machine Learning → Deep Learning → Generative AI"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "Artificial Intelligence → Machine Learning → Deep Learning → Generative AI",
     "explanation": "ตามนิยามของ IBM AI คือร่มใหญ่ที่สุด โดยมี Machine Learning เป็นแขนงย่อยของ AI, Deep Learning เป็นแขนง ย่อยของ ML และ Generative AI เป็นซับเซตย่อยภายใน Deep Learning",
     "sourcePage": 29
@@ -816,11 +816,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Natural Language Processing (NLP)"
+        "text": "Computer Vision (CV)"
       },
       {
         "key": "ข",
-        "text": "Computer Vision (CV)"
+        "text": "Natural Language Processing (NLP)"
       },
       {
         "key": "ค",
@@ -831,7 +831,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "Expert Systems"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "Computer Vision (CV)",
     "explanation": "Computer Vision คือสาขาของ AI ที่ทำให้คอมพิวเตอร์สามารถมอง เห็น วิเคราะห์ และทำความเข้าใจข้อมูลจากภาพนิ่งหรือวิดีโอได้",
     "sourcePage": 30
@@ -936,23 +936,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "การแยกหน่วยความจำเก็บคำสั่งโปรแกรมและหน่วยความจำเก็บข้อมูลออกจากกันคนละบัส"
+        "text": "การแยกหน่วยความจำเก็บคำสั่งและหน่วยความจำเก็บข้อมูลออกจากกันคนละชุดบัส"
       },
       {
         "key": "ข",
-        "text": "การเก็บทั้งคำสั่งของโปรแกรม (Instructions) และข้อมูล (Data) ไว้ในหน่วยความจำหลักเดียวกันในรูปแบบเลขฐานสอง"
+        "text": "การเก็บคำสั่งโปรแกรมและข้อมูลไว้ในหน่วยความจำหลักเดียวกันในรูปเลขฐานสอง"
       },
       {
         "key": "ค",
-        "text": "การใช้การ์ดเจาะรูแทนการใช้หลอดสุญญากาศทั้งหมด"
+        "text": "การประมวลผลคำสั่งทั้งหมดผ่านระบบคลาวด์ภายนอกโดยไม่พึ่งพาหน่วยความจำภายใน"
       },
       {
         "key": "ง",
-        "text": "การประมวลผลด้วย Qubit แทนการใช้บิตปกติ"
+        "text": "การประมวลผลข้อมูลด้วยวงจรตรรกะแบบขนานโดยไม่ต้องมีหน่วยควบคุมการทำงาน"
       }
     ],
     "answer": "ข",
-    "answerText": "การเก็บทั้งคำสั่งของโปรแกรม (Instructions) และข้อมูล (Data) ไว้ในหน่วยความจำหลักเดียวกันในรูปแบบ\nเลขฐานสอง",
+    "answerText": "การเก็บคำสั่งโปรแกรมและข้อมูลไว้ในหน่วยความจำหลักเดียวกันในรูปเลขฐานสอง",
     "explanation": "Stored-Program Concept ของ John von Neumann เก็บทั้งโปรแกรมและข้อมูลในหน่วย ความจำเดียวกัน (ส่วนข้อ ก. คือ Harvard Architecture)",
     "sourcePage": 31
   },
@@ -1056,23 +1056,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "แชตบอตสำหรับตอบคำถามลูกค้าทั่วไปบนเว็บไซต์อีคอมเมิร์ซ"
+        "text": "ระบบแชตบอตตอบคำถามลูกค้าทั่วไปและระบบแนะนำสินค้าบนร้านค้าออนไลน์"
       },
       {
         "key": "ข",
-        "text": "ระบบ AI สำหรับคัดกรองเรซูเม่สมัครงานและประเมินสินเชื่อธนาคาร"
+        "text": "ระบบ AI คัดกรองเรซูเม่สมัครงานและอัลกอริทึมประเมินสินเชื่อธนาคาร"
       },
       {
         "key": "ค",
-        "text": "ระบบให้คะแนนทางสังคมแก่พลเมืองโดยภาครัฐ (Social Scoring) และการสอดส่องชีวมาตรแบบเรียลไทม์ในพื้นที่ สาธารณะโดยไม่มีข้อยกเว้นตามกฎหมาย"
+        "text": "ระบบให้คะแนนทางสังคมโดยภาครัฐและการสอดส่องชีวมาตรเรียลไทม์ในที่สาธารณะ"
       },
       {
         "key": "ง",
-        "text": "ตัวกรองอีเมลขยะและระบบแนะนำภาพยนตร์ในแอปสตรีมมิง"
+        "text": "ตัวกรองอีเมลขยะสแปมและระบบแนะนำภาพยนตร์ในแอปพลิเคชันสตรีมมิง"
       }
     ],
-    "answer": "ค",
-    "answerText": "ระบบให้คะแนนทางสังคมแก่พลเมืองโดยภาครัฐ (Social Scoring) และการสอดส่องชีวมาตรแบบเรียลไทม์\nในพื้นที่สาธารณะโดยไม่มีข้อยกเว้นตามกฎหมาย",
+    "answer": "ง",
+    "answerText": "ตัวกรองอีเมลขยะสแปมและระบบแนะนำภาพยนตร์ในแอปพลิเคชันสตรีมมิง",
     "explanation": "ระบบ Social Scoring ถูกจัดเป็น Unacceptable Risk (ถูกแบน) ส่วนการคัดกรองสมัครงานและสินเชื่อ (ข้อ ข.) จัดเป็น High-Risk AI ที่ต้องมี Human Oversight ตามมาตรา 14 (ThaiJo EU AI Act Analysis)",
     "sourcePage": 32
   },
@@ -1086,23 +1086,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "การตั้งรหัสผ่านความยาว 8 ตัวอักษรที่มีตัวพิมพ์ใหญ่และตัวเลข"
+        "text": "การตั้งรหัสผ่านเดิมให้ยาวขึ้นเป็น 32 ตัวอักษรและบังคับเปลี่ยนทุกเดือน"
       },
       {
         "key": "ข",
-        "text": "การส่งรหัส OTP 6 หลักผ่านข้อความ SMS"
+        "text": "การยืนยันตัวตนด้วยรหัส OTP ผ่านข้อความ SMS ไปยังโทรศัพท์มือถือ"
       },
       {
         "key": "ค",
-        "text": "การใช้คำถามความปลอดภัยส่วนบุคคล (Security Questions)"
+        "text": "การใช้ซอฟต์แวร์แอนติไวรัสสแกนและตรวจสอบมัลแวร์บนเครื่องลูกข่าย"
       },
       {
         "key": "ง",
-        "text": "การใช้ Passkeys / ฮาร์ดแวร์กุญแจนิรภัยที่ผูกกุญแจเข้ารหัส (Cryptographic Key Pair) เข้ากับโดเมนจริงของ เว็บไซต์"
+        "text": "การใช้ Passkeys และฮาร์ดแวร์คีย์ที่ใช้กุญแจเข้ารหัสลับแบบไม่สมมาตร"
       }
     ],
     "answer": "ง",
-    "answerText": "การใช้ Passkeys / ฮาร์ดแวร์กุญแจนิรภัยที่ผูกกุญแจเข้ารหัส (Cryptographic Key Pair) เข้ากับโดเมน\nจริงของเว็บไซต์",
+    "answerText": "การใช้ Passkeys และฮาร์ดแวร์คีย์ที่ใช้กุญแจเข้ารหัสลับแบบไม่สมมาตร",
     "explanation": "SMS OTP ยังคงถูกดักจับด้วยหน้าเว็บ Phishing แบบ Real-time Proxy หรือ SIM Swapping ได้ แต่ Passkeys (FIDO2) จะตรวจสอบชื่อโดเมนระดับโปรโตคอลด้วยกุญแจอสมมาตร จึงไม่ส่งข้อมูลรับรอง ให้เว็บปลอมเด็ดขาด (IBM Zero Trust)",
     "sourcePage": 32
   },
@@ -1146,23 +1146,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Red Team (หรือ Penetration Testers / White Hat Hackers)"
+        "text": "Red Team (ทีมจำลองบทบาทผู้โจมตีเพื่อทดสอบเจาะระบบเชิงรุก)"
       },
       {
         "key": "ข",
-        "text": "Black Hat Hackers"
+        "text": "Blue Team (ทีมเฝ้าระวัง ตรวจจับ และตอบสนองต่อภัยคุกคามในระบบ)"
       },
       {
         "key": "ค",
-        "text": "Script Kiddies"
+        "text": "Yellow Team (ทีมนักพัฒนาซอฟต์แวร์และออกแบบสถาปัตยกรรมระบบ)"
       },
       {
         "key": "ง",
-        "text": "Botnet Herders"
+        "text": "Purple Team (ทีมบูรณาการข้อมูลและประสานงานระหว่างรุกและรับ)"
       }
     ],
     "answer": "ก",
-    "answerText": "Red Team (หรือ Penetration Testers / White Hat Hackers)",
+    "answerText": "Red Team (ทีมจำลองบทบาทผู้โจมตีเพื่อทดสอบเจาะระบบเชิงรุก)",
     "explanation": "ในด้าน Cybersecurity ทีมจำลองการบุกรุกเพื่อทดสอบช่องโหว่โดยได้รับอนุญาตเรียกว่า Red Team ส่วนทีมป้องกันและเฝ้าระวังระบบเรียกว่า Blue Team",
     "sourcePage": 33
   },
@@ -1180,18 +1180,18 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "Segment → Packet → Frame → Bit"
+        "text": "Frame → Packet → Segment → Bit"
       },
       {
         "key": "ค",
-        "text": "Frame → Packet → Segment → Bit"
+        "text": "Segment → Packet → Frame → Bit"
       },
       {
         "key": "ง",
         "text": "Segment → Frame → Packet → Bit"
       }
     ],
-    "answer": "ข",
+    "answer": "ค",
     "answerText": "Segment → Packet → Frame → Bit",
     "explanation": "Layer 4 (Transport) = Segment (หรือ Datagram สำหรับ UDP) → Layer 3 (Network) = Packet → Layer 2 (Data Link) = Frame → Layer 1 (Physical) = Bit (Cloudflare OSI Model)",
     "sourcePage": 33
@@ -1270,7 +1270,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "Discover → Offer → Request → Acknowledge"
+        "text": "Query → Response → Update → Confirm"
       },
       {
         "key": "ค",
@@ -1278,10 +1278,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "Query → Response → Update → Confirm"
+        "text": "Discover → Offer → Request → Acknowledge"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "Discover → Offer → Request → Acknowledge",
     "explanation": "กระบวนการของ DHCP ย่อว่า DORA: Client ส่ง DHCP Discover → Server ตอบกลับด้วย DHCP Offer → Client ยืนยันขอใช้ด้วย DHCP Request → Server บันทึกและยืนยันด้วย DHCP Acknowledge",
     "sourcePage": 34
@@ -1296,23 +1296,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "TCP เป็นแบบ Connectionless ที่เน้นความเร็วสูง ส่วน UDP ต้องทำ 3-Way Handshake ก่อนส่งข้อมูล"
+        "text": "UDP รับประกันการส่งข้อมูลด้วย 3-Way Handshake ส่วน TCP ส่งแบบ Best-Effort"
       },
       {
         "key": "ข",
-        "text": "UDP มีกลไกตรวจสอบลำดับแพ็กเก็ตและส่งข้อมูลซ้ำเมื่อสูญหาย ส่วน TCP ไม่มี"
+        "text": "TCP และ UDP ส่งข้อมูลแบบ Connection-Oriented โดยใช้ขั้นตอน Handshake เดียวกัน"
       },
       {
         "key": "ค",
-        "text": "TCP ทำ 3-Way Handshake (SYN, SYN-ACK, ACK) เพื่อรับประกันความถูกต้องของข้อมูล ส่วน UDP ส่งข้อมูลทันที โดยไม่สร้างการเชื่อมต่อล่วงหน้าจึงมีความหน่วงต่ำกว่า"
+        "text": "TCP ใช้ 3-Way Handshake (SYN, SYN-ACK, ACK) รับประกันการเชื่อมต่อ ส่วน UDP ไม่สร้างการเชื่อมต่อ"
       },
       {
         "key": "ง",
-        "text": "ทั้ง TCP และ UDP ทำงานอยู่ในชั้น Network Layer (Layer 3) เหมือนกัน"
+        "text": "TCP ไม่ตรวจสอบความถูกต้องของข้อมูล ส่วน UDP มีการจัดลำดับแพ็กเก็ตใหม่เสมอ"
       }
     ],
     "answer": "ค",
-    "answerText": "TCP ทำ 3-Way Handshake (SYN, SYN-ACK, ACK) เพื่อรับประกันความถูกต้องของข้อมูล ส่วน UDP ส่ง\nข้อมูลทันทีโดยไม่สร้างการเชื่อมต่อล่วงหน้าจึงมีความหน่วงต่ำกว่า",
+    "answerText": "TCP ใช้ 3-Way Handshake (SYN, SYN-ACK, ACK) รับประกันการเชื่อมต่อ ส่วน UDP ไม่สร้างการเชื่อมต่อ",
     "explanation": "ทั้งคู่ทำงานที่ Layer 4 (Transport Layer) โดย TCP เน้นความน่าเชื่อถือ (Reliable, Connection-oriented) ส่วน UDP เน้นความเร็วและความหน่วงต่ำ (Unreliable, Connectionless) (Cloudflare TLS & TCP)",
     "sourcePage": 34
   },
@@ -1326,11 +1326,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "1 Collision Domain และ 1 Broadcast Domain"
+        "text": "12 Collision Domains และ 1 Broadcast Domain"
       },
       {
         "key": "ข",
-        "text": "12 Collision Domains และ 1 Broadcast Domain"
+        "text": "1 Collision Domain และ 1 Broadcast Domain"
       },
       {
         "key": "ค",
@@ -1341,7 +1341,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "12 Collision Domains และ 12 Broadcast Domains"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "12 Collision Domains และ 1 Broadcast Domain",
     "explanation": "พอร์ตแต่ละพอร์ตของ Layer 2 Switch ที่มีเครื่องเชื่อมต่อจะแยกเป็นคนละ Collision Domain (จึงมี 12 Collision Domains) แต่ทุกพอร์ตยังคงอยู่ใน Broadcast Domain เดียวกัน (1 Broadcast Domain)",
     "sourcePage": 34
@@ -1386,23 +1386,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Container ต้องจำลองฮาร์ดแวร์เสมือนและมี Guest OS Kernel แยกของตนเองทุกตัว ส่วน VM แชร์ Kernel ร่วมกัน"
+        "text": "Container มี Guest OS แยกสมบูรณ์ในตัวเอง ส่วน VM ใช้ Kernel ร่วมกับโฮสต์"
       },
       {
         "key": "ข",
-        "text": "Container แชร์ระบบปฏิบัติการและ Kernel ร่วมกับเครื่องโฮสต์ (Host OS) จึงมีขนาดเล็กและเริ่มทำงานได้เร็วกว่า VM ที่ต้องจำลองระดับฮาร์ดแวร์และรัน Guest OS เต็มรูปแบบ"
+        "text": "Container แชร์ OS Kernel ร่วมกับโฮสต์ทำให้เบากว่า ส่วน VM จำลอง OS ครบชุด"
       },
       {
         "key": "ค",
-        "text": "VM ไม่สามารถรันบนระบบ Cloud ได้ ในขณะที่ Container รันได้เฉพาะบน Cloud เท่านั้น"
+        "text": "Container ทำงานได้เฉพาะบนระบบคลาวด์ ส่วน VM ทำงานได้เฉพาะบน Bare-Metal"
       },
       {
         "key": "ง",
-        "text": "Docker คือซอฟต์แวร์ประเภท Bare-metal Hypervisor Type 1"
+        "text": "Container ต้องมี Hypervisor Type-1 เสมอ ส่วน VM ใช้ Docker Engine จัดการ"
       }
     ],
     "answer": "ข",
-    "answerText": "Container แชร์ระบบปฏิบัติการและ Kernel ร่วมกับเครื่องโฮสต์ (Host OS) จึงมีขนาดเล็กและเริ่มทำงานได้\nเร็วกว่า VM ที่ต้องจำลองระดับฮาร์ดแวร์และรัน Guest OS เต็มรูปแบบ",
+    "answerText": "Container แชร์ OS Kernel ร่วมกับโฮสต์ทำให้เบากว่า ส่วน VM จำลอง OS ครบชุด",
     "explanation": "ตามเอกสารของ AWS และ Docker Containerization ตัดชั้นการจำลองฮาร์ดแวร์และ Guest OS ออกไป โดยแชร์ Host OS Kernel ร่วมกัน จึง ประหยัดทรัพยากรและบูตได้เร็วกว่า VM มาก",
     "sourcePage": 35
   },
@@ -1416,23 +1416,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "L1 Cache → Registers → L2 Cache → RAM → SSD"
+        "text": "Fetch → Execute → Decode → Store"
       },
       {
         "key": "ข",
-        "text": "Registers → L1 Cache → L2 Cache → L3 Cache → Main Memory (RAM) → NVMe SSD"
+        "text": "Fetch → Decode → Execute → Store"
       },
       {
         "key": "ค",
-        "text": "Registers → Main Memory (RAM) → L1 Cache → L2 Cache → HDD"
+        "text": "Decode → Fetch → Store → Execute"
       },
       {
         "key": "ง",
-        "text": "L3 Cache → L2 Cache → L1 Cache → Registers → RAM"
+        "text": "Store → Execute → Fetch → Decode"
       }
     ],
-    "answer": "ข",
-    "answerText": "Registers → L1 Cache → L2 Cache → L3 Cache → Main Memory (RAM) → NVMe SSD — คำ\nอธิบาย: Registers อยู่ติดกับ ALU จึงเร็วที่สุด ตามด้วย L1, L2, L3 Cache (สร้างจาก SRAM), ถัดมาคือ RAM\n(DRAM) และอุปกรณ์จัดเก็บข้อมูลถาวร (Crucial SSD)",
+    "answer": "ง",
+    "answerText": "Store → Execute → Fetch → Decode",
     "explanation": "",
     "sourcePage": 35
   },
@@ -1506,23 +1506,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Legacy BIOS คู่กับ MBR (Master Boot Record)"
+        "text": "AMAT = Hit Time + (Hit Rate × Miss Penalty)"
       },
       {
         "key": "ข",
-        "text": "UEFI คู่กับ GPT (GUID Partition Table)"
+        "text": "AMAT = Hit Time + (Miss Rate × Miss Penalty)"
       },
       {
         "key": "ค",
-        "text": "Legacy BIOS คู่กับ FAT16"
+        "text": "AMAT = (Hit Time × Hit Rate) + Miss Penalty"
       },
       {
         "key": "ง",
-        "text": "CMOS คู่กับ MBR"
+        "text": "AMAT = (Hit Rate + Miss Rate) × Hit Time"
       }
     ],
     "answer": "ข",
-    "answerText": "UEFI คู่กับ GPT (GUID Partition Table)",
+    "answerText": "AMAT = Hit Time + (Miss Rate × Miss Penalty)",
     "explanation": "MBR รองรับขนาดดิสก์สูงสุดเพียง 2 TB เท่านั้น สำหรับดิสก์เกิน 2 TB และการรองรับ Secure Boot ในระบบปฏิบัติการยุคใหม่ ต้องใช้เฟิร์มแวร์ UEFI คู่กับพาร์ติชันแบบ GPT",
     "sourcePage": 36
   },
@@ -1566,23 +1566,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Process ใช้หน่วยความจำร่วมกันทั้งหมด ส่วนแต่ละ Thread มีพื้นที่หน่วยความจำแยกขาดจากกัน"
+        "text": "Process ใช้ Memory ร่วมกันทั้งหมด ส่วน Thread มี Address Space แยกอิสระ"
       },
       {
         "key": "ข",
-        "text": "Thread เป็นหน่วยย่อยภายใน Process โดยหลาย Thread ใน Process เดียวกันจะแชร์พื้นที่หน่วยความจำ (Address Space / Heap) ร่วมกัน ทำให้สลับการทำงานได้เร็วกว่าการสลับข้าม Process"
+        "text": "Thread เป็นหน่วยย่อยใน Process ที่แชร์พื้นที่ Memory ร่วมกันภายใน Process เดียวกัน"
       },
       {
         "key": "ค",
-        "text": "ระบบปฏิบัติการแบบ 64-bit รันได้เฉพาะ Thread ไม่สามารถรัน Process ได้"
+        "text": "Process สลับการทำงานได้เร็วกว่า Thread เพราะไม่ต้องบันทึก State ในหน่วยความจำ"
       },
       {
         "key": "ง",
-        "text": "การเกิด Deadlock เกิดขึ้นได้เฉพาะในระบบที่มี Process เดียวและ Thread เดียวเท่านั้น"
+        "text": "Thread และ Process เป็นสิ่งเดียวกันในสถาปัตยกรรม x86-64 ทุกระบบปฏิบัติการ"
       }
     ],
-    "answer": "ข",
-    "answerText": "Thread เป็นหน่วยย่อยภายใน Process โดยหลาย Thread ใน Process เดียวกันจะแชร์พื้นที่หน่วยความจำ\n(Address Space / Heap) ร่วมกัน ทำให้สลับการทำงานได้เร็วกว่าการสลับข้าม Process",
+    "answer": "ง",
+    "answerText": "Thread และ Process เป็นสิ่งเดียวกันในสถาปัตยกรรม x86-64 ทุกระบบปฏิบัติการ",
     "explanation": "Process มี Address Space เป็นอิสระจากกัน ส่วน Threads ภายใน Process เดียวกันแชร์ Code, Data และ Heap ร่วมกัน (แต่มี Stack และ Register ของแต่ละ Thread แยกกัน)",
     "sourcePage": 36
   },
@@ -1626,23 +1626,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "RAID 0"
+        "text": "RAID 0 (Data Striping)"
       },
       {
         "key": "ข",
-        "text": "RAID 1"
+        "text": "RAID 1 (Disk Mirroring)"
       },
       {
         "key": "ค",
-        "text": "RAID 5"
+        "text": "RAID 5 (Distributed Parity)"
       },
       {
         "key": "ง",
-        "text": "RAID 10 (RAID 1+0)"
+        "text": "RAID 10 (Striped Mirrors)"
       }
     ],
     "answer": "ง",
-    "answerText": "RAID 10 (RAID 1+0)",
+    "answerText": "RAID 10 (Striped Mirrors)",
     "explanation": "RAID 0 เน้นความเร็วอย่างเดียวไม่มีการสำรองข้อมูล (ถ้าพัง 1 ลูก ข้อมูล หายทั้งหมด), RAID 1 คือการทำ Mirroring คู่ขนาน, RAID 5 ใช้ Parity เก็บสำรองเสียความจุ 1 ลูก, ส่วน RAID 10 ผสม ผสานทั้งการทำ Mirroring (RAID 1) และ Striping (RAID 0) โดยใช้ดิสก์อย่างน้อย 4 ลูก",
     "sourcePage": 37
   },
@@ -1656,11 +1656,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "10"
+        "text": "14"
       },
       {
         "key": "ข",
-        "text": "14"
+        "text": "10"
       },
       {
         "key": "ค",
@@ -1671,7 +1671,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "2"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "14",
     "explanation": "ลำดับการประมวลผล: ยกกำลังก่อน: 2 ** 3 = 8 หารปัดเศษและคูณจากซ้ายไปขวา: 20 // 3 = 6 จากนั้นนำ 6 * 2 = 12 บวกและลบจากซ้ายไปขวา: 10 + 12 - 8 = 14",
     "sourcePage": 37
@@ -1810,7 +1810,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "[3, 6, 2, 8]"
+        "text": "[3, 8, 2, 6]"
       },
       {
         "key": "ค",
@@ -1818,10 +1818,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "[3, 8, 2, 6]"
+        "text": "[3, 6, 2, 8]"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "[3, 6, 2, 8]",
     "explanation": "ในรอบที่ 1 ของ Bubble Sort: เปรียบเทียบคู่แรก (8, 3) สลับเป็น [3, 8, 6, 2] เปรียบเทียบคู่ถัดไป (8, 6) สลับเป็น [3, 6, 8, 2] เปรียบเทียบคู่สุดท้าย (8, 2) สลับเป็น [3, 6, 2, 8] (ค่ามากที่สุดคือ 8 จะลอยไปอยู่ตำแหน่งขวาสุดเมื่อจบรอบที่ 1)",
     "sourcePage": 39
@@ -1912,7 +1912,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       }
     ],
     "answer": "ก",
-    "answerText": "การจัดกลุ่มลูกค้าตามพฤติกรรมการซื้อโดยไม่มีป้ายกำกับล่วงหน้า → Unsupervised Learning ด้วยอัลกอ\nริทึม K-Means Clustering",
+    "answerText": "การจัดกลุ่มลูกค้าตามพฤติกรรมการซื้อโดยไม่มีป้ายกำกับล่วงหน้า → Unsupervised Learning ด้วยอัลกอริทึม K- Means Clustering",
     "explanation": "การแบ่งกลุ่มข้อมูลที่ไม่มีเฉลยกำกับ (Customer Segmentation) เป็นงาน Clustering ในกลุ่ม Unsupervised Learning ซึ่งนิยมใช้อัลกอริทึม K-Means",
     "sourcePage": 40
   },
@@ -1926,23 +1926,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Underfitting / แก้ไขโดยเพิ่มจำนวนชั้นของ Neural Network ให้ซับซ้อนขึ้น"
+        "text": "ข้อมูลต้องถูกแปลงเป็นเลขฐานสองและบีบอัดไฟล์ก่อนค้นหา"
       },
       {
         "key": "ข",
-        "text": "Overfitting / แก้ไขโดยใช้เทคนิค Dropout, Regularization, Early Stopping หรือเพิ่มปริมาณข้อมูลฝึกสอน"
+        "text": "ข้อมูลใน Array ต้องได้รับการเรียงลำดับ (Sorted) ไว้ล่วงหน้า"
       },
       {
         "key": "ค",
-        "text": "Vanishing Gradient / แก้ไขโดยตัดข้อมูลฝึกสอนออกครึ่งหนึ่ง"
+        "text": "ข้อมูลต้องเก็บอยู่ในโครงสร้างแบบ Doubly Linked List เท่านั้น"
       },
       {
         "key": "ง",
-        "text": "Hallucination / แก้ไขโดยเพิ่มค่า Learning Rate ให้สูงที่สุด"
+        "text": "ขนาดของข้อมูลต้องเป็นเลขยกกำลังสอง เช่น 64, 128, 256 เสมอ"
       }
     ],
-    "answer": "ข",
-    "answerText": "Overfitting / แก้ไขโดยใช้เทคนิค Dropout, Regularization, Early Stopping หรือเพิ่มปริมาณข้อมูล\nฝึกสอน",
+    "answer": "ค",
+    "answerText": "ข้อมูลต้องเก็บอยู่ในโครงสร้างแบบ Doubly Linked List เท่านั้น",
     "explanation": "อาการที่โมเดลทำคะแนนบน Training Set ได้ดีมากแต่ทำบน Validation/Test Set ได้แย่ คืออาการ Overfitting แก้ไขได้ด้วยการลดความซับซ้อนของโมเดล ทำ Regularization/Dropout หรือเพิ่มข้อมูลฝึกสอน",
     "sourcePage": 40
   },
@@ -2016,23 +2016,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "K-Means Clustering"
+        "text": "Fine-tuning โมเดลพื้นฐานใหม่ทั้งหมดด้วยชุดข้อมูลองค์กรเป็นประจำทุกสัปดาห์"
       },
       {
         "key": "ข",
-        "text": "Retrieval-Augmented Generation (RAG) ร่วมกับ Vector Database"
+        "text": "Retrieval-Augmented Generation (RAG) ร่วมกับฐานข้อมูล Vector Database"
       },
       {
         "key": "ค",
-        "text": "Image Segmentation ด้วย CNN"
+        "text": "Prompt Engineering แบบไม่เชื่อมต่อฐานข้อมูลภายนอกหรือคลังเอกสารใดๆ"
       },
       {
         "key": "ง",
-        "text": "Reinforcement Learning แบบสุ่ม"
+        "text": "ขยายขนาด Context Window ของโมเดลให้รองรับเอกสารทั้งหมดในรอบเดียว"
       }
     ],
-    "answer": "ข",
-    "answerText": "Retrieval-Augmented Generation (RAG) ร่วมกับ Vector Database",
+    "answer": "ง",
+    "answerText": "ขยายขนาด Context Window ของโมเดลให้รองรับเอกสารทั้งหมดในรอบเดียว",
     "explanation": "RAG จะแปลง เอกสารระเบียบการเป็น Vector Embeddings เก็บใน Vector Database เมื่อผู้ใช้ถาม ระบบจะค้นเนื้อหาที่ตรงที่สุดมา แนบใน Prompt ให้ LLM ตอบตามข้อเท็จจริง ช่วยลด Hallucination และประหยัดค่าใช้จ่ายในการฝึกโมเดลใหม่ (NVIDIA RAG)",
     "sourcePage": 41
   },
@@ -2046,23 +2046,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "ตั้งค่า Temperature ให้สูงที่สุด (เช่น 1.5 – 2.0)"
+        "text": "จัดเก็บตารางข้อมูลแบบ Relational Database และประมวลผลด้วยคำสั่ง SQL มาตรฐาน"
       },
       {
         "key": "ข",
-        "text": "ตั้งค่า Temperature ให้ต่ำหรือเท่ากับ 0 (เช่น 0.0 – 0.2)"
+        "text": "จัดเก็บ Vector Embeddings และค้นหาความคล้ายคลึงเชิงความหมายด้วย Approximate Nearest Neighbor"
       },
       {
         "key": "ค",
-        "text": "ตั้งค่า Context Window ให้เหลือ 1 Token"
+        "text": "จัดเก็บไฟล์ภาพกราฟิกแบบบิตแมปและแปลงความละเอียดภาพให้เป็นไฟล์เวกเตอร์ SVG"
       },
       {
         "key": "ง",
-        "text": "ปิดการใช้งาน Self-Attention"
+        "text": "จัดเก็บประวัติการทำงานของระบบเครือข่ายและสแกนตรวจจับการโจมตีทางไซเบอร์"
       }
     ],
     "answer": "ข",
-    "answerText": "ตั้งค่า Temperature ให้ต่ำหรือเท่ากับ 0 (เช่น 0.0 – 0.2)",
+    "answerText": "จัดเก็บ Vector Embeddings และค้นหาความคล้ายคลึงเชิงความหมายด้วย Approximate Nearest Neighbor",
     "explanation": "ค่า Temperature ที่ต่ำ (เข้าใกล้ 0) จะบังคับให้โมเดลเลือก Token ที่มีความน่าจะเป็นสูงสุด (Greedy / Deterministic decoding) เหมาะกับงานที่ต้องการ ความแม่นยำและข้อเท็จจริง",
     "sourcePage": 41
   },
@@ -2106,23 +2106,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "AI Agents ไม่ใช้โครงข่ายประสาทเทียมในการทำงานเลย"
+        "text": "AI Agents ทำงานด้วยตรรกะแบบสถิติอย่างง่ายโดยไม่ใช้โมเดลภาษาขนาดใหญ่เลย"
       },
       {
         "key": "ข",
-        "text": "AI Agents สามารถตั้งเป้าหมายย่อย วางแผนการทำงานหลายขั้นตอน (Multi-step reasoning/planning) จดจำ บริบท และเรียกใช้เครื่องมือภายนอก (Tool Use / API Calling) เพื่อทำงานให้สำเร็จได้โดยอัตโนมัติ"
+        "text": "AI Agents สามารถวางแผนหลายขั้นตอน จดจำบริบท และเรียกใช้เครื่องมือภายนอกได้อัตโนมัติ"
       },
       {
         "key": "ค",
-        "text": "AI Agents ทำงานได้เฉพาะเมื่อไม่มีการเชื่อมต่ออินเทอร์เน็ตเท่านั้น"
+        "text": "AI Agents สามารถประมวลผลคำสั่งได้เฉพาะเมื่อออฟไลน์โดยไม่ต่ออินเทอร์เน็ต"
       },
       {
         "key": "ง",
-        "text": "AI Agents ใช้สำหรับบีบอัดไฟล์รูปภาพเท่านั้น"
+        "text": "AI Agents ถูกออกแบบมาสำหรับงานแปลงไฟล์เอกสารและบีบอัดรูปภาพเท่านั้น"
       }
     ],
-    "answer": "ข",
-    "answerText": "AI Agents สามารถตั้งเป้าหมายย่อย วางแผนการทำงานหลายขั้นตอน (Multi-step\nreasoning/planning) จดจำบริบท และเรียกใช้เครื่องมือภายนอก (Tool Use / API Calling) เพื่อทำงานให้สำเร็จได้\nโดยอัตโนมัติ",
+    "answer": "ง",
+    "answerText": "AI Agents ถูกออกแบบมาสำหรับงานแปลงไฟล์เอกสารและบีบอัดรูปภาพเท่านั้น",
     "explanation": "ตามนิยามของ IBM AI Agents และ AWS ระบบ Agentic AI ผสานความเข้าใจภาษาของ LLM เข้ากับความสามารถในการวางแผน (Planning), ความจำ (Memory) และการเรียกใช้เครื่องมือ (Tool use) 5.3 ระดับยาก (Advanced / Hard Level: ข้อ 71–100)",
     "sourcePage": 42
   },
@@ -2136,23 +2136,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "นำข้อความมาเข้ารหัสด้วย Public Key ของผู้รับ แล้วส่งไปพร้อมกับรหัสผ่าน"
+        "text": "แปลงข้อความด้วยคีย์สมมาตรและส่งให้ผู้รับถอดรหัสกลับเป็นข้อความเดิม"
       },
       {
         "key": "ข",
-        "text": "นำข้อความต้นฉบับมาผ่านฟังก์ชันแฮช (Cryptographic Hash เช่น SHA-256) เพื่อให้ได้ Message Digest แล้วนำ ค่าแฮชไปเข้ารหัสด้วย Private Key ของผู้ส่ง โดยผู้รับจะตรวจสอบด้วย Public Key ของผู้ส่ง"
+        "text": "นำข้อมูลมาผ่านฟังก์ชันแฮชทางเดียว เพื่อสร้างค่าแฮชสำหรับตรวจสอบความถูกต้อง"
       },
       {
         "key": "ค",
-        "text": "นำข้อความต้นฉบับมาบีบอัดด้วยอัลกอริทึม ZIP แล้วเข้ารหัสด้วย Public Key ของผู้ส่ง"
+        "text": "บันทึกข้อมูลซ้ำลงบนสองอุปกรณ์จัดเก็บข้อมูลพร้อมกันเพื่อป้องกันสูญหาย"
       },
       {
         "key": "ง",
-        "text": "นำค่าแฮชของข้อความไปเข้ารหัสด้วย Private Key ของผู้รับ แล้วให้ผู้ส่งใช้ Public Key ของผู้รับตรวจสอบ"
+        "text": "เข้ารหัสข้อความด้วย Public Key ของผู้ส่งเพื่อให้ทุกคนตรวจสอบที่มาได้"
       }
     ],
-    "answer": "ข",
-    "answerText": "นำข้อความต้นฉบับมาผ่านฟังก์ชันแฮช (Cryptographic Hash เช่น SHA-256) เพื่อให้ได้ Message\nDigest แล้วนำค่าแฮชไปเข้ารหัสด้วย Private Key ของผู้ส่ง โดยผู้รับจะตรวจสอบด้วย Public Key ของผู้ส่ง — คำ\nอธิบาย: Digital Signature ต้องสร้างด้วย Private Key ของผู้ส่ง เสมอ (เพื่อยืนยันว่ามาจากผู้ส่งจริง) และเมื่อผู้รับใช้\nPublic Key ของผู้ส่ง ถอดรหัสได้ค่าแฮชที่ตรงกับค่าแฮชของไฟล์ที่ได้รับ ย่อมพิสูจน์ได้ทั้ง Integrity (ข้อมูลไม่ถูกแก้ไข)\nและ Non-repudiation",
+    "answer": "ก",
+    "answerText": "แปลงข้อความด้วยคีย์สมมาตรและส่งให้ผู้รับถอดรหัสกลับเป็นข้อความเดิม",
     "explanation": "",
     "sourcePage": 42
   },
@@ -2166,23 +2166,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "ปกป้องเฉพาะข้อมูลขณะจัดเก็บในฮาร์ดดิสก์ (Data at Rest) โดยอนุญาตให้ระบบปฏิบัติการโฮสต์อ่านได้อิสระ"
+        "text": "ปกป้องข้อมูลที่เก็บถาวรบนอุปกรณ์จัดเก็บข้อมูล (Data at Rest) ด้วยการเข้ารหัส"
       },
       {
         "key": "ข",
-        "text": "ปกป้องเฉพาะข้อมูลขณะส่งผ่านสายแลน (Data in Transit) แทนการใช้ TLS"
+        "text": "ปกป้องข้อมูลที่กำลังเคลื่อนที่บนเครือข่าย (Data in Transit) ด้วย TLS 1.3"
       },
       {
         "key": "ค",
-        "text": "ปกป้องข้อมูลและโค้ด ขณะกำลังประมวลผลในหน่วยความจำ (Data in Use) โดยแยกส่วนและเข้ารหัสในระดับฮาร์ดแวร์ CPU แม้แต่ OS Kernel หรือ Hypervisor ที่ถูกเจาะระบบก็ไม่สามารถแอบอ่านข้อมูลภายใน Enclave ได้"
+        "text": "ปกป้องข้อมูลและโค้ดขณะกำลังประมวลผลใน CPU/RAM (Data in Use) ด้วย Enclave"
       },
       {
         "key": "ง",
-        "text": "ใช้สำหรับเร่งความเร็วการแสดงผลกราฟิก 3 มิติบนเว็บเบราว์เซอร์"
+        "text": "สำรองข้อมูลลงเทปแม่เหล็กภายนอกสถานที่เพื่อป้องกันการโจมตีจากแรนซัมแวร์"
       }
     ],
     "answer": "ค",
-    "answerText": "ปกป้องข้อมูลและโค้ด ขณะกำลังประมวลผลในหน่วยความจำ (Data in Use) โดยแยกส่วนและเข้ารหัสใน\nระดับฮาร์ดแวร์ CPU แม้แต่ OS Kernel หรือ Hypervisor ที่ถูกเจาะระบบก็ไม่สามารถแอบอ่านข้อมูลภายใน Enclave\nได้",
+    "answerText": "ปกป้องข้อมูลและโค้ดขณะกำลังประมวลผลใน CPU/RAM (Data in Use) ด้วย Enclave",
     "explanation": "ตามเอกสาร Intel SGX Explained Enclave ปกป้อง Confidentiality และ Integrity ของโค้ดและ ข้อมูลขณะรันอยู่ใน RAM (Data in Use) จากทั้ง OS Kernel และ Hypervisor",
     "sourcePage": 42
   },
@@ -2196,23 +2196,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "PDPA ของไทยมีบทบัญญัติบังคับเรื่อง Human Oversight-by-Design ที่เข้มงวดกว่า EU AI Act ทุกประการ"
+        "text": "PDPA มีบทบัญญัติควบคุม Human Oversight สำหรับระบบ AI ที่เข้มงวดกว่า EU AI Act"
       },
       {
         "key": "ข",
-        "text": "กรอบกฎหมายสหภาพยุโรปกำหนดสิทธิของเจ้าของข้อมูลในการขอให้มนุษย์เข้าแทรกแซง (Human Intervention) และ สิทธิได้รับคำอธิบายอัลกอริทึม (EU AI Act มาตรา 86) ในขณะที่ PDPA ปัจจุบันของไทยยังไม่มีบทบัญญัติเฉพาะเจาะจงที่ รับรองสิทธิปฏิเสธ ADM โดยตรงเหมือน GDPR มาตรา 22"
+        "text": "EU AI Act กำหนดสิทธิขอคำอธิบายและการแทรกแซงโดยมนุษย์ แต่ PDPA ยังไม่มีข้อกำหนดเฉพาะนี้"
       },
       {
         "key": "ค",
-        "text": "ทั้ง GDPR, EU AI Act และ PDPA ห้ามมิให้ธนาคารใช้ซอฟต์แวร์คำนวณดอกเบี้ยโดยเด็ดขาด"
+        "text": "ทั้ง EU AI Act และ PDPA ห้ามสถาบันการเงินใช้ซอฟต์แวร์ประมวลผลสินเชื่ออัตโนมัติ"
       },
       {
         "key": "ง",
-        "text": "EU AI Act บังคับใช้เฉพาะกับบริษัทที่ตั้งอยู่ในทวีปเอเชียเท่านั้น"
+        "text": "EU AI Act มีผลบังคับใช้เฉพาะกับองค์กรธุรกิจที่จดทะเบียนในทวีปเอเชียเท่านั้น"
       }
     ],
     "answer": "ข",
-    "answerText": "กรอบกฎหมายสหภาพยุโรปกำหนดสิทธิของเจ้าของข้อมูลในการขอให้มนุษย์เข้าแทรกแซง (Human\nIntervention) และสิทธิได้รับคำอธิบายอัลกอริทึม (EU AI Act มาตรา 86) ในขณะที่ PDPA ปัจจุบันของไทยยังไม่มี\nบทบัญญัติเฉพาะเจาะจงที่รับรองสิทธิปฏิเสธ ADM โดยตรงเหมือน GDPR มาตรา 22",
+    "answerText": "EU AI Act กำหนดสิทธิขอคำอธิบายและการแทรกแซงโดยมนุษย์ แต่ PDPA ยังไม่มีข้อกำหนดเฉพาะนี้",
     "explanation": "งานวิจัยเปรียบ เทียบใน วารสาร JISSD (2026) ชี้ให้เห็นว่า EU มีกลไกคุ้มครอง 4 ชั้น (GDPR มาตรา 22 + EU AI Act มาตรา 14 และ 86) ในขณะที่ PDPA พ.ศ. 2562 ยังมีช่องว่างด้านสิทธิปฏิเสธ ADM และการบังคับทำ DPIA สำหรับระบบ AI ความเสี่ยงสูง",
     "sourcePage": 43
   },
@@ -2226,23 +2226,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "เพราะคอมพิวเตอร์ควอนตัมสามารถเดารหัสผ่าน Wi-Fi ด้วยการสุ่มตัวอักษรทีละตัวได้ช้ากว่าเดิม"
+        "text": "ควอนตัมคอมพิวเตอร์สามารถสุ่มเดารหัสผ่าน AES-256 ได้เร็วกว่าเดิมด้วยอัลกอริทึมโกรเวอร์"
       },
       {
         "key": "ข",
-        "text": "เพราะอัลกอริทึมของชอร์ (Shor's Algorithm) บนคอมพิวเตอร์ควอนตัมสามารถแยกตัวประกอบของจำนวนเต็มขนาด ใหญ่และแก้ปัญหา Discrete Logarithm ได้ในเวลาแบบพหุนาม (Polynomial Time) จึงจำเป็นต้องเปลี่ยนผ่านไปสู่ มาตรฐาน Post-Quantum Cryptography (PQC)"
+        "text": "อัลกอริทึมของชอร์สามารถแยกตัวประกอบจำนวนเต็มขนาดใหญ่และแก้ Discrete Log ได้ในเวลาพหุนาม"
       },
       {
         "key": "ค",
-        "text": "เพราะคอมพิวเตอร์ควอนตัมทำให้สายไฟเบอร์ออปติกหยุดทำงานทันที"
+        "text": "การรบกวนของควอนตัมทำให้สายเคเบิลใยแก้วนำแสงสูญเสียคุณสมบัติในการนำส่งข้อมูลดิจิทัล"
       },
       {
         "key": "ง",
-        "text": "เพราะ Qubit ไม่สามารถทำงานร่วมกับเลขฐานสองได้เลยแม้ผ่านตัวแปลง"
+        "text": "คิวบิตไม่สามารถรองรับการคำนวณเลขฐานสิบหกที่ใช้งานในโปรโตคอลการเข้ารหัสของเว็บเบราว์เซอร์"
       }
     ],
-    "answer": "ข",
-    "answerText": "เพราะอัลกอริทึมของชอร์ (Shor's Algorithm) บนคอมพิวเตอร์ควอนตัมสามารถแยกตัวประกอบของ\nจำนวนเต็มขนาดใหญ่และแก้ปัญหา Discrete Logarithm ได้ในเวลาแบบพหุนาม (Polynomial Time) จึงจำเป็นต้อง\nเปลี่ยนผ่านไปสู่มาตรฐาน Post-Quantum Cryptography (PQC)",
+    "answer": "ง",
+    "answerText": "คิวบิตไม่สามารถรองรับการคำนวณเลขฐานสิบหกที่ใช้งานในโปรโตคอลการเข้ารหัสของเว็บเบราว์เซอร์",
     "explanation": "ความปลอดภัยของ RSA อาศัย ความยากในการแยกตัวประกอบของเลขจำนวนเฉพาะขนาดใหญ่ ซึ่ง Shor's Algorithm สามารถแก้ได้รวดเร็วมากบน Quantum Computer (ส่วนการเข้ารหัสแบบสมมาตรเช่น AES-256 ได้รับผลกระทบจาก Grover's Algorithm เพียงลด ระดับความปลอดภัยลงครึ่งหนึ่งซึ่งยังปลอดภัยสูง)",
     "sourcePage": 43
   },
@@ -2256,23 +2256,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Layer 7 DDoS ใช้เฉพาะโปรโตคอล ICMP Ping เท่านั้น ส่วน Layer 3 DDoS ใช้ HTTP GET"
+        "text": "SYN Flood ส่งแพ็กเก็ต TCP SYN ปริมาณมหาศาลเพื่อทำให้ตารางการเชื่อมต่อของไฟร์วอลล์เต็ม"
       },
       {
         "key": "ข",
-        "text": "Layer 7 DDoS (เช่น HTTP Flood) จำลองการส่งคำขอระดับแอปพลิเคชันที่ดูเหมือนผู้ใช้ปกติเพื่อผลาญทรัพยากร CPU, RAM และฐานข้อมูลของเซิร์ฟเวอร์โดยตรงแม้ใช้แบนด์วิดท์ไม่มาก ส่วน Layer 3/4 DDoS มุ่งเน้นการอัดปริมาณ ทราฟฟิกให้เต็มท่อเครือข่ายหรือตารางสถานะ TCP"
+        "text": "HTTP Flood ส่งคำขอระดับแอปพลิเคชันที่ถูกต้องเพื่อผลาญทรัพยากร CPU และหน่วยความจำของเซิร์ฟเวอร์"
       },
       {
         "key": "ค",
-        "text": "Layer 7 DDoS ป้องกันได้ด้วยการใช้สายแลน Cat6 แทน Cat5e"
+        "text": "UDP Amplification สะท้อนทราฟฟิกขนาดใหญ่ผ่านเซิร์ฟเวอร์ DNS เพื่อทำให้แบนด์วิดท์เครือข่ายเต็ม"
       },
       {
         "key": "ง",
-        "text": "Layer 3 DDoS เกิดขึ้นได้เฉพาะบนเครือข่ายไร้สาย Bluetooth เท่านั้น"
+        "text": "ICMP Flood ส่งคำขอ Ping ปริมาณมหาศาลเพื่อทำให้เราเตอร์และสวิตช์ในระบบหยุดตอบสนอง"
       }
     ],
     "answer": "ข",
-    "answerText": "Layer 7 DDoS (เช่น HTTP Flood) จำลองการส่งคำขอระดับแอปพลิเคชันที่ดูเหมือนผู้ใช้ปกติเพื่อผลาญ\nทรัพยากร CPU, RAM และฐานข้อมูลของเซิร์ฟเวอร์โดยตรงแม้ใช้แบนด์วิดท์ไม่มาก ส่วน Layer 3/4 DDoS มุ่งเน้น\nการอัดปริมาณทราฟฟิกให้เต็มท่อเครือข่ายหรือตารางสถานะ TCP",
+    "answerText": "HTTP Flood ส่งคำขอระดับแอปพลิเคชันที่ถูกต้องเพื่อผลาญทรัพยากร CPU และหน่วยความจำของเซิร์ฟเวอร์",
     "explanation": "ตามเอกสารของ Cloudflare Application Layer DDoS การโจมตีระดับ Layer 7 จะโจมตีจุดที่เซิร์ฟเวอร์ต้องประมวลผลหนัก (เช่น การค้นหาฐานข้อมูล ผ่าน HTTP GET/POST)",
     "sourcePage": 43
   },
@@ -2332,7 +2332,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       }
     ],
     "answer": "ก",
-    "answerText": "Network: 172.16.45.128, First Host: 172.16.45.129, Last Host: 172.16.45.158, Broadcast:\n172.16.45.159",
+    "answerText": "Network: 172.16.45.128, First Host: 172.16.45.129, Last Host: 172.16.45.158, Broadcast: 172.16.45.159",
     "explanation": "Prefix /27 มีจำนวนบิตโฮสต์ h = 32 - 27 = 5 บิต ขนาดบล็อก (Block Size) ในออกเต็ตที่ 4 คือ 25 = 32 แอดเดรสต่อ หนึ่งเครือข่ายย่อย พหุคูณของ 32 ได้แก่ 0, 32, 64, 96, 128, 160, ... เนื่องจาก 140 อยู่ระหว่าง 128 กับ 160 ดังนั้น: Network Address คือ 172.16.45.128 Broadcast Address (ก่อนถึงบล็อกถัดไป .160 อยู่ 1 ค่า) คือ 172.16.45.159 ช่วงโฮสต์ที่ใช้งานได้จริง คือ 172.16.45.129 ถึง 172.16.45.158 (รวม 30 เครื่อง)",
     "sourcePage": 44
   },
@@ -2346,23 +2346,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "2001:db8::50::ab0"
+        "text": "2001:db8:85a3::8a2e:370:7334"
       },
       {
         "key": "ข",
-        "text": "2001:db8::50:0:0:ab0"
+        "text": "2001:db8:85a3::8a2e:0370:7334"
       },
       {
         "key": "ค",
-        "text": "2001:db8:0:0:5:0:0:ab"
+        "text": "2001:db8:85a3:0:0:8a2e:37:7334"
       },
       {
         "key": "ง",
-        "text": "2001:0db8::0050:0:0:0ab"
+        "text": "2001:0db8:85a3::8a2e:370:7334"
       }
     ],
-    "answer": "ข",
-    "answerText": "2001:db8::50:0:0:ab0",
+    "answer": "ง",
+    "answerText": "2001:0db8:85a3::8a2e:370:7334",
     "explanation": "กฎการย่อ IPv6 มี 2 ข้อ: ตัดเลข 0 นำหน้า (Leading zeros) ของแต่ละกลุ่มออกได้ แต่ห้ามตัดเลข 0 ต่อท้าย (Trailing zeros) ดังนั้น 0db8 → db8, 0050 → 50, และ 0ab0 → ab0 (ตัด 0 ท้ายไม่ได้!) ยุบกลุ่มที่เป็น 0000 ติดกันด้วย :: ได้ เพียงแห่งเดียวเท่านั้น (จึงทำให้ข้อ ก. ผิดเพราะใช้ :: สองครั้ง) เมื่อยุบชุดแรกเป็น :: ชุดหลังจึงต้องเขียนเป็น :0:0: ได้ผลลัพธ์คือ 2001:db8::50:0:0:ab0",
     "sourcePage": 44
   },
@@ -2392,7 +2392,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       }
     ],
     "answer": "ข",
-    "answerText": "Destination IP = 8.8.8.8 และ Destination MAC = MAC ของขาใน Default Gateway Router\n(192.168.1.1)",
+    "answerText": "Destination IP = 8.8.8.8 และ Destination MAC = MAC ของขาใน Default Gateway Router (192.168.1.1)",
     "explanation": "กฎเหล็กของระบบเครือข่าย: Source/Destination IP Address (Layer 3) จะคงเดิม ตั้งแต่ต้นทางถึงปลายทางสุดท้าย (เว้นแต่ถูกแปลงด้วย NAT ที่ขาออกของ Router) แต่ Source/Destination MAC Address (Layer 2) จะเปลี่ยนไปทุกๆ Hop ดังนั้นเมื่อ PC-A พบว่า 8.8.8.8 อยู่คนละวงแลน จึงใส่ Destination IP เป็น 8.8.8.8 แต่จ่าหน้าซองเฟรม (Destination MAC) ไปที่ MAC Address ของ Default Gateway (192.168.1.1)",
     "sourcePage": 45
   },
@@ -2406,23 +2406,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "บน Cisco Router การส่งต่อแพ็กเก็ต IPv6 ถูกเปิดไว้โดยค่าเริ่มต้น ไม่ต้องพิมพ์คำสั่งใดๆ"
+        "text": "ตั้งค่า IP ด้วยคำสั่งแบบ Static IP จากผู้ดูแลระบบเรียบร้อยแล้ว"
       },
       {
         "key": "ข",
-        "text": "หากเครื่อง Windows ตั้งรับ IPv4 จาก DHCP Server แต่ไม่สามารถติดต่อ DHCP Server ได้เลย เครื่องจะกำหนด IP ช่วง APIPA (169.254.x.x/16) ให้ตนเอง และบน Cisco Router ต้องสั่งเปิด ipv6 unicast-routing ก่อนจึงจะ ทำหน้าที่ส่งต่อแพ็กเก็ต IPv6 ข้ามเครือข่ายได้"
+        "text": "ไม่สามารถติดต่อ DHCP Server ได้ จึงกำหนดค่า APIPA (169.254.x.x) อัตโนมัติ"
       },
       {
         "key": "ค",
-        "text": "ระเบียน DNS ที่ใช้จับคู่ชื่อโดเมนกับหมายเลข IPv6 คือ CNAME Record เท่านั้น"
+        "text": "ระบบ DNS Server ตอบกลับหมายเลขไอพีสำรองฉุกเฉินให้เครื่องลูกข่าย"
       },
       {
         "key": "ง",
-        "text": "คำสั่ง ipconfig /flushdns ใช้สำหรับขอรับหมายเลข IP Address ใหม่จาก DHCP Server"
+        "text": "การ์ดเครือข่ายฮาร์ดแวร์ทำงานผิดปกติจนไม่สามารถเปิดระบบได้เลย"
       }
     ],
-    "answer": "ข",
-    "answerText": "หากเครื่อง Windows ตั้งรับ IPv4 จาก DHCP Server แต่ไม่สามารถติดต่อ DHCP Server ได้เลย เครื่อง\nจะกำหนด IP ช่วง APIPA (169.254.x.x/16) ให้ตนเอง และบน Cisco Router ต้องสั่งเปิด ipv6 unicast-\nrouting ก่อนจึงจะทำหน้าที่ส่งต่อแพ็กเก็ต IPv6 ข้ามเครือข่ายได้",
+    "answer": "ก",
+    "answerText": "ตั้งค่า IP ด้วยคำสั่งแบบ Static IP จากผู้ดูแลระบบเรียบร้อยแล้ว",
     "explanation": "ตามเอกสาร Cisco Learning Network บน Cisco IOS ค่าเริ่มต้นเปิดเฉพาะ IPv4 routing แต่ต้องพิมพ์คำสั่ง ipv6 unicast-routing เพื่อเปิด IPv6 routing (ส่วนระเบียน DNS ของ IPv6 คือ AAAA Record และคำสั่งขอ IP ใหม่คือ ipconfig /renew)",
     "sourcePage": 45
   },
@@ -2436,23 +2436,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Pod คือเซิร์ฟเวอร์กายภาพที่ภายในบรรจุ Control Plane หลายตัว"
+        "text": "Pod คือเครื่องเซิร์ฟเวอร์กายภาพที่ทำหน้าที่เป็น Control Plane ประจำคลัสเตอร์"
       },
       {
         "key": "ข",
-        "text": "Control Plane ทำหน้าที่บริหารจัดการคลัสเตอร์และจัดตารางงาน (Scheduling) โดยสั่งให้นำ Pod (ซึ่งเป็นหน่วยดี พลอยที่เล็กที่สุดที่บรรจุหนึ่งหรือหลายคอนเทนเนอร์ไว้ด้วยกัน) ไปรันบนเครื่อง Worker Node"
+        "text": "Control Plane จัดการคลัสเตอร์และจัดตารางงาน ส่วน Pod รันคอนเทนเนอร์บน Worker Node"
       },
       {
         "key": "ค",
-        "text": "Node คือไฟล์ Dockerfile ที่ยังไม่ถูกคอมไพล์"
+        "text": "Node คือไฟล์คำสั่ง Dockerfile ที่ยังไม่ถูกนำไปบิลด์เป็นอิมเมจของระบบ"
       },
       {
         "key": "ง",
-        "text": "Kubernetes ต้องสร้าง Guest OS Kernel ใหม่ทุกครั้งที่มีการสร้าง Pod"
+        "text": "Kubernetes จะสร้าง Guest OS Kernel ใหม่ขึ้นมาทุกครั้งที่มีการรัน Pod ในระบบ"
       }
     ],
     "answer": "ข",
-    "answerText": "Control Plane ทำหน้าที่บริหารจัดการคลัสเตอร์และจัดตารางงาน (Scheduling) โดยสั่งให้นำ Pod (ซึ่งเป็น\nหน่วยดีพลอยที่เล็กที่สุดที่บรรจุหนึ่งหรือหลายคอนเทนเนอร์ไว้ด้วยกัน) ไปรันบนเครื่อง Worker Node",
+    "answerText": "Control Plane จัดการคลัสเตอร์และจัดตารางงาน ส่วน Pod รันคอนเทนเนอร์บน Worker Node",
     "explanation": "ตามเอกสาร AWS Kubernetes Cluster Pod คือหน่วยเล็กที่สุดที่รันคอนเทนเนอร์ โดยรันอยู่บนเครื่อง Node และถูก ควบคุมดูแลโดย Control Plane",
     "sourcePage": 45
   },
@@ -2556,11 +2556,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "2.0 ms"
+        "text": "2.67 ms"
       },
       {
         "key": "ข",
-        "text": "2.67 ms"
+        "text": "2.0 ms"
       },
       {
         "key": "ค",
@@ -2571,7 +2571,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "8.0 ms"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "2.67 ms",
     "explanation": "อัลกอริทึม SJF จะเลือกโปรเซสที่ใช้เวลาน้อยที่สุดเข้าทำงานก่อน คือลำดับ P2 (2 ms) → P3 (4 ms) → P1 (10 ms): เวลารอของ P2 = 0 ms (เริ่มทำทันทีที่ t=0 เสร็จที่ t=2) เวลารอของ P3 = 2 ms (เริ่มทำที่ t=2 เสร็จที่ t=6) เวลารอของ P1 = 6 ms (เริ่มทำที่ t=6 เสร็จที่ t=16) ค่าเฉลี่ยเวลารอคอย = (0 + 2 + 6) / (3) = (8) / (3) ≈ 2.67 ms",
     "sourcePage": 47
@@ -2620,7 +2620,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "6,220,800 ไบต์"
+        "text": "49,766,400 ไบต์"
       },
       {
         "key": "ค",
@@ -2628,10 +2628,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "49,766,400 ไบต์"
+        "text": "6,220,800 ไบต์"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "6,220,800 ไบต์",
     "explanation": "ความลึกสี 24 bits = 24 ÷ 8 = 3 Bytes ต่อ 1 พิกเซล จำนวนพิกเซลทั้งหมด = 1,920 × 1,080 = 2,073,600 พิกเซล ดังนั้นขนาดข้อมูล = 2,073,600 × 3 = 6,220,800 ไบต์ (ประมาณ 5.93 MiB)",
     "sourcePage": 47
@@ -2830,7 +2830,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "4 40"
+        "text": "4 50"
       },
       {
         "key": "ค",
@@ -2838,10 +2838,10 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "4 50"
+        "text": "4 40"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "4 40",
     "explanation": "คำสั่ง b = a ไม่ได้คัดลอกลิสต์ใหม่ แต่ให้ตัวแปร b ชี้ไปยังอ็อบเจกต์ลิสต์ตัวเดียวกับ a ในหน่วยความจำ ดังนั้นเมื่อทำ b.append(40) ลิสต์ a จึงเปลี่ยนเป็น [10, 20, 30, 40] ด้วย (Python Control Flow & Lists) คำสั่ง c = a[:] เป็นการทำ Shallow Copy สร้างลิสต์ใบใหม่แยกต่างหาก ดังนั้น c.append(50) จึงไม่กระทบกับ a ดังนั้น len(a) จึงเท่ากับ 4 และตัวสุดท้าย a[-1] คือ 40",
     "sourcePage": 50
@@ -2890,18 +2890,18 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "0.0"
+        "text": "1.5"
       },
       {
         "key": "ค",
-        "text": "1.5"
+        "text": "0.0"
       },
       {
         "key": "ง",
         "text": "2.5"
       }
     ],
-    "answer": "ข",
+    "answer": "ค",
     "answerText": "0.0",
     "explanation": "คำนวณผลรวมถ่วงน้ำหนัก z = (x1 w1 + x2 w2 + x3 w3) + b: z = (2.0 × 0.5) + (-1.0 × 2.0) + (3.0 × -1.0) + 1.5 = 1.0 - 2.0 - 3.0 + 1.5 = -2.5 1. ส่งผ่านฟังก์ชัน ReLU: f(-2.5) = max(0, -2.5) = 0.0",
     "sourcePage": 51
@@ -2946,23 +2946,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "RAG บังคับให้ต้องนำข้อมูลความลับของลูกค้าไปฝังรวมในพารามิเตอร์ของโมเดลสาธารณะเสมอ"
+        "text": "RAG บังคับให้นำข้อมูลความลับขององค์กรไปฝังรวมในพารามิเตอร์ของโมเดลสาธารณะเสมอ"
       },
       {
         "key": "ข",
-        "text": "RAG ช่วยแยกข้อมูลภายในองค์กรออกจากชุดข้อมูลฝึกสอนของโมเดล (ทำให้เพิกถอนสิทธิ์การเข้าถึงได้ทันที) แต่หากฐาน ข้อมูล Vector Database ไม่ได้รับการเข้ารหัสและถูกเจาะระบบ ผู้โจมตีอาจย้อนกลับกระบวนการ Vector Embedding (Embedding Inversion) เพื่อกู้คืนข้อมูลต้นฉบับได้"
+        "text": "RAG แยกข้อมูลองค์กรออกจากโมเดลได้ดี แต่ต้องระวังการกู้คืนข้อมูลจาก Vector Database"
       },
       {
         "key": "ค",
-        "text": "Vector Database ไม่จำเป็นต้องมีการควบคุมสิทธิ์การเข้าถึงเพราะเวกเตอร์ตัวเลขไม่สามารถแปลงกลับเป็นข้อความได้ เลยในทุกกรณี"
+        "text": "Vector Database ปลอดภัยสมบูรณ์โดยไม่ต้องควบคุมสิทธิ์การเข้าถึงใดๆ ทั้งสิ้น"
       },
       {
         "key": "ง",
-        "text": "การใช้ RAG ทำให้โมเดลไม่ต้องใช้ GPU ในการทำ Inference อีกต่อไป"
+        "text": "การประมวลผลด้วย RAG ทำให้โมเดลภาษาไม่ต้องพึ่งพาชิป GPU ในการคำนวณอีกต่อไป"
       }
     ],
-    "answer": "ข",
-    "answerText": "RAG ช่วยแยกข้อมูลภายในองค์กรออกจากชุดข้อมูลฝึกสอนของโมเดล (ทำให้เพิกถอนสิทธิ์การเข้าถึงได้\nทันที) แต่หากฐานข้อมูล Vector Database ไม่ได้รับการเข้ารหัสและถูกเจาะระบบ ผู้โจมตีอาจย้อนกลับกระบวนการ\nVector Embedding (Embedding Inversion) เพื่อกู้คืนข้อมูลต้นฉบับได้",
+    "answer": "ง",
+    "answerText": "การประมวลผลด้วย RAG ทำให้โมเดลภาษาไม่ต้องพึ่งพาชิป GPU ในการคำนวณอีกต่อไป",
     "explanation": "ตามเอกสาร IBM RAG - Greater data security จุดเด่นของ RAG คือการไม่นำข้อมูลองค์กรไปเทรนฝังในโมเดล แต่ต้องระวังการเข้ารหัส Vector Database เพราะหากรั่วไหลอาจถูกทำ Embedding Inversion ได้",
     "sourcePage": 51
   },
@@ -2976,23 +2976,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "ช่วยลดขนาดของฮาร์ดดิสก์ลงจนเหลือศูนย์ไบต์"
+        "text": "ช่วยลดขนาดการจัดเก็บเวกเตอร์ในฮาร์ดดิสก์ของเซิร์ฟเวอร์ลงได้มากกว่า 90%"
       },
       {
         "key": "ข",
-        "text": "ช่วยให้ระบบสามารถเข้าใจและเชื่อมโยงความสัมพันธ์เชิงโครงสร้างหลายทอด (Multi-hop relationships) ระหว่างเอนทิ ตีต่างๆ ที่กระจายอยู่ในเอกสารหลายฉบับ ซึ่งการค้นหาด้วยความคล้ายคลึงของเวกเตอร์ (Semantic Search) เพียงอย่าง เดียวมักจับความสัมพันธ์ข้ามเอกสารได้ไม่ครบถ้วน"
+        "text": "ช่วยเชื่อมโยงความสัมพันธ์เชิงโครงสร้างหลายทอด (Multi-hop) ระหว่างข้อมูลข้ามเอกสาร"
       },
       {
         "key": "ค",
-        "text": "ช่วยเปลี่ยนโมเดลภาษาให้กลายเป็นระบบปฏิบัติการ Linux"
+        "text": "ช่วยแปลงข้อมูลรูปภาพให้กลายเป็นฐานข้อมูลเชิงสัมพันธ์แบบตาราง SQL อัตโนมัติ"
       },
       {
         "key": "ง",
-        "text": "ใช้สำหรับแปลงไฟล์เสียงให้เป็นสายสัญญาณไฟเบอร์ออปติก"
+        "text": "ช่วยเพิ่มขีดความสามารถของโมเดลให้ทำงานได้โดยไม่ต้องมีการเชื่อมต่อเครือข่าย"
       }
     ],
-    "answer": "ข",
-    "answerText": "ช่วยให้ระบบสามารถเข้าใจและเชื่อมโยงความสัมพันธ์เชิงโครงสร้างหลายทอด (Multi-hop relationships)\nระหว่างเอนทิตีต่างๆ ที่กระจายอยู่ในเอกสารหลายฉบับ ซึ่งการค้นหาด้วยความคล้ายคลึงของเวกเตอร์ (Semantic\nSearch) เพียงอย่างเดียวมักจับความสัมพันธ์ข้ามเอกสารได้ไม่ครบถ้วน",
+    "answer": "ง",
+    "answerText": "ช่วยเพิ่มขีดความสามารถของโมเดลให้ทำงานได้โดยไม่ต้องมีการเชื่อมต่อเครือข่าย",
     "explanation": "ตามเอกสาร AWS What is GraphRAG การผสาน Vector + Graph Hybrid ช่วยให้ได้ทั้งความสามารถในการค้นหาความหมายใกล้เคียง (Semantic Search) และการไล่ความสัมพันธ์ระหว่างโหนดเอนทิตี (Graph Traversal)",
     "sourcePage": 52
   },
@@ -3096,11 +3096,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "รองรับช่องสัญญาณกว้างสูงสุด 160 MHz ใช้ 1024-QAM และทำงานได้เพียงย่านความถี่เดียว"
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz ใช้ 4096-QAM และ Multi-Link Operation"
       },
       {
         "key": "ข",
-        "text": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz ใช้ 4096-QAM และ Multi-Link Operation"
+        "text": "รองรับช่องสัญญาณกว้างสูงสุด 160 MHz ใช้ 1024-QAM และทำงานได้เพียงย่านความถี่เดียว"
       },
       {
         "key": "ค",
@@ -3111,9 +3111,9 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz แต่ไม่สามารถใช้หลายย่านความถี่พร้อมกันได้"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "รองรับช่องสัญญาณกว้างสูงสุด 320 MHz ใช้ 4096-QAM และ Multi-Link Operation",
-    "explanation": "Wi-Fi 7 หรือ IEEE 802.11be เป็นมาตรฐาน Extremely High Throughput ที่มีคุณสมบัติสำคัญ ได้แก่ ช่องสัญญาณกว้างสูงสุด 320 MHz ในย่านความถี่ที่รองรับ การมอดูเลต 4096-QAM ซึ่งบรรจุข้อมูลได้ 12 บิตต่อสัญลักษณ์ และ Multi-Link Operation (MLO) ที่ช่วยให้อุปกรณ์ส่งหรือรับข้อมูลผ่านหลายลิงก์ได้ตามเงื่อนไขของระบบ ข้อ ก สับสนกับคุณสมบัติบางส่วนของ Wi-Fi 6 และ Wi-Fi 6E ซึ่งมีช่องสัญญาณสูงสุด 160 MHz และใช้ 1024-QAM ข้อ ค ให้ค่าความกว้างช่องสัญญาณและระดับการมอดูเลตต่ำกว่าความสามารถเด่นของ Wi-Fi 7 ข้อ ง ผิดเพราะ MLO เป็นหนึ่งในคุณสมบัติหลักของ Wi-Fi 7 อย่างไรก็ตาม การใช้งานจริงขึ้นอยู่กับย่านความถี่ กฎระเบียบ และความสามารถของอุปกรณ์ทั้งสองฝั่ง",
+    "explanation": "Wi-Fi 7 หรือ IEEE 802.11be เป็นมาตรฐาน Extremely High Throughput ที่มีคุณสมบัติสำคัญ ได้แก่ ช่องสัญญาณกว้างสูงสุด 320 MHz ในย่านความถี่ที่รองรับ การมอดูเลต 4096-QAM ซึ่งบรรจุข้อมูลได้ 12 บิตต่อสัญลักษณ์ และ Multi-Link Operation (MLO) ที่ช่วยให้อุปกรณ์ส่งหรือรับข้อมูลผ่านหลายลิงก์ได้ตามเงื่อนไขของระบบ ข้อ ข สับสนกับคุณสมบัติบางส่วนของ Wi-Fi 6 และ Wi-Fi 6E ซึ่งมีช่องสัญญาณสูงสุด 160 MHz และใช้ 1024-QAM ข้อ ค ให้ค่าความกว้างช่องสัญญาณและระดับการมอดูเลตต่ำกว่าความสามารถเด่นของ Wi-Fi 7 ข้อ ง ผิดเพราะ MLO เป็นหนึ่งในคุณสมบัติหลักของ Wi-Fi 7 อย่างไรก็ตาม การใช้งานจริงขึ้นอยู่กับย่านความถี่ กฎระเบียบ และความสามารถของอุปกรณ์ทั้งสองฝั่ง",
     "sourcePage": 1
   },
   {
@@ -3156,24 +3156,24 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Grover's Algorithm ซึ่งเร่งการค้นหาข้อมูลแบบไม่เรียงลำดับเป็น O(√N)"
+        "text": "Grover's Algorithm ซึ่งช่วยค้นหาข้อมูลในฐานข้อมูลที่ไม่ได้เรียงลำดับได้เร็วขึ้นแบบพหุนาม"
       },
       {
         "key": "ข",
-        "text": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มได้อย่างมีประสิทธิภาพเชิงพหุนามในแบบจำลองควอนตัม"
+        "text": "Simon's Algorithm ซึ่งใช้แก้ปัญหาเกี่ยวกับฟังก์ชันคาบแบบเอกซ์โพเนนเชียลในระบบเครือข่าย"
       },
       {
         "key": "ค",
-        "text": "Dijkstra's Algorithm ซึ่งค้นหาเส้นทางที่สั้นที่สุดด้วย Qubit"
+        "text": "VQE Algorithm ซึ่งใช้สำหรับจำลองโครงสร้างโมเลกุลทางเคมีบนเครื่องควอนตัมคอมพิวเตอร์"
       },
       {
         "key": "ง",
-        "text": "K-Means Algorithm ซึ่งใช้ Quantum Entanglement เพื่อแบ่งจำนวนเฉพาะ"
+        "text": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มขนาดใหญ่ได้ในเวลาแบบพหุนาม"
       }
     ],
-    "answer": "ข",
-    "answerText": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มได้อย่างมีประสิทธิภาพเชิงพหุนามในแบบจำลองควอนตัม",
-    "explanation": "Shor's Algorithm เป็นอัลกอริทึมควอนตัมที่แก้ปัญหาการแยกตัวประกอบจำนวนเต็มโดยใช้ประโยชน์จาก Quantum Fourier Transform และแนวคิดการค้นหาคาบ ทำให้สามารถแยกตัวประกอบจำนวนเต็มได้ในเวลาพหุนามเมื่อมีคอมพิวเตอร์ควอนตัมแบบ Fault-Tolerant ที่มีขนาดเหมาะสม จึงมีผลต่อสมมติฐานความปลอดภัยของ RSA ข้อ ก เป็นอัลกอริทึมของ Grover ซึ่งให้การเร่งการค้นหาแบบไม่มีโครงสร้างจาก O(N) เป็น O(√N) ไม่ใช่อัลกอริทึมหลักสำหรับการแยกตัวประกอบ ข้อ ค เป็นอัลกอริทึมกราฟแบบดั้งเดิมสำหรับหาเส้นทางที่สั้นที่สุด ไม่ได้ใช้ Qubit เป็นเงื่อนไขของอัลกอริทึม ข้อ ง เป็นเทคนิค Unsupervised Learning ที่ใช้จัดกลุ่มข้อมูล ไม่ได้ออกแบบมาเพื่อแยกตัวประกอบจำนวนเต็ม",
+    "answer": "ง",
+    "answerText": "Shor's Algorithm ซึ่งสามารถแยกตัวประกอบจำนวนเต็มขนาดใหญ่ได้ในเวลาแบบพหุนาม",
+    "explanation": "Shor's Algorithm เป็นอัลกอริทึมควอนตัมที่แก้ปัญหาการแยกตัวประกอบจำนวนเต็มโดยใช้ประโยชน์จาก Quantum Fourier Transform และแนวคิดการค้นหาคาบ ทำให้สามารถแยกตัวประกอบจำนวนเต็มได้ในเวลาพหุนามเมื่อมีคอมพิวเตอร์ควอนตัมแบบ Fault-Tolerant ที่มีขนาดเหมาะสม จึงมีผลต่อสมมติฐานความปลอดภัยของ RSA ข้อ ก เป็นอัลกอริทึมของ Grover ซึ่งให้การเร่งการค้นหาแบบไม่มีโครงสร้างจาก O(N) เป็น O(√N) ไม่ใช่อัลกอริทึมหลักสำหรับการแยกตัวประกอบ ข้อ ค เป็นอัลกอริทึมกราฟแบบดั้งเดิมสำหรับหาเส้นทางที่สั้นที่สุด ไม่ได้ใช้ Qubit เป็นเงื่อนไขของอัลกอริทึม ข้อ ข เป็นเทคนิค Unsupervised Learning ที่ใช้จัดกลุ่มข้อมูล ไม่ได้ออกแบบมาเพื่อแยกตัวประกอบจำนวนเต็ม",
     "sourcePage": 1
   },
   {
@@ -3186,11 +3186,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "Superposition คือการเชื่อมต่อ Qubit หลายตัว ส่วน Entanglement คือการเพิ่มจำนวนบิตแบบทวิภาค"
+        "text": "Superposition คือสถานะซ้อนทับของสถานะควอนตัม ส่วน Entanglement คือความสัมพันธ์เชิงควอนตัมระหว่างระบบที่ไม่สามารถอธิบายแยกจากกันได้อย่างสมบูรณ์"
       },
       {
         "key": "ข",
-        "text": "Superposition คือสถานะซ้อนทับของสถานะควอนตัม ส่วน Entanglement คือความสัมพันธ์เชิงควอนตัมระหว่างระบบที่ไม่สามารถอธิบายแยกจากกันได้อย่างสมบูรณ์"
+        "text": "Superposition คือการเชื่อมต่อ Qubit หลายตัว ส่วน Entanglement คือการเพิ่มจำนวนบิตแบบทวิภาค"
       },
       {
         "key": "ค",
@@ -3201,9 +3201,9 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "Superposition และ Entanglement เป็นชื่อเรียกเดียวกันของการเพิ่มความถี่สัญญาณในวงจรควอนตัม"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "Superposition คือสถานะซ้อนทับของสถานะควอนตัม ส่วน Entanglement คือความสัมพันธ์เชิงควอนตัมระหว่างระบบที่ไม่สามารถอธิบายแยกจากกันได้อย่างสมบูรณ์",
-    "explanation": "Quantum Superposition อธิบายสถานะของ Qubit ที่สามารถอยู่ในผลรวมเชิงควอนตัมของสถานะพื้นฐาน |0⟩ และ |1⟩ ได้ โดยเมื่อวัดจะได้ผลลัพธ์ตามความน่าจะเป็น ส่วน Entanglement เป็นความสัมพันธ์ระหว่าง Qubit หลายตัวที่ทำให้สถานะรวมของระบบมีความเชื่อมโยงกัน และไม่สามารถแทนด้วยสถานะของแต่ละ Qubit อย่างอิสระได้ ข้อ ก สลับความหมายของแนวคิดทั้งสองและเข้าใจผิดเกี่ยวกับจำนวนบิต ข้อ ค ใช้คำว่าอยู่ในสถานะ 0 และ 1 พร้อมกันในความหมายแบบคลาสสิก ซึ่งไม่ถูกต้อง อีกทั้ง Quantum No-Cloning Theorem ห้ามคัดลอกสถานะควอนตัมที่ไม่ทราบค่าได้อย่างสมบูรณ์โดยทั่วไป ข้อ ง เป็นการสับสนกับแนวคิดด้านสัญญาณ ไม่เกี่ยวข้องกับนิยามของ Superposition หรือ Entanglement",
+    "explanation": "Quantum Superposition อธิบายสถานะของ Qubit ที่สามารถอยู่ในผลรวมเชิงควอนตัมของสถานะพื้นฐาน |0⟩ และ |1⟩ ได้ โดยเมื่อวัดจะได้ผลลัพธ์ตามความน่าจะเป็น ส่วน Entanglement เป็นความสัมพันธ์ระหว่าง Qubit หลายตัวที่ทำให้สถานะรวมของระบบมีความเชื่อมโยงกัน และไม่สามารถแทนด้วยสถานะของแต่ละ Qubit อย่างอิสระได้ ข้อ ข สลับความหมายของแนวคิดทั้งสองและเข้าใจผิดเกี่ยวกับจำนวนบิต ข้อ ค ใช้คำว่าอยู่ในสถานะ 0 และ 1 พร้อมกันในความหมายแบบคลาสสิก ซึ่งไม่ถูกต้อง อีกทั้ง Quantum No-Cloning Theorem ห้ามคัดลอกสถานะควอนตัมที่ไม่ทราบค่าได้อย่างสมบูรณ์โดยทั่วไป ข้อ ง เป็นการสับสนกับแนวคิดด้านสัญญาณ ไม่เกี่ยวข้องกับนิยามของ Superposition หรือ Entanglement",
     "sourcePage": 1
   },
   {
@@ -3254,16 +3254,16 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ค",
-        "text": "Data Processor เพราะประมวลผลข้อมูลตามคำสั่งของ Data Controller"
+        "text": "Data Protection Officer เพราะมีหน้าที่จัดเก็บข้อมูลให้บริษัท A"
       },
       {
         "key": "ง",
-        "text": "Data Protection Officer เพราะมีหน้าที่จัดเก็บข้อมูลให้บริษัท A"
+        "text": "Data Processor เพราะประมวลผลข้อมูลตามคำสั่งของ Data Controller"
       }
     ],
-    "answer": "ค",
+    "answer": "ง",
     "answerText": "Data Processor เพราะประมวลผลข้อมูลตามคำสั่งของ Data Controller",
-    "explanation": "ตามหลัก PDPA ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller) เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลข้อมูล ส่วนผู้ประมวลผลข้อมูลส่วนบุคคล (Data Processor) ดำเนินการเกี่ยวกับข้อมูลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูล ดังนั้นบริษัท A เป็น Controller และบริษัท B เป็น Processor ข้อ ก Data Subject คือบุคคลธรรมดาที่ข้อมูลส่วนบุคคลเกี่ยวข้องด้วย ไม่ใช่บริษัทที่ให้บริการประมวลผล ข้อ ข ผิดเพราะบริษัท B ไม่ได้เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลตามเงื่อนไขของโจทย์ ข้อ ง DPO คือเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล มีหน้าที่ให้คำแนะนำ ตรวจสอบ และประสานงานตามกฎหมาย ไม่ใช่ชื่อเรียกของผู้ให้บริการจัดเก็บข้อมูล ทั้งนี้บทบาทจริงต้องพิจารณาจากอำนาจและการดำเนินการจริง ไม่ใช่ชื่อในสัญญาเพียงอย่างเดียว",
+    "explanation": "ตามหลัก PDPA ผู้ควบคุมข้อมูลส่วนบุคคล (Data Controller) เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลข้อมูล ส่วนผู้ประมวลผลข้อมูลส่วนบุคคล (Data Processor) ดำเนินการเกี่ยวกับข้อมูลตามคำสั่งหรือในนามของผู้ควบคุมข้อมูล ดังนั้นบริษัท A เป็น Controller และบริษัท B เป็น Processor ข้อ ก Data Subject คือบุคคลธรรมดาที่ข้อมูลส่วนบุคคลเกี่ยวข้องด้วย ไม่ใช่บริษัทที่ให้บริการประมวลผล ข้อ ข ผิดเพราะบริษัท B ไม่ได้เป็นผู้กำหนดวัตถุประสงค์และวิธีการประมวลผลตามเงื่อนไขของโจทย์ ข้อ ค DPO คือเจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล มีหน้าที่ให้คำแนะนำ ตรวจสอบ และประสานงานตามกฎหมาย ไม่ใช่ชื่อเรียกของผู้ให้บริการจัดเก็บข้อมูล ทั้งนี้บทบาทจริงต้องพิจารณาจากอำนาจและการดำเนินการจริง ไม่ใช่ชื่อในสัญญาเพียงอย่างเดียว",
     "sourcePage": 1
   },
   {
@@ -3276,23 +3276,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "การพัฒนาเครื่องมือคำนวณโครงสร้างโปรตีนด้วย AlphaFold"
+        "text": "การวิจัยเรื่อง Quantum Entanglement และการสื่อสารข้อมูลแบบควอนตัมความเร็วสูง"
       },
       {
         "key": "ข",
-        "text": "การค้นพบกลไกทางพันธุกรรมที่ควบคุมการแบ่งเซลล์"
+        "text": "การค้นพบคลื่นความโน้มถ่วงจากการชนกันของหลุมดำมวลยิ่งยวดในอวกาศส่วนลึก"
       },
       {
         "key": "ค",
-        "text": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วยโครงข่ายประสาทเทียม"
+        "text": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วย Artificial Neural Networks"
       },
       {
         "key": "ง",
-        "text": "การค้นพบหลักการเข้ารหัสข้อมูลแบบ Quantum Encryption"
+        "text": "การประดิษฐ์เซลล์แสงอาทิตย์ประสิทธิภาพสูงจากวัสดุเพอรอฟสไกต์ยุคใหม่"
       }
     ],
     "answer": "ค",
-    "answerText": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วยโครงข่ายประสาทเทียม",
+    "answerText": "การพัฒนาเครื่องมือพื้นฐานสำหรับ Machine Learning ด้วย Artificial Neural Networks",
     "explanation": "รางวัลโนเบลสาขาฟิสิกส์ปี 2024 มอบให้ John J. Hopfield และ Geoffrey Hinton สำหรับการค้นพบและประดิษฐ์สิ่งที่ทำให้เกิด Machine Learning ด้วยโครงข่ายประสาทเทียม โดยผลงานของ Hopfield เกี่ยวข้องกับ Associative Memory และ Hopfield Network ส่วน Hinton มีผลงานเกี่ยวกับวิธีการเรียนรู้ของโครงข่ายประสาทเทียม ข้อ ก เป็นเนื้อหาที่เกี่ยวข้องกับ AlphaFold และรางวัลโนเบลสาขาเคมีปี 2024 ซึ่งมีผู้ได้รับรางวัลคือ David Baker, Demis Hassabis และ John Jumper ข้อ ข ไม่ใช่ผลงานที่เป็นเหตุผลของรางวัลดังกล่าว ข้อ ง ไม่ใช่หัวข้อที่ระบุในการมอบรางวัลโนเบลสาขาฟิสิกส์ปี 2024",
     "sourcePage": 1
   },
@@ -3396,11 +3396,11 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "TCP เพราะมีการยืนยันทุกแพ็กเก็ตและรับประกันว่าเสียงจะไม่สูญหาย"
+        "text": "UDP เพราะไม่มีการรับประกันการส่งถึง แต่มี Overhead ต่ำและเหมาะกับงานที่ต้องการความหน่วงต่ำ"
       },
       {
         "key": "ข",
-        "text": "UDP เพราะไม่มีการรับประกันการส่งถึง แต่มี Overhead ต่ำและเหมาะกับงานที่ต้องการความหน่วงต่ำ"
+        "text": "TCP เพราะมีการยืนยันทุกแพ็กเก็ตและรับประกันว่าเสียงจะไม่สูญหาย"
       },
       {
         "key": "ค",
@@ -3411,9 +3411,9 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "ICMP เพราะออกแบบมาเพื่อส่งข้อมูล Multimedia แบบเรียลไทม์"
       }
     ],
-    "answer": "ข",
+    "answer": "ก",
     "answerText": "UDP เพราะไม่มีการรับประกันการส่งถึง แต่มี Overhead ต่ำและเหมาะกับงานที่ต้องการความหน่วงต่ำ",
-    "explanation": "UDP เป็น Connectionless Transport Protocol ที่ไม่ทำ Three-Way Handshake และไม่มีกลไก Retransmission, Sequencing และ Flow Control แบบ TCP ทำให้มี Overhead ต่ำและเหมาะกับแอปพลิเคชันที่ให้ความสำคัญกับเวลามากกว่าการส่งข้อมูลทุกแพ็กเก็ตให้ครบ เช่น VoIP และการสตรีมแบบเรียลไทม์ ข้อ ก TCP มีความสามารถด้าน Reliability แต่การส่งซ้ำและการจัดลำดับข้อมูลอาจเพิ่ม Latency และ Jitter ข้อ ค HTTP เป็นโปรโตคอลระดับ Application Layer ซึ่งต้องอาศัย Transport Layer ในการส่งข้อมูล ข้อ ง ICMP ใช้สำหรับข้อความควบคุมและวินิจฉัยเครือข่าย เช่น Ping ไม่ใช่โปรโตคอลหลักสำหรับส่งเสียงแบบเรียลไทม์",
+    "explanation": "UDP เป็น Connectionless Transport Protocol ที่ไม่ทำ Three-Way Handshake และไม่มีกลไก Retransmission, Sequencing และ Flow Control แบบ TCP ทำให้มี Overhead ต่ำและเหมาะกับแอปพลิเคชันที่ให้ความสำคัญกับเวลามากกว่าการส่งข้อมูลทุกแพ็กเก็ตให้ครบ เช่น VoIP และการสตรีมแบบเรียลไทม์ ข้อ ข TCP มีความสามารถด้าน Reliability แต่การส่งซ้ำและการจัดลำดับข้อมูลอาจเพิ่ม Latency และ Jitter ข้อ ค HTTP เป็นโปรโตคอลระดับ Application Layer ซึ่งต้องอาศัย Transport Layer ในการส่งข้อมูล ข้อ ง ICMP ใช้สำหรับข้อความควบคุมและวินิจฉัยเครือข่าย เช่น Ping ไม่ใช่โปรโตคอลหลักสำหรับส่งเสียงแบบเรียลไทม์",
     "sourcePage": 2
   },
   {
@@ -3430,7 +3430,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "30 หมายเลข"
+        "text": "62 หมายเลข"
       },
       {
         "key": "ค",
@@ -3438,12 +3438,12 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "62 หมายเลข"
+        "text": "30 หมายเลข"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "30 หมายเลข",
-    "explanation": "Subnet /27 มี Host Bits เท่ากับ 32 - 27 = 5 บิต จำนวน IP Address ทั้งหมดต่อ Subnet คือ 2^5 = 32 หมายเลข โดยตาม Subnet IPv4 แบบทั่วไปจะหัก Network Address และ Broadcast Address ออกอย่างละ 1 หมายเลข จึงเหลือ Usable Hosts = 32 - 2 = 30 หมายเลข ข้อ ก คือจำนวน Usable Hosts ของ /28 ซึ่งมี Host Bits 4 บิตและรองรับ 14 เครื่อง ข้อ ค เป็นจำนวน IP ทั้งหมดของ /27 แต่รวม Network และ Broadcast Address ด้วย ข้อ ง คือจำนวน Usable Hosts ของ /26 ซึ่งมี Host Bits 6 บิตและรองรับ 62 เครื่อง",
+    "explanation": "Subnet /27 มี Host Bits เท่ากับ 32 - 27 = 5 บิต จำนวน IP Address ทั้งหมดต่อ Subnet คือ 2^5 = 32 หมายเลข โดยตาม Subnet IPv4 แบบทั่วไปจะหัก Network Address และ Broadcast Address ออกอย่างละ 1 หมายเลข จึงเหลือ Usable Hosts = 32 - 2 = 30 หมายเลข ข้อ ก คือจำนวน Usable Hosts ของ /28 ซึ่งมี Host Bits 4 บิตและรองรับ 14 เครื่อง ข้อ ค เป็นจำนวน IP ทั้งหมดของ /27 แต่รวม Network และ Broadcast Address ด้วย ข้อ ข คือจำนวน Usable Hosts ของ /26 ซึ่งมี Host Bits 6 บิตและรองรับ 62 เครื่อง",
     "sourcePage": 2
   },
   {
@@ -3456,23 +3456,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "เป็น Private IP ในช่วง 10.0.0.0/8 ที่ DHCP Server แจกให้อัตโนมัติ"
+        "text": "เป็น Public IP Address ที่ผู้ให้บริการอินเทอร์เน็ตกำหนดให้เพื่อใช้งานภายนอก"
       },
       {
         "key": "ข",
-        "text": "เป็น APIPA หรือ Link-Local Address ที่ระบบอาจกำหนดเมื่อไม่สามารถรับ IPv4 Address จาก DHCP ได้"
+        "text": "เป็น APIPA Address ที่ระบบกำหนดขึ้นเองอัตโนมัติเมื่อติดต่อ DHCP Server ไม่สำเร็จ"
       },
       {
         "key": "ค",
-        "text": "เป็น Loopback Address ที่ใช้ทดสอบการสื่อสารกับ Router ภายนอก"
+        "text": "เป็น Loopback Address ที่ระบบปฏิบัติการสงวนไว้สำหรับการทดสอบภายในเครื่องเท่านั้น"
       },
       {
         "key": "ง",
-        "text": "เป็น Public IP Address ที่สามารถเข้าถึงอินเทอร์เน็ตได้โดยตรงผ่าน DNS"
+        "text": "เป็น Private IP Address คลาส C ที่เราเตอร์จัดสรรให้ตามปกติในเครือข่ายท้องถิ่น"
       }
     ],
     "answer": "ข",
-    "answerText": "เป็น APIPA หรือ Link-Local Address ที่ระบบอาจกำหนดเมื่อไม่สามารถรับ IPv4 Address จาก DHCP ได้",
+    "answerText": "เป็น APIPA Address ที่ระบบกำหนดขึ้นเองอัตโนมัติเมื่อติดต่อ DHCP Server ไม่สำเร็จ",
     "explanation": "ช่วง 169.254.0.0/16 เป็น IPv4 Link-Local Address ซึ่งในระบบปฏิบัติการทั่วไปอาจถูกกำหนดผ่านกลไก APIPA เมื่อไม่สามารถรับ Address จาก DHCP ได้ตามปกติ อุปกรณ์ที่ใช้ IP ช่วงนี้สามารถสื่อสารกับอุปกรณ์อื่นใน Link เดียวกันที่มี Link-Local Address ได้ แต่โดยทั่วไปไม่สามารถใช้เป็นเส้นทางสื่อสารข้ามเครือข่ายผ่าน Router ได้ ข้อ ก ช่วง 10.0.0.0/8 เป็น Private IP ตาม RFC 1918 ไม่ใช่ช่วงที่ตรวจพบ ข้อ ค Loopback ใช้ช่วง 127.0.0.0/8 โดย 127.0.0.1 เป็นตัวอย่างที่รู้จักกันดี ข้อ ง เป็นความเข้าใจผิด เพราะ 169.254.0.0/16 ไม่ใช่ Public IP ที่ใช้เชื่อมต่ออินเทอร์เน็ตโดยตรง และ DNS ไม่ได้เปลี่ยนข้อจำกัดนี้",
     "sourcePage": 2
   },
@@ -3490,20 +3490,20 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "A และ MX"
+        "text": "TXT และ PTR"
       },
       {
         "key": "ค",
-        "text": "TXT และ PTR"
+        "text": "A และ MX"
       },
       {
         "key": "ง",
         "text": "CNAME และ AAAA"
       }
     ],
-    "answer": "ข",
+    "answer": "ค",
     "answerText": "A และ MX",
-    "explanation": "DNS A Record ใช้จับคู่ชื่อโดเมนกับ IPv4 Address เช่น example.com ไปยัง 203.0.113.10 ส่วน MX Record ใช้ระบุ Mail Exchanger ของโดเมน พร้อมค่า Priority เพื่อกำหนดลำดับความสำคัญของ Mail Server ดังนั้นจึงต้องใช้ A และ MX ตามลำดับ ข้อ ก AAAA ใช้กับ IPv6 Address ส่วน CNAME ใช้กำหนดชื่อแทนไปยังชื่อโดเมนอื่น ไม่ใช่ Record สำหรับกำหนด Mail Server ข้อ ค TXT ใช้เก็บข้อความ เช่น SPF, DKIM หรือการยืนยันโดเมน ส่วน PTR ใช้ทำ Reverse DNS ข้อ ง CNAME และ AAAA ไม่ตรงกับข้อกำหนด เพราะ AAAA ไม่ได้ใช้เชื่อมชื่อโดเมนกับ IPv4 และ CNAME ไม่ได้กำหนด MX Priority",
+    "explanation": "DNS A Record ใช้จับคู่ชื่อโดเมนกับ IPv4 Address เช่น example.com ไปยัง 203.0.113.10 ส่วน MX Record ใช้ระบุ Mail Exchanger ของโดเมน พร้อมค่า Priority เพื่อกำหนดลำดับความสำคัญของ Mail Server ดังนั้นจึงต้องใช้ A และ MX ตามลำดับ ข้อ ก AAAA ใช้กับ IPv6 Address ส่วน CNAME ใช้กำหนดชื่อแทนไปยังชื่อโดเมนอื่น ไม่ใช่ Record สำหรับกำหนด Mail Server ข้อ ข TXT ใช้เก็บข้อความ เช่น SPF, DKIM หรือการยืนยันโดเมน ส่วน PTR ใช้ทำ Reverse DNS ข้อ ง CNAME และ AAAA ไม่ตรงกับข้อกำหนด เพราะ AAAA ไม่ได้ใช้เชื่อมชื่อโดเมนกับ IPv4 และ CNAME ไม่ได้กำหนด MX Priority",
     "sourcePage": 2
   },
   {
@@ -3520,7 +3520,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "Recursive Resolver → Root Server → TLD Server → Authoritative Server"
+        "text": "Authoritative Server → Root Server → Recursive Resolver → TLD Server"
       },
       {
         "key": "ค",
@@ -3528,12 +3528,12 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "Authoritative Server → Root Server → Recursive Resolver → TLD Server"
+        "text": "Recursive Resolver → Root Server → TLD Server → Authoritative Server"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "Recursive Resolver → Root Server → TLD Server → Authoritative Server",
-    "explanation": "โดยทั่วไปเครื่องลูกข่ายจะส่งคำถามไปยัง Recursive Resolver ก่อน หาก Resolver ไม่มีข้อมูลใน Cache จะเริ่มค้นหาแบบ Iterative โดยถาม Root Server เพื่อค้นหาข้อมูล Referral ไปยัง TLD Server จากนั้นถาม TLD Server เช่น .com เพื่อค้นหา Authoritative Name Server ของ example.com และสุดท้ายถาม Authoritative Server เพื่อรับคำตอบของ www.example.com เช่น A Record หรือ AAAA Record ข้อ ก เริ่มจาก Root Server ก่อน Resolver ทั้งที่ระบบโดยทั่วไปต้องมี Resolver รับคำขอจาก Client ก่อน และยังจัดลำดับ TLD กับ Authoritative สลับกัน ข้อ ค ให้ TLD มาก่อน Root ซึ่งไม่เป็นไปตามลำดับ DNS Hierarchy ข้อ ง เริ่มที่ Authoritative Server โดยไม่มีข้อมูลสำหรับค้นหา Name Server และจัดตำแหน่ง Resolver ผิด อย่างไรก็ตาม การทำงานจริงอาจมีการใช้ Cache และ Query Optimization ทำให้ไม่จำเป็นต้องสอบถามทุกชั้นทุกครั้ง",
+    "explanation": "โดยทั่วไปเครื่องลูกข่ายจะส่งคำถามไปยัง Recursive Resolver ก่อน หาก Resolver ไม่มีข้อมูลใน Cache จะเริ่มค้นหาแบบ Iterative โดยถาม Root Server เพื่อค้นหาข้อมูล Referral ไปยัง TLD Server จากนั้นถาม TLD Server เช่น .com เพื่อค้นหา Authoritative Name Server ของ example.com และสุดท้ายถาม Authoritative Server เพื่อรับคำตอบของ www.example.com เช่น A Record หรือ AAAA Record ข้อ ก เริ่มจาก Root Server ก่อน Resolver ทั้งที่ระบบโดยทั่วไปต้องมี Resolver รับคำขอจาก Client ก่อน และยังจัดลำดับ TLD กับ Authoritative สลับกัน ข้อ ค ให้ TLD มาก่อน Root ซึ่งไม่เป็นไปตามลำดับ DNS Hierarchy ข้อ ข เริ่มที่ Authoritative Server โดยไม่มีข้อมูลสำหรับค้นหา Name Server และจัดตำแหน่ง Resolver ผิด อย่างไรก็ตาม การทำงานจริงอาจมีการใช้ Cache และ Query Optimization ทำให้ไม่จำเป็นต้องสอบถามทุกชั้นทุกครั้ง",
     "sourcePage": 2
   },
   {
@@ -3580,7 +3580,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "Docker Container โดยใช้ Linux Namespaces สำหรับ Isolation และ cgroups สำหรับควบคุม Resource"
+        "text": "Docker Container โดยใช้ Hypervisor จำลองฮาร์ดแวร์และติดตั้ง Guest OS แยกในทุก Container"
       },
       {
         "key": "ค",
@@ -3588,12 +3588,12 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "Docker Container โดยใช้ Hypervisor จำลองฮาร์ดแวร์และติดตั้ง Guest OS แยกในทุก Container"
+        "text": "Docker Container โดยใช้ Linux Namespaces สำหรับ Isolation และ cgroups สำหรับควบคุม Resource"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "Docker Container โดยใช้ Linux Namespaces สำหรับ Isolation และ cgroups สำหรับควบคุม Resource",
-    "explanation": "Container มีน้ำหนักเบากว่า Virtual Machine โดยทั่วไป เพราะ Container บน Linux Host ใช้ Kernel ร่วมกัน แต่แยกมุมมองทรัพยากรและกระบวนการผ่าน Namespaces เช่น PID, Network และ Mount Namespace ส่วน cgroups ใช้จำกัดและติดตามการใช้ทรัพยากร เช่น CPU และ Memory ข้อ ก สับสนระหว่าง Container กับ VM เพราะ Namespace ไม่ได้สร้าง Guest Kernel แยกต่างหากทุกเครื่อง ข้อ ค Dual Boot เป็นการเลือกบูตระบบปฏิบัติการ ไม่ใช่วิธีรัน Application หลายสภาพแวดล้อมพร้อมกันด้วย Container ข้อ ง อธิบายสถาปัตยกรรม VM ที่ใช้ Hypervisor และ Guest OS มากกว่าสถาปัตยกรรม Container ทั้งนี้ Container ไม่ได้หมายความว่าไม่มีชั้น Isolation อื่นหรือปลอดภัยเทียบเท่า VM ในทุกสถานการณ์",
+    "explanation": "Container มีน้ำหนักเบากว่า Virtual Machine โดยทั่วไป เพราะ Container บน Linux Host ใช้ Kernel ร่วมกัน แต่แยกมุมมองทรัพยากรและกระบวนการผ่าน Namespaces เช่น PID, Network และ Mount Namespace ส่วน cgroups ใช้จำกัดและติดตามการใช้ทรัพยากร เช่น CPU และ Memory ข้อ ก สับสนระหว่าง Container กับ VM เพราะ Namespace ไม่ได้สร้าง Guest Kernel แยกต่างหากทุกเครื่อง ข้อ ค Dual Boot เป็นการเลือกบูตระบบปฏิบัติการ ไม่ใช่วิธีรัน Application หลายสภาพแวดล้อมพร้อมกันด้วย Container ข้อ ข อธิบายสถาปัตยกรรม VM ที่ใช้ Hypervisor และ Guest OS มากกว่าสถาปัตยกรรม Container ทั้งนี้ Container ไม่ได้หมายความว่าไม่มีชั้น Isolation อื่นหรือปลอดภัยเทียบเท่า VM ในทุกสถานการณ์",
     "sourcePage": 2
   },
   {
@@ -3666,24 +3666,24 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "อ่านคำสั่งถัดไปจากหน่วยความจำและเพิ่มค่า Program Counter"
+        "text": "นำคำสั่งจากหน่วยความจำหลักมาเก็บไว้ใน Program Counter ของซีพียู"
       },
       {
         "key": "ข",
-        "text": "ตีความคำสั่งที่อยู่ใน Instruction Register เพื่อระบุชนิดคำสั่งและ Operand ที่ต้องใช้"
+        "text": "ประมวลผลทางคณิตศาสตร์และตรรกศาสตร์ผ่าน Arithmetic Logic Unit"
       },
       {
         "key": "ค",
-        "text": "ดำเนินการคำนวณทางคณิตศาสตร์หรือทางตรรกะตามคำสั่ง"
+        "text": "บันทึกผลลัพธ์จากการคำนวณกลับลงสู่หน่วยความจำหลักของระบบคอมพิวเตอร์"
       },
       {
         "key": "ง",
-        "text": "บันทึกผลลัพธ์สุดท้ายลงในหน่วยความจำหรือ Register ปลายทาง"
+        "text": "ตีความคำสั่งใน Instruction Register เพื่อสร้างสัญญาณควบคุมการทำงาน"
       }
     ],
-    "answer": "ข",
-    "answerText": "ตีความคำสั่งที่อยู่ใน Instruction Register เพื่อระบุชนิดคำสั่งและ Operand ที่ต้องใช้",
-    "explanation": "Decode คือขั้นตอนที่ Control Unit ตีความ Machine Instruction ที่ถูก Fetch เข้ามาและอยู่ใน Instruction Register เพื่อกำหนดว่าจะต้องทำงานอะไร ใช้ Operand ใด และต้องควบคุมส่วนใดของ CPU ข้อ ก เป็นลักษณะของ Fetch ซึ่งอ่านคำสั่งจากหน่วยความจำเข้าสู่ CPU ข้อ ค เป็นขั้นตอน Execute ซึ่งดำเนินการคำสั่งจริง เช่น การคำนวณผ่าน ALU ข้อ ง เป็นขั้นตอน Store หรือ Write Back ซึ่งเขียนผลลัพธ์กลับไปยัง Register หรือ Memory ตามชนิดของคำสั่ง",
+    "answer": "ง",
+    "answerText": "ตีความคำสั่งใน Instruction Register เพื่อสร้างสัญญาณควบคุมการทำงาน",
+    "explanation": "Decode คือขั้นตอนที่ Control Unit ตีความ Machine Instruction ที่ถูก Fetch เข้ามาและอยู่ใน Instruction Register เพื่อกำหนดว่าจะต้องทำงานอะไร ใช้ Operand ใด และต้องควบคุมส่วนใดของ CPU ข้อ ก เป็นลักษณะของ Fetch ซึ่งอ่านคำสั่งจากหน่วยความจำเข้าสู่ CPU ข้อ ค เป็นขั้นตอน Execute ซึ่งดำเนินการคำสั่งจริง เช่น การคำนวณผ่าน ALU ข้อ ข เป็นขั้นตอน Store หรือ Write Back ซึ่งเขียนผลลัพธ์กลับไปยัง Register หรือ Memory ตามชนิดของคำสั่ง",
     "sourcePage": 3
   },
   {
@@ -3756,23 +3756,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "NVMe รองรับได้สูงสุด 64,000 I/O Queues และมีความลึกสูงสุด 64,000 Commands ต่อ Queue ส่วน AHCI มี 1 Queue ที่รองรับสูงสุด 32 Commands"
+        "text": "NVMe รองรับได้สูงสุด 64,000 Queues และ 64,000 Commands ต่อ Queue ส่วน AHCI รองรับ 1 Queue และ 32 Commands"
       },
       {
         "key": "ข",
-        "text": "NVMe ใช้ 1 I/O Queue ที่รองรับ 32 Commands ส่วน AHCI ใช้ 64,000 Queues"
+        "text": "AHCI รองรับได้สูงสุด 64,000 Queues และ 64,000 Commands ต่อ Queue ส่วน NVMe รองรับ 1 Queue และ 32 Commands"
       },
       {
         "key": "ค",
-        "text": "NVMe รองรับคำสั่งได้เพียง 32 รายการต่อ Queue ส่วน AHCI รองรับคำสั่ง 64,000 รายการต่อ Queue"
+        "text": "NVMe รองรับได้สูงสุด 32 Queues และ 64,000 Commands ต่อ Queue ส่วน AHCI รองรับ 64,000 Queues และ 32 Commands"
       },
       {
         "key": "ง",
-        "text": "NVMe และ AHCI มีโครงสร้าง Queue เท่ากัน แต่ NVMe เร็วกว่าเพราะใช้ไฟเลี้ยงมากกว่า"
+        "text": "NVMe และ AHCI รองรับได้ 64,000 Queues เท่ากัน แต่ NVMe มีความเร็วบัส PCIe ที่สูงกว่า AHCI บน SATA มาก"
       }
     ],
     "answer": "ก",
-    "answerText": "NVMe รองรับได้สูงสุด 64,000 I/O Queues และมีความลึกสูงสุด 64,000 Commands ต่อ Queue ส่วน AHCI มี 1 Queue ที่รองรับสูงสุด 32 Commands",
+    "answerText": "NVMe รองรับได้สูงสุด 64,000 Queues และ 64,000 Commands ต่อ Queue ส่วน AHCI รองรับ 1 Queue และ 32 Commands",
     "explanation": "NVMe ถูกออกแบบมาเพื่อใช้ประโยชน์จากหน่วยเก็บข้อมูลที่เชื่อมต่อผ่าน PCIe โดยรองรับได้สูงสุด 65,535 I/O Queues และแต่ละ Queue รองรับได้สูงสุด 65,536 Commands ตามข้อกำหนด ซึ่งมักอธิบายโดยประมาณว่า 64,000 Queues และ 64,000 Commands ต่อ Queue ส่วน SATA AHCI มี Native Command Queue เดียวที่รองรับได้สูงสุด 32 Commands ข้อ ข สลับโครงสร้าง Queue ระหว่างสองเทคโนโลยี ข้อ ค สลับจำนวนคำสั่งที่รองรับต่อ Queue ข้อ ง ผิดเพราะความแตกต่างหลักอยู่ที่สถาปัตยกรรมและการจัดการ I/O Queue รวมถึงการเชื่อมต่อ ไม่ใช่โครงสร้าง Queue ที่เหมือนกันหรือปริมาณไฟเลี้ยง",
     "sourcePage": 3
   },
@@ -3790,7 +3790,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "12 TB และทนดิสก์เสียได้ 1 ลูก"
+        "text": "8 TB และทนดิสก์เสียได้ 2 ลูก"
       },
       {
         "key": "ค",
@@ -3798,12 +3798,12 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ง",
-        "text": "8 TB และทนดิสก์เสียได้ 2 ลูก"
+        "text": "12 TB และทนดิสก์เสียได้ 1 ลูก"
       }
     ],
-    "answer": "ข",
+    "answer": "ง",
     "answerText": "12 TB และทนดิสก์เสียได้ 1 ลูก",
-    "explanation": "RAID 5 ใช้ Distributed Parity กระจายข้อมูล Parity ไปยังดิสก์ทุกลูก โดยความจุใช้งานตามทฤษฎีคำนวณจาก (N - 1) × ความจุดิสก์ที่มีขนาดเท่ากัน เมื่อ N = 4 และความจุ 4 TB จะได้ (4 - 1) × 4 = 12 TB RAID 5 สามารถทนต่อการเสียของดิสก์หนึ่งลูกได้โดยใช้ Parity ในการสร้างข้อมูลกลับมา ข้อ ก ใช้ความจุรวมโดยไม่หักพื้นที่ Parity และให้ความสามารถทนดิสก์เสียเกินจริง ข้อ ค ใช้สูตรลักษณะ RAID 10 บางกรณี แต่ไม่ได้ตรงกับ RAID 5 ข้อ ง ใช้ความจุผิดและนำความสามารถทนความเสียหายของ RAID 6 มาใช้กับ RAID 5",
+    "explanation": "RAID 5 ใช้ Distributed Parity กระจายข้อมูล Parity ไปยังดิสก์ทุกลูก โดยความจุใช้งานตามทฤษฎีคำนวณจาก (N - 1) × ความจุดิสก์ที่มีขนาดเท่ากัน เมื่อ N = 4 และความจุ 4 TB จะได้ (4 - 1) × 4 = 12 TB RAID 5 สามารถทนต่อการเสียของดิสก์หนึ่งลูกได้โดยใช้ Parity ในการสร้างข้อมูลกลับมา ข้อ ก ใช้ความจุรวมโดยไม่หักพื้นที่ Parity และให้ความสามารถทนดิสก์เสียเกินจริง ข้อ ค ใช้สูตรลักษณะ RAID 10 บางกรณี แต่ไม่ได้ตรงกับ RAID 5 ข้อ ข ใช้ความจุผิดและนำความสามารถทนความเสียหายของ RAID 6 มาใช้กับ RAID 5",
     "sourcePage": 3
   },
   {
@@ -3846,23 +3846,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "New"
+        "text": "New (สถานะเริ่มสร้างโพรเซส)"
       },
       {
         "key": "ข",
-        "text": "Ready"
+        "text": "Ready (สถานะพร้อมรับการรัน CPU)"
       },
       {
         "key": "ค",
-        "text": "Waiting หรือ Blocked"
+        "text": "Waiting (สถานะรอคอย I/O หรือทรัพยากร)"
       },
       {
         "key": "ง",
-        "text": "Terminated"
+        "text": "Terminated (สถานะสิ้นสุดการประมวลผล)"
       }
     ],
     "answer": "ค",
-    "answerText": "Waiting หรือ Blocked",
+    "answerText": "Waiting (สถานะรอคอย I/O หรือทรัพยากร)",
     "explanation": "เมื่อ Process ในสถานะ Running ต้องรอเหตุการณ์ภายนอก เช่น การอ่านข้อมูลจาก Disk หรือการรับข้อมูลจากอุปกรณ์ I/O ระบบปฏิบัติการจะเปลี่ยนสถานะเป็น Waiting หรือ Blocked เพื่อไม่ให้ Process ใช้ CPU ระหว่างรอ เมื่อ I/O เสร็จสิ้นจึงเปลี่ยนกลับไปเป็น Ready เพื่อรอการจัดสรร CPU ข้อ ก New ใช้กับ Process ที่เพิ่งถูกสร้าง ข้อ ข Ready หมายถึง Process พร้อมทำงานและรอ CPU ไม่ได้กำลังรอ I/O Completion ข้อ ง Terminated หมายถึง Process จบการทำงานหรือถูกยุติแล้ว ไม่ใช่การหยุดชั่วคราวเพื่อรออุปกรณ์",
     "sourcePage": 3
   },
@@ -4056,24 +4056,24 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "QuickSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด"
+        "text": "QuickSort มี Worst-case Time Complexity เป็น O(N log N) เสมอ"
       },
       {
         "key": "ข",
-        "text": "MergeSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด โดยทั่วไปใช้หน่วยความจำเพิ่มเติม O(N) สำหรับการเรียงแบบ Array"
+        "text": "MergeSort มี Worst-case Time Complexity เป็น O(N log N) และใช้ Space O(N)"
       },
       {
         "key": "ค",
-        "text": "Bubble Sort เพราะใช้การเปรียบเทียบทีละคู่ จึงมี Time Complexity O(N log N)"
+        "text": "Bubble Sort มี Average-case Time Complexity เป็น O(N log N) เสมอ"
       },
       {
         "key": "ง",
-        "text": "Selection Sort เพราะมีจำนวนการสลับข้อมูลต่ำและมี Time Complexity O(N log N)"
+        "text": "Insertion Sort มี Worst-case Time Complexity เป็น O(log N) เสมอ"
       }
     ],
-    "answer": "ข",
-    "answerText": "MergeSort เพราะมี Time Complexity O(N log N) ทั้งกรณีเฉลี่ยและกรณีเลวร้ายที่สุด โดยทั่วไปใช้หน่วยความจำเพิ่มเติม O(N) สำหรับการเรียงแบบ Array",
-    "explanation": "MergeSort ใช้แนวคิด Divide and Conquer โดยแบ่งข้อมูลเป็นส่วนย่อย เรียงแต่ละส่วน และรวมผลลัพธ์เข้าด้วยกัน มี Time Complexity O(N log N) ทั้งกรณีดีที่สุด กรณีเฉลี่ย และกรณีเลวร้ายที่สุด สำหรับการเรียง Array ทั่วไปมักใช้ Auxiliary Space O(N) ซึ่งตรงกับข้อกำหนดของโจทย์ ข้อ ก QuickSort มีค่าเฉลี่ย O(N log N) แต่กรณีเลวร้ายที่สุด O(N²) เมื่อเลือก Pivot ทำให้เกิดการแบ่งข้อมูลไม่สมดุล ข้อ ค Bubble Sort มี Time Complexity โดยทั่วไป O(N²) ข้อ ง Selection Sort มี Time Complexity O(N²) ทั้งกรณีเฉลี่ยและเลวร้ายที่สุด",
+    "answer": "ง",
+    "answerText": "Insertion Sort มี Worst-case Time Complexity เป็น O(log N) เสมอ",
+    "explanation": "MergeSort ใช้แนวคิด Divide and Conquer โดยแบ่งข้อมูลเป็นส่วนย่อย เรียงแต่ละส่วน และรวมผลลัพธ์เข้าด้วยกัน มี Time Complexity O(N log N) ทั้งกรณีดีที่สุด กรณีเฉลี่ย และกรณีเลวร้ายที่สุด สำหรับการเรียง Array ทั่วไปมักใช้ Auxiliary Space O(N) ซึ่งตรงกับข้อกำหนดของโจทย์ ข้อ ก QuickSort มีค่าเฉลี่ย O(N log N) แต่กรณีเลวร้ายที่สุด O(N²) เมื่อเลือก Pivot ทำให้เกิดการแบ่งข้อมูลไม่สมดุล ข้อ ค Bubble Sort มี Time Complexity โดยทั่วไป O(N²) ข้อ ข Selection Sort มี Time Complexity O(N²) ทั้งกรณีเฉลี่ยและเลวร้ายที่สุด",
     "sourcePage": 4
   },
   {
@@ -4326,7 +4326,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "40%"
+        "text": "40.00%"
       },
       {
         "key": "ข",
@@ -4334,16 +4334,16 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ค",
-        "text": "80%"
+        "text": "80.00%"
       },
       {
         "key": "ง",
         "text": "97.78%"
       }
     ],
-    "answer": "ข",
-    "answerText": "44.44%",
-    "explanation": "Recall หรือ Sensitivity คำนวณจาก TP / (TP + FN) ซึ่งวัดสัดส่วนของผู้ที่เป็นโรคจริงและโมเดลสามารถตรวจพบได้ แทนค่าเป็น 80 / (80 + 100) = 80 / 180 = 0.4444 หรือประมาณ 44.44% ตรงกับตัวเลือก ข",
+    "answer": "ค",
+    "answerText": "80.00%",
+    "explanation": "Recall หรือ Sensitivity คำนวณจาก TP / (TP + FN) ซึ่งวัดสัดส่วนของผู้ที่เป็นโรคจริงและโมเดลสามารถตรวจพบได้ แทนค่าเป็น 80 / (80 + 100) = 80 / 180 = 0.4444 หรือประมาณ 44.44% ตรงกับตัวเลือก ค",
     "sourcePage": 5
   },
   {
@@ -4390,7 +4390,7 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
       },
       {
         "key": "ข",
-        "text": "0.69 (0.6857)"
+        "text": "0.69"
       },
       {
         "key": "ค",
@@ -4401,9 +4401,9 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
         "text": "0.80"
       }
     ],
-    "answer": "ข",
-    "answerText": "0.69 (0.6857)",
-    "explanation": "ใช้สูตร F1 = 2 × (Precision × Recall) / (Precision + Recall) แทนค่าได้เป็น 2 × (0.80 × 0.60) / (0.80 + 0.60) = 0.96 / 1.40 = 0.6857 หรือประมาณ 0.69 ตรงกับตัวเลือก ข",
+    "answer": "ง",
+    "answerText": "0.80",
+    "explanation": "ใช้สูตร F1 = 2 × (Precision × Recall) / (Precision + Recall) แทนค่าได้เป็น 2 × (0.80 × 0.60) / (0.80 + 0.60) = 0.96 / 1.40 = 0.6857 หรือประมาณ 0.69 ตรงกับตัวเลือก ง",
     "sourcePage": 5
   },
   {
@@ -4416,23 +4416,23 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงมากจน Gradient ระเบิดในทุกชั้น"
+        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงเกินไปจนส่งผลให้เกิดปัญหา Gradient Exploding ในทุกชั้น"
       },
       {
         "key": "ข",
-        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ที่ส่งย้อนกลับผ่านหลายชั้นอาจลดลงอย่างรวดเร็ว"
+        "text": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ลดลงอย่างรวดเร็วเมื่อผ่านหลายชั้น"
       },
       {
         "key": "ค",
-        "text": "Sigmoid ไม่สามารถให้ผลลัพธ์ที่อยู่ในช่วง 0 ถึง 1 ได้"
+        "text": "Sigmoid ไม่สามารถสร้างผลลัพธ์ที่เป็นตัวเลขทศนิยมในช่วงระหว่าง 0 ถึง 1 ได้"
       },
       {
         "key": "ง",
-        "text": "Sigmoid ทำให้ Neural Network ไม่สามารถคำนวณค่า Weight ได้เลย"
+        "text": "Sigmoid ทำให้โครงข่ายประสาทเทียมไม่สามารถคำนวณการปรับค่าน้ำหนักได้เลยในทุกกรณี"
       }
     ],
     "answer": "ข",
-    "answerText": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ที่ส่งย้อนกลับผ่านหลายชั้นอาจลดลงอย่างรวดเร็ว",
+    "answerText": "อนุพันธ์ของ Sigmoid มีค่าสูงสุดเพียง 0.25 ทำให้ Gradient ลดลงอย่างรวดเร็วเมื่อผ่านหลายชั้น",
     "explanation": "Sigmoid มีรูปแบบ f(x) = 1 / (1 + e^-x) และอนุพันธ์ f'(x) = f(x)(1-f(x)) ซึ่งมีค่าสูงสุดเท่ากับ 0.25 เมื่อ x = 0 และจะเข้าใกล้ศูนย์ในบริเวณที่อิ่มตัว เมื่อใช้หลายชั้นและคำนวณ Gradient ด้วย Backpropagation การคูณอนุพันธ์ที่มีค่าน้อยต่อเนื่องกันทำให้ Gradient ลดลงจนชั้นต้น ๆ ได้รับสัญญาณการเรียนรู้น้อย เกิด Vanishing Gradient ข้อ ก ผิดเพราะอนุพันธ์ของ Sigmoid ไม่ได้มีค่าสูงมาก ข้อ ค ผิดเพราะ Sigmoid ให้ผลลัพธ์อยู่ในช่วง 0 ถึง 1 ข้อ ง ผิดเพราะ Neural Network ยังคำนวณและปรับ Weight ได้ แต่ประสิทธิภาพในการเรียนรู้อาจลดลง",
     "sourcePage": 5
   },
@@ -4446,24 +4446,24 @@ export const PRACTICE_QUESTIONS: PracticeQuestion[] = [
     "options": [
       {
         "key": "ก",
-        "text": "นำ Q ไปบวกกับ K เพื่อสร้าง Token ใหม่ จากนั้นใช้ V เป็นค่า Learning Rate"
+        "text": "นำ Q บวกกับ K เพื่อสร้าง Token ใหม่ แล้วใช้ V เป็นตัวกำหนด Learning Rate ของระบบ"
       },
       {
         "key": "ข",
-        "text": "คำนวณคะแนนความสัมพันธ์จาก Q และ K หารด้วยรากที่สองของมิติของ K จากนั้นใช้ Softmax เพื่อสร้างน้ำหนักและนำไปถ่วงน้ำหนัก V"
+        "text": "นำ Q ดอทกับ K แล้วหารด้วย √d_k จากนั้นเข้า Softmax เพื่อสร้าง Attention Weights ถ่วงน้ำหนัก V"
       },
       {
         "key": "ค",
-        "text": "ใช้ V คำนวณคะแนน Attention โดยตรง ส่วน Q และ K มีหน้าที่เก็บข้อมูลตำแหน่งเท่านั้น"
+        "text": "ใช้ V คำนวณ Attention โดยตรง ส่วน Q และ K มีหน้าที่เก็บตำแหน่งลำดับของคำเท่านั้น"
       },
       {
         "key": "ง",
-        "text": "ใช้ Q, K และ V เพื่อแปลงข้อมูลทั้งหมดเป็น Binary Encoding ก่อนส่งเข้า Convolution Layer"
+        "text": "นำ Q, K และ V เข้ารหัสแบบ Binary ก่อนส่งเข้าสู่เลเยอร์ Convolution ของโครงข่าย"
       }
     ],
-    "answer": "ข",
-    "answerText": "คำนวณคะแนนความสัมพันธ์จาก Q และ K หารด้วยรากที่สองของมิติของ K จากนั้นใช้ Softmax เพื่อสร้างน้ำหนักและนำไปถ่วงน้ำหนัก V",
-    "explanation": "Scaled Dot-Product Attention มีรูปแบบ Attention(Q,K,V) = softmax(QK^T / √d_k)V โดย Query ใช้ค้นหาข้อมูลที่เกี่ยวข้อง Key ใช้แสดงคุณลักษณะที่ใช้เปรียบเทียบความสัมพันธ์ และ Value เป็นข้อมูลที่ถูกนำมาถ่วงน้ำหนักตามคะแนน Attention การหารด้วย √d_k ช่วยควบคุมขนาดคะแนนก่อนผ่าน Softmax",
+    "answer": "ง",
+    "answerText": "นำ Q, K และ V เข้ารหัสแบบ Binary ก่อนส่งเข้าสู่เลเยอร์ Convolution ของโครงข่าย",
+    "explanation": "Scaled Dot-Product Attention มีรูปแบบ Attention(Q,K,V) = softmax(QK^T / √d_k)V โดย Query ใช้ค้นหาข้อมูลที่เกี่ยวข้อ ข Key ใช้แสดงคุณลักษณะที่ใช้เปรียบเทียบความสัมพันธ์ และ Value เป็นข้อมูลที่ถูกนำมาถ่วงน้ำหนักตามคะแนน Attention การหารด้วย √d_k ช่วยควบคุมขนาดคะแนนก่อนผ่าน Softmax",
     "sourcePage": 5
   },
   {
