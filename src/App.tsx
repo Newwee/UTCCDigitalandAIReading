@@ -138,7 +138,11 @@ export function App() {
         )}
 
         {currentTab === 'must-remember' && (
-          <ExamPrepView onSelectTab={handleSelectTab} />
+          <ExamPrepView 
+            onSelectTab={handleSelectTab} 
+            theme={theme}
+            onToggleTheme={toggleTheme}
+          />
         )}
 
         {currentTab === 'audit' && (
