@@ -26,6 +26,7 @@ interface HeaderProps {
   onToggleTheme: () => void;
   onOpenSearch: () => void;
   bookmarkedCount: number;
+  visible?: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -35,6 +36,7 @@ export const Header: React.FC<HeaderProps> = ({
   onToggleTheme,
   onOpenSearch,
   bookmarkedCount,
+  visible = true,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -56,7 +58,12 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-header transition-colors">
+    <header 
+      className={`sticky top-0 z-40 w-full glass-header transition-transform duration-300 ease-in-out ${
+        visible ? 'translate-y-0' : '-translate-y-full pointer-events-none'
+      }`}
+      style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
         {/* Logo & Brand */}
         <button

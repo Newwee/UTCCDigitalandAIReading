@@ -38,6 +38,8 @@ interface ReadingPageViewProps {
   onChangeFontSize: (size: 'sm' | 'base' | 'lg' | 'xl') => void;
   readingWidth: 'compact' | 'standard' | 'wide';
   onChangeReadingWidth: (width: 'compact' | 'standard' | 'wide') => void;
+  isZenMode?: boolean;
+  onToggleZenMode?: () => void;
 }
 
 export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
@@ -52,6 +54,8 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
   onChangeFontSize,
   readingWidth,
   onChangeReadingWidth,
+  isZenMode = false,
+  onToggleZenMode,
 }) => {
   // If no topic selected, select the first available
   const activeTopic: StudyTopic = (currentTopicId && getTopicById(currentTopicId)) || STUDY_TOPICS[0];
@@ -70,6 +74,16 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
       onRecordVisit(activeTopic.id, scrollProgress);
     }
   }, [activeTopic?.id]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isZenMode && onToggleZenMode) {
+        onToggleZenMode();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isZenMode, onToggleZenMode]);
 
   // Track scroll progress and active section
   useEffect(() => {
@@ -147,99 +161,109 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
   const currentCategory = CATEGORIES.find(c => c.id === activeTopic.category);
 
   return (
-    <div className="relative min-h-screen">
-      {/* 1. Real-time Reading Progress Bar (Fixed Top) */}
-      <div className="fixed top-16 left-0 w-full h-1 bg-[var(--border-color)] z-30">
+    <div className={`relative min-h-screen ${isZenMode ? 'zen-reading-mode' : ''}`}>
+      <div 
+        className="fixed left-0 w-full h-[2.5px] bg-[var(--border-color)] z-30 transition-all duration-300"
+        style={{ top: isZenMode ? '0px' : 'calc(4rem + env(safe-area-inset-top, 0px))' }}
+      >
         <div
           className="h-full bg-gradient-to-r from-[#35D5F2] via-[#8B7CFF] to-[#53DBAB] transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
         />
       </div>
 
-      <div className="xl:hidden sticky top-16 z-20 glass-panel px-4 py-2.5 flex items-center justify-between border-b border-[var(--border-color)]">
-        <button
-          onClick={() => setLeftSidebarOpen(true)}
-          className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[40px]"
-        >
-          <BookOpen className="w-3.5 h-3.5 text-[#35D5F2]" />
-          <span>หัวข้อ ({STUDY_TOPICS.length})</span>
-        </button>
+      {!isZenMode && (
+        <div className="xl:hidden sticky top-16 z-20 glass-panel px-4 py-2.5 flex items-center justify-between border-b border-[var(--border-color)]">
+          <button
+            onClick={() => setLeftSidebarOpen(true)}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[44px]"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-[#35D5F2]" />
+            <span>หัวข้อ ({STUDY_TOPICS.length})</span>
+          </button>
 
-        <span className="text-xs font-mono text-[#35D5F2] font-bold">
-          {scrollProgress}%
-        </span>
+          <span className="text-xs font-mono text-[#35D5F2] font-bold">
+            {scrollProgress}%
+          </span>
 
-        <button
-          onClick={() => setRightTocOpen(true)}
-          className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[40px]"
-        >
-          <ListOrdered className="w-3.5 h-3.5 text-[#8B7CFF]" />
-          <span>สารบัญบท</span>
-        </button>
-      </div>
+          <button
+            onClick={() => setRightTocOpen(true)}
+            className="flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-xl bg-[var(--bg-elevated)] text-[var(--text-primary)] min-h-[44px]"
+          >
+            <ListOrdered className="w-3.5 h-3.5 text-[#8B7CFF]" />
+            <span>สารบัญบท</span>
+          </button>
+        </div>
+      )}
 
-      {/* 3-Column Desktop Layout */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div 
+        className={`max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 ${isZenMode ? 'py-8 sm:py-12' : 'py-6'}`}
+        style={{
+          paddingLeft: 'max(1rem, env(safe-area-inset-left, 0px))',
+          paddingRight: 'max(1rem, env(safe-area-inset-right, 0px))',
+        }}
+      >
+        <div className={`grid grid-cols-1 ${isZenMode ? '' : 'lg:grid-cols-12'} gap-8 items-start`}>
           
-          <aside className="hidden xl:block xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 space-y-6 scrollbar-thin">
-            <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
-                  สารบัญบทเรียน
-                </span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg-elevated)] font-semibold text-[#35D5F2]">
-                  {STUDY_TOPICS.length} หัวข้อ
-                </span>
-              </div>
+          {!isZenMode && (
+            <aside className="hidden xl:block xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pr-2 space-y-6 scrollbar-thin">
+              <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
+                    สารบัญบทเรียน
+                  </span>
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-[var(--bg-elevated)] font-semibold text-[#35D5F2]">
+                    {STUDY_TOPICS.length} หัวข้อ
+                  </span>
+                </div>
 
-              {/* Topics grouped by Category */}
-              <div className="space-y-4">
-                {CATEGORIES.map(category => {
-                  const catTopics = STUDY_TOPICS.filter(t => t.category === category.id);
-                  if (catTopics.length === 0) return null;
+                <div className="space-y-4">
+                  {CATEGORIES.map(category => {
+                    const catTopics = STUDY_TOPICS.filter(t => t.category === category.id);
+                    if (catTopics.length === 0) return null;
 
-                  return (
-                    <div key={category.id} className="space-y-1.5">
-                      <div className="flex items-center gap-1.5 px-2 py-1 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider">
-                        <span
-                          className="w-2 h-2 rounded-full"
-                          style={{ backgroundColor: category.color }}
-                        />
-                        <span className="truncate">{category.nameTh}</span>
+                    return (
+                      <div key={category.id} className="space-y-1.5">
+                        <div className="flex items-center gap-1.5 px-2 py-1 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider">
+                          <span
+                            className="w-2 h-2 rounded-full"
+                            style={{ backgroundColor: category.color }}
+                          />
+                          <span className="truncate">{category.nameTh}</span>
+                        </div>
+
+                        <div className="space-y-1">
+                          {catTopics.map(topic => {
+                            const isActive = topic.id === activeTopic.id;
+                            const isDone = isCompleted(topic.id);
+
+                            return (
+                              <button
+                                key={topic.id}
+                                onClick={() => onSelectTopic(topic.id)}
+                                className={`w-full text-left px-3 py-2.5 rounded-xl text-xs font-medium transition-all flex items-start justify-between gap-2 min-h-[44px] ${
+                                  isActive
+                                    ? 'bg-[#35D5F2]/10 text-[#35D5F2] border border-[#35D5F2]/30 font-semibold shadow-sm'
+                                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+                                }`}
+                              >
+                                <span className="line-clamp-2 leading-relaxed">{topic.title}</span>
+                                {isDone && (
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#53DBAB] shrink-0 mt-0.5" />
+                                )}
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
-
-                      <div className="space-y-1">
-                        {catTopics.map(topic => {
-                          const isActive = topic.id === activeTopic.id;
-                          const isDone = isCompleted(topic.id);
-
-                          return (
-                            <button
-                              key={topic.id}
-                              onClick={() => onSelectTopic(topic.id)}
-                              className={`w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-all flex items-start justify-between gap-2 ${
-                                isActive
-                                  ? 'bg-[#35D5F2]/10 text-[#35D5F2] border border-[#35D5F2]/30 font-semibold shadow-sm'
-                                  : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
-                              }`}
-                            >
-                              <span className="line-clamp-2 leading-relaxed">{topic.title}</span>
-                              {isDone && (
-                                <CheckCircle2 className="w-3.5 h-3.5 text-[#53DBAB] shrink-0 mt-0.5" />
-                              )}
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          </aside>
+            </aside>
+          )}
 
-          <main className="w-full lg:col-span-8 xl:col-span-6 flex flex-col items-center">
+          <main className={`w-full ${isZenMode ? 'col-span-12' : 'lg:col-span-8 xl:col-span-6'} flex flex-col items-center`}>
             <div ref={contentContainerRef} className={`w-full ${widthClasses} space-y-8`}>
               
               {/* Reading Settings Control Bar */}
@@ -281,18 +305,41 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
                   ))}
                 </div>
 
-                {/* Bookmark & Actions */}
                 <div className="flex items-center gap-2">
+                  {onToggleZenMode && (
+                    <button
+                      onClick={onToggleZenMode}
+                      className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold transition-all min-h-[38px] cursor-pointer ${
+                        isZenMode
+                          ? 'bg-amber-400 text-slate-950 border-amber-400 shadow-md'
+                          : 'bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:text-[#35D5F2] hover:border-[#35D5F2]/40 border-[var(--border-color)]'
+                      }`}
+                      title={isZenMode ? 'ออกจากโหมดสมาธิ' : 'ซ่อนปุ่มและเมนูทั้งหมด (โหมดอ่านสมาธิ)'}
+                    >
+                      {isZenMode ? (
+                        <>
+                          <Minimize2 className="w-3.5 h-3.5" />
+                          <span>ออกจากโหมดสมาธิ</span>
+                        </>
+                      ) : (
+                        <>
+                          <Maximize2 className="w-3.5 h-3.5 text-amber-400" />
+                          <span>🔕 ซ่อนเมนู (โหมดสมาธิ)</span>
+                        </>
+                      )}
+                    </button>
+                  )}
+
                   <button
                     onClick={() => onToggleBookmark(activeTopic.id)}
-                    className={`flex items-center gap-1.5 px-3 py-1 rounded-xl border text-xs font-semibold transition-all ${
+                    className={`flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-semibold transition-all min-h-[38px] cursor-pointer ${
                       bookmarked
                         ? 'bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/30'
                         : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:text-[#F59E0B] border-[var(--border-color)]'
                     }`}
                   >
                     <Bookmark className={`w-3.5 h-3.5 ${bookmarked ? 'fill-current' : ''}`} />
-                    <span>{bookmarked ? 'บันทึกแล้ว' : 'บันทึก'}</span>
+                    <span className="hidden min-[420px]:inline">{bookmarked ? 'บันทึกแล้ว' : 'บันทึก'}</span>
                   </button>
                 </div>
               </div>
@@ -605,84 +652,154 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
             </div>
           </main>
 
-          <aside className="hidden lg:block lg:col-span-4 xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-2 space-y-6 scrollbar-thin">
-            <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
-                  สารบัญเนื้อหา (TOC)
-                </span>
-                <span className="text-xs font-mono font-bold text-[#35D5F2]">
-                  {scrollProgress}%
-                </span>
-              </div>
+          {!isZenMode && (
+            <aside className="hidden lg:block lg:col-span-4 xl:col-span-3 sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto pl-2 space-y-6 scrollbar-thin">
+              <div className="p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)] space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)]">
+                    สารบัญเนื้อหา (TOC)
+                  </span>
+                  <span className="text-xs font-mono font-bold text-[#35D5F2]">
+                    {scrollProgress}%
+                  </span>
+                </div>
 
-              {/* Mini Scroll Progress Bar in TOC */}
-              <div className="w-full h-1 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] transition-all duration-150"
-                  style={{ width: `${scrollProgress}%` }}
-                />
-              </div>
+                <div className="w-full h-1 bg-[var(--bg-elevated)] rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] transition-all duration-150"
+                    style={{ width: `${scrollProgress}%` }}
+                  />
+                </div>
 
-              {/* Clickable Section Links */}
-              <nav className="space-y-1">
-                {activeTopic.sections.map(sec => {
-                  const isActive = activeSectionId === sec.id;
+                <nav className="space-y-1">
+                  {activeTopic.sections.map(sec => {
+                    const isActive = activeSectionId === sec.id;
 
-                  return (
-                    <button
-                      key={sec.id}
-                      onClick={() => scrollToSection(sec.id)}
-                      className={`w-full text-left px-3 py-1.5 rounded-lg text-xs transition-all flex items-center gap-2 ${
-                        isActive
-                          ? 'text-[#35D5F2] font-bold bg-[#35D5F2]/10'
-                          : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
-                      }`}
-                    >
-                      <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-[#35D5F2]' : 'bg-[var(--text-muted)]'}`} />
-                      <span className="truncate">{sec.title}</span>
-                    </button>
-                  );
-                })}
-              </nav>
+                    return (
+                      <button
+                        key={sec.id}
+                        onClick={() => scrollToSection(sec.id)}
+                        className={`w-full text-left px-3 py-2 rounded-lg text-xs transition-all flex items-center gap-2 min-h-[38px] ${
+                          isActive
+                            ? 'text-[#35D5F2] font-bold bg-[#35D5F2]/10'
+                            : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--bg-elevated)]'
+                        }`}
+                      >
+                        <span className={`w-1.5 h-1.5 rounded-full ${isActive ? 'bg-[#35D5F2]' : 'bg-[var(--text-muted)]'}`} />
+                        <span className="truncate">{sec.title}</span>
+                      </button>
+                    );
+                  })}
+                </nav>
 
-              {/* Bookmark Toggle in Sidebar */}
-              <div className="pt-3 border-t border-[var(--border-color)]">
+                <div className="pt-3 border-t border-[var(--border-color)]">
+                  <button
+                    onClick={() => onToggleBookmark(activeTopic.id)}
+                    className={`w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all min-h-[44px] cursor-pointer ${
+                      bookmarked
+                        ? 'bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30'
+                        : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:text-[#F59E0B] border border-[var(--border-color)]'
+                    }`}
+                  >
+                    <Bookmark className={`w-3.5 h-3.5 ${bookmarked ? 'fill-current' : ''}`} />
+                    <span>{bookmarked ? 'บันทึกในรายการโปรดแล้ว' : 'บันทึกบทนี้'}</span>
+                  </button>
+                </div>
+
                 <button
-                  onClick={() => onToggleBookmark(activeTopic.id)}
-                  className={`w-full flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
-                    bookmarked
-                      ? 'bg-[#F59E0B]/15 text-[#F59E0B] border border-[#F59E0B]/30'
-                      : 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:text-[#F59E0B] border border-[var(--border-color)]'
-                  }`}
+                  onClick={scrollToTop}
+                  className="w-full flex items-center justify-center gap-1.5 text-[11px] text-[var(--text-muted)] hover:text-[var(--text-primary)] py-2 transition-colors min-h-[40px] cursor-pointer"
                 >
-                  <Bookmark className={`w-3.5 h-3.5 ${bookmarked ? 'fill-current' : ''}`} />
-                  <span>{bookmarked ? 'บันทึกในรายการโปรดแล้ว' : 'บันทึกบทนี้'}</span>
+                  <ArrowUp className="w-3.5 h-3.5" />
+                  <span>กลับสู่ด้านบนสุด</span>
                 </button>
               </div>
-
-              {/* Scroll to Top */}
-              <button
-                onClick={scrollToTop}
-                className="w-full flex items-center justify-center gap-1.5 text-[11px] text-[var(--text-muted)] hover:text-[var(--text-primary)] py-1 transition-colors"
-              >
-                <ArrowUp className="w-3.5 h-3.5" />
-                <span>กลับสู่ด้านบนสุด</span>
-              </button>
-            </div>
-          </aside>
+            </aside>
+          )}
 
         </div>
       </div>
 
+      {isZenMode && (
+        <div 
+          className="fixed z-50 flex items-center gap-1.5 p-1.5 rounded-full bg-[#080D1B]/90 dark:bg-[#080D1B]/90 bg-white/95 backdrop-blur-2xl border border-white/20 dark:border-white/20 border-slate-300 shadow-2xl transition-all duration-300 hover:opacity-100 opacity-60 group"
+          style={{ 
+            bottom: 'max(1.25rem, env(safe-area-inset-bottom, 1rem))',
+            right: 'max(1rem, env(safe-area-inset-right, 1rem))'
+          }}
+        >
+          <span className="text-[11px] font-mono font-bold text-[#35D5F2] px-2.5 py-1">
+            {scrollProgress}%
+          </span>
+
+          <button
+            onClick={() => setRightTocOpen(true)}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-[var(--bg-elevated)] hover:bg-[#8B7CFF]/20 text-[var(--text-primary)] hover:text-[#8B7CFF] text-xs font-semibold transition-colors min-h-[36px] cursor-pointer"
+            title="เปิดสารบัญบท"
+          >
+            <ListOrdered className="w-3.5 h-3.5 text-[#8B7CFF]" />
+            <span className="hidden sm:inline">สารบัญ</span>
+          </button>
+
+          <button
+            onClick={() => setLeftSidebarOpen(true)}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-[var(--bg-elevated)] hover:bg-[#35D5F2]/20 text-[var(--text-primary)] hover:text-[#35D5F2] text-xs font-semibold transition-colors min-h-[36px] cursor-pointer"
+            title="เปลี่ยนหัวข้อ"
+          >
+            <BookOpen className="w-3.5 h-3.5 text-[#35D5F2]" />
+            <span className="hidden sm:inline">หัวข้อ</span>
+          </button>
+
+          <div className="flex items-center gap-0.5 bg-[var(--bg-elevated)] rounded-full p-0.5">
+            <button
+              onClick={() => {
+                const sizes: ('sm' | 'base' | 'lg' | 'xl')[] = ['sm', 'base', 'lg', 'xl'];
+                const idx = sizes.indexOf(fontSize);
+                if (idx > 0) onChangeFontSize(sizes[idx - 1]);
+              }}
+              className="px-2 py-1 text-[11px] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] rounded-full cursor-pointer"
+              title="ลดขนาดตัวอักษร"
+            >
+              A-
+            </button>
+            <button
+              onClick={() => {
+                const sizes: ('sm' | 'base' | 'lg' | 'xl')[] = ['sm', 'base', 'lg', 'xl'];
+                const idx = sizes.indexOf(fontSize);
+                if (idx < sizes.length - 1) onChangeFontSize(sizes[idx + 1]);
+              }}
+              className="px-2 py-1 text-[11px] font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] rounded-full cursor-pointer"
+              title="เพิ่มขนาดตัวอักษร"
+            >
+              A+
+            </button>
+          </div>
+
+          <button
+            onClick={onToggleZenMode}
+            className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs font-bold transition-all shadow-sm min-h-[36px] cursor-pointer"
+            title="ออกจากโหมดสมาธิ"
+          >
+            <X className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">ออก</span>
+          </button>
+        </div>
+      )}
+
       {leftSidebarOpen && (
-        <div className="fixed inset-0 z-50 flex bg-black/60 backdrop-blur-sm xl:hidden">
-          <div className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-r border-[var(--border-color)] p-5 overflow-y-auto space-y-4">
+        <div className="fixed inset-0 z-50 flex bg-black/60 backdrop-blur-sm">
+          <div 
+            className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-r border-[var(--border-color)] p-5 overflow-y-auto space-y-4"
+            style={{ 
+              paddingTop: 'max(1.5rem, env(safe-area-inset-top, 0px))', 
+              paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' 
+            }}
+          >
             <div className="flex items-center justify-between pb-3 border-b border-[var(--border-color)]">
               <h3 className="font-bold text-sm text-[var(--text-primary)]">รายการบทเรียนทั้งหมด</h3>
               <button
                 onClick={() => setLeftSidebarOpen(false)}
-                className="p-1 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                className="p-1 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -706,7 +823,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
                           setLeftSidebarOpen(false);
                           scrollToTop();
                         }}
-                        className={`w-full text-left p-2.5 rounded-xl text-xs font-medium transition-all ${
+                        className={`w-full text-left p-2.5 rounded-xl text-xs font-medium transition-all min-h-[44px] cursor-pointer ${
                           topic.id === activeTopic.id
                             ? 'bg-[#35D5F2]/10 text-[#35D5F2] font-semibold'
                             : 'text-[var(--text-secondary)] hover:bg-[var(--bg-elevated)]'
@@ -725,14 +842,20 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
       )}
 
       {rightTocOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm xl:hidden">
+        <div className="fixed inset-0 z-50 flex justify-end bg-black/60 backdrop-blur-sm">
           <div className="flex-1" onClick={() => setRightTocOpen(false)} />
-          <div className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-l border-[var(--border-color)] p-5 overflow-y-auto space-y-4">
+          <div 
+            className="w-80 max-w-[85vw] h-full bg-[var(--bg-card)] border-l border-[var(--border-color)] p-5 overflow-y-auto space-y-4"
+            style={{ 
+              paddingTop: 'max(1.5rem, env(safe-area-inset-top, 0px))', 
+              paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom, 0px))' 
+            }}
+          >
             <div className="flex items-center justify-between pb-3 border-b border-[var(--border-color)]">
               <h3 className="font-bold text-sm text-[var(--text-primary)]">สารบัญหัวข้อในบทนี้</h3>
               <button
                 onClick={() => setRightTocOpen(false)}
-                className="p-1 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)]"
+                className="p-1 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-primary)] cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -743,7 +866,7 @@ export const ReadingPageView: React.FC<ReadingPageViewProps> = ({
                 <button
                   key={sec.id}
                   onClick={() => scrollToSection(sec.id)}
-                  className="w-full text-left p-2.5 rounded-xl text-xs text-[var(--text-secondary)] hover:text-[#35D5F2] hover:bg-[var(--bg-elevated)] transition-colors"
+                  className="w-full text-left p-2.5 rounded-xl text-xs text-[var(--text-secondary)] hover:text-[#35D5F2] hover:bg-[var(--bg-elevated)] transition-colors min-h-[44px] cursor-pointer"
                 >
                   {sec.title}
                 </button>

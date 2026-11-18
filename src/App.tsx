@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useStudyState } from './hooks/useStudyState';
 import { Header, NavTab } from './components/Header';
 import { AppleTabBar } from './components/AppleTabBar';
@@ -42,11 +42,36 @@ export function App() {
   const [revisionCategory, setRevisionCategory] = useState<CategoryId | undefined>(undefined);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [moreSheetOpen, setMoreSheetOpen] = useState(false);
+  const [isZenMode, setIsZenMode] = useState(false);
+  const [isNavVisible, setIsNavVisible] = useState(true);
+  const lastScrollYRef = useRef(0);
 
-  // Navigate to a specific topic and switch to reading tab
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const diff = currentScrollY - lastScrollYRef.current;
+
+      if (currentScrollY < 60) {
+        setIsNavVisible(true);
+      } else if (diff > 45) {
+        setIsNavVisible(false);
+      } else if (diff < -15) {
+        setIsNavVisible(true);
+      }
+
+      lastScrollYRef.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const showNav = isNavVisible && !isZenMode;
+
   const handleOpenTopic = (topicId: string, sectionId?: string) => {
     setSelectedTopicId(topicId);
     setCurrentTab('reading');
+    setIsNavVisible(true);
     if (sectionId) {
       setTimeout(() => {
         const el = document.getElementById(sectionId);
@@ -63,20 +88,22 @@ export function App() {
     setRevisionSubTab(subTab);
     setRevisionCategory(categoryId);
     setCurrentTab('revision');
+    setIsZenMode(false);
+    setIsNavVisible(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleSelectTab = (tab: NavTab) => {
+    setIsZenMode(false);
+    setIsNavVisible(true);
     setCurrentTab(tab);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <div className="min-h-screen flex flex-col relative transition-colors duration-200">
-      {/* Background Graphic Ambient Lighting */}
       <BackgroundEffects />
 
-      {/* Global Navigation Header */}
       <Header
         currentTab={currentTab}
         onSelectTab={handleSelectTab}
@@ -84,6 +111,7 @@ export function App() {
         onToggleTheme={toggleTheme}
         onOpenSearch={() => setIsSearchOpen(true)}
         bookmarkedCount={state.bookmarkedTopicIds.length}
+        visible={showNav}
       />
 
       <div className="flex-1 relative z-10 pb-24 xl:pb-0">
@@ -126,6 +154,8 @@ export function App() {
             onChangeFontSize={setFontSize}
             readingWidth={state.readingWidth}
             onChangeReadingWidth={setReadingWidth}
+            isZenMode={isZenMode}
+            onToggleZenMode={() => setIsZenMode(prev => !prev)}
           />
         )}
 
@@ -164,7 +194,7 @@ export function App() {
         {currentTab === 'about' && <AboutView />}
       </div>
 
-      <Footer onSelectTab={handleSelectTab} />
+      {!isZenMode && <Footer onSelectTab={handleSelectTab} />}
 
       <AppleTabBar
         currentTab={currentTab}
@@ -175,6 +205,7 @@ export function App() {
         onOpenSearch={() => setIsSearchOpen(true)}
         moreSheetOpen={moreSheetOpen}
         onToggleMoreSheet={() => setMoreSheetOpen(prev => !prev)}
+        visible={showNav}
       />
 
       <SearchModal

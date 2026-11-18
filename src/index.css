@@ -57,6 +57,11 @@ body {
   padding-bottom: max(1rem, var(--safe-bottom));
 }
 
+.zen-reading-mode {
+  padding-top: max(1rem, var(--safe-top));
+  padding-bottom: max(2.5rem, var(--safe-bottom));
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 7px;

@@ -26,6 +26,7 @@ interface AppleTabBarProps {
   onOpenSearch: () => void;
   moreSheetOpen: boolean;
   onToggleMoreSheet: () => void;
+  visible?: boolean;
 }
 
 export const AppleTabBar: React.FC<AppleTabBarProps> = ({
@@ -37,6 +38,7 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
   onOpenSearch,
   moreSheetOpen,
   onToggleMoreSheet,
+  visible = true,
 }) => {
   const primaryTabs: { id: NavTab; label: string; icon: React.ElementType; badge?: string }[] = [
     { id: 'home', label: 'หน้าแรก', icon: Layers },
@@ -147,8 +149,10 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
       )}
 
       <nav 
-        className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 xl:hidden w-[calc(100%-2rem)] max-w-md pointer-events-auto"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+        className={`fixed left-1/2 -translate-x-1/2 z-40 xl:hidden w-[calc(100%-1.5rem)] max-w-md pointer-events-auto transition-transform duration-300 ease-in-out ${
+          visible ? 'translate-y-0' : 'translate-y-36 pointer-events-none'
+        }`}
+        style={{ bottom: 'max(0.75rem, env(safe-area-inset-bottom, 0px))' }}
       >
         <div className="bg-[#080D1B]/90 dark:bg-[#080D1B]/90 bg-white/95 backdrop-blur-2xl border border-white/10 dark:border-white/10 border-black/10 rounded-full px-2 py-1.5 shadow-2xl flex items-center justify-around">
           {primaryTabs.map(tab => {
