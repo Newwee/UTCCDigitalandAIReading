@@ -61,7 +61,15 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
                   onClick={() => onSelectTab('revision')}
                   className="hover:text-[#35D5F2] transition-colors"
                 >
-                  ทบทวน & ข้อสอบจำลอง 100 ข้อ
+                  ทบทวน & ข้อสอบแยก 5 หน่วย (150 ข้อ)
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => onSelectTab('must-remember')}
+                  className="hover:text-amber-400 font-semibold text-amber-400/90 transition-colors flex items-center gap-1.5"
+                >
+                  <span>🔥 จำก่อนสอบ (ติวเข้ม & ม็อกสอบ 100 ข้อ)</span>
                 </button>
               </li>
               <li>

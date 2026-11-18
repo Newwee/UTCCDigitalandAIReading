@@ -10,6 +10,7 @@ import { HomeView } from './views/HomeView';
 import { StudyLibraryView } from './views/StudyLibraryView';
 import { ReadingPageView } from './views/ReadingPageView';
 import { RevisionView, RevisionTab } from './views/RevisionView';
+import { ExamPrepView } from './views/ExamPrepView';
 import { BookmarksHistoryView } from './views/BookmarksHistoryView';
 import { ContentAuditView } from './views/ContentAuditView';
 import { CompetitionView } from './views/CompetitionView';
@@ -134,6 +135,10 @@ export function App() {
             initialTab={revisionSubTab}
             initialCategoryId={revisionCategory}
           />
+        )}
+
+        {currentTab === 'must-remember' && (
+          <ExamPrepView onSelectTab={handleSelectTab} />
         )}
 
         {currentTab === 'audit' && (

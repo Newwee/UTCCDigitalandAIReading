@@ -12,11 +12,12 @@ import {
   X, 
   Award,
   Layers,
-  FileCheck2
+  FileCheck2,
+  Flame
 } from 'lucide-react';
 import { GradientText } from './ui/GradientText';
 
-export type NavTab = 'home' | 'library' | 'reading' | 'revision' | 'audit' | 'bookmarks' | 'competition' | 'about';
+export type NavTab = 'home' | 'library' | 'reading' | 'revision' | 'must-remember' | 'audit' | 'bookmarks' | 'competition' | 'about';
 
 interface HeaderProps {
   currentTab: NavTab;
@@ -42,6 +43,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'library', label: 'คลังเนื้อหา', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
     { id: 'revision', label: 'ข้อสอบ & สรุปย่อ', icon: Award, tag: 'NEW 150 ข้อ' },
+    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, tag: 'HOT' },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2 },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles },
@@ -95,7 +97,11 @@ export const Header: React.FC<HeaderProps> = ({
                 <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#35D5F2]' : 'text-[var(--text-muted)]'}`} />
                 <span className="whitespace-nowrap">{item.label}</span>
                 {item.tag && (
-                  <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan shrink-0 whitespace-nowrap">
+                  <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-black tracking-wider animate-pulse shrink-0 whitespace-nowrap ${
+                    item.id === 'must-remember'
+                      ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-white shadow-md'
+                      : 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] shadow-glow-cyan'
+                  }`}>
                     {item.tag}
                   </span>
                 )}
@@ -164,7 +170,11 @@ export const Header: React.FC<HeaderProps> = ({
                   <Icon className="w-4 h-4" />
                   <span>{item.label}</span>
                   {item.tag && (
-                    <span className="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-wider animate-pulse shadow-glow-cyan">
+                    <span className={`px-1.5 py-0.5 rounded-full text-[9px] font-black tracking-wider animate-pulse shrink-0 ${
+                      item.id === 'must-remember'
+                        ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-white shadow-md'
+                        : 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] shadow-glow-cyan'
+                    }`}>
                       {item.tag}
                     </span>
                   )}

@@ -12,7 +12,8 @@ import {
   Search,
   Sun,
   Moon,
-  X
+  X,
+  Flame
 } from 'lucide-react';
 import { NavTab } from './Header';
 
@@ -41,10 +42,12 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
     { id: 'home', label: 'หน้าแรก', icon: Layers },
     { id: 'library', label: 'คลังบทเรียน', icon: BookOpen },
     { id: 'reading', label: 'อ่านเนื้อหา', icon: FileText },
-    { id: 'revision', label: 'ข้อสอบ & สรุป', icon: Award, badge: '150 ข้อ' },
+    { id: 'revision', label: 'ข้อสอบ', icon: Award, badge: '150 ข้อ' },
+    { id: 'must-remember', label: 'จำก่อนสอบ', icon: Flame, badge: 'HOT' },
   ];
 
   const moreItems: { id: NavTab; label: string; icon: React.ElementType; desc: string; badge?: number }[] = [
+    { id: 'must-remember', label: 'จำก่อนสอบ (ติวเข้ม & ม็อกสอบ 100 ข้อ)', icon: Flame, desc: 'สรุป 5 หมวด + สนามสอบจำลองพร้อมเฉลยละเอียด' },
     { id: 'audit', label: 'ตรวจ 57 หน้า', icon: FileCheck2, desc: 'ตรวจสอบความถูกต้องและครอบคลุมครบ 100%' },
     { id: 'bookmarks', label: 'บันทึก & ประวัติ', icon: Bookmark, desc: 'บทเรียนที่คั่นหน้าและประวัติการอ่านล่าสุด', badge: bookmarkedCount },
     { id: 'competition', label: 'เกณฑ์แข่งขัน', icon: Sparkles, desc: 'กำหนดการ รางวัล และเกณฑ์การสอบ UTCC' },
@@ -158,16 +161,20 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
                   if (moreSheetOpen) onToggleMoreSheet();
                   onSelectTab(tab.id);
                 }}
-                className={`relative flex flex-col items-center justify-center py-1.5 px-3 rounded-full min-w-[62px] min-h-[46px] transition-all transform active:scale-95 ${
+                className={`relative flex flex-col items-center justify-center py-1.5 px-1.5 sm:px-2 rounded-full min-w-[48px] sm:min-w-[56px] min-h-[46px] transition-all transform active:scale-95 ${
                   isActive
                     ? 'text-[#35D5F2] font-bold'
                     : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'
                 }`}
               >
                 <div className="relative">
-                  <Icon className={`w-5 h-5 transition-transform ${isActive ? 'scale-110' : ''}`} />
+                  <Icon className={`w-5 h-5 transition-transform ${isActive ? 'scale-110 text-[#35D5F2]' : ''}`} />
                   {tab.badge && (
-                    <span className="absolute -top-1.5 -right-3 px-1 py-0.2 rounded-full text-[8px] font-black bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B] tracking-tight shadow-sm animate-pulse">
+                    <span className={`absolute -top-1.5 -right-3 px-1 py-0.2 rounded-full text-[8px] font-black tracking-tight shadow-sm animate-pulse ${
+                      tab.id === 'must-remember'
+                        ? 'bg-gradient-to-r from-amber-400 to-rose-500 text-white'
+                        : 'bg-gradient-to-r from-[#35D5F2] to-[#8B7CFF] text-[#080D1B]'
+                    }`}>
                       {tab.badge}
                     </span>
                   )}
@@ -184,7 +191,7 @@ export const AppleTabBar: React.FC<AppleTabBarProps> = ({
 
           <button
             onClick={onToggleMoreSheet}
-            className={`relative flex flex-col items-center justify-center py-1.5 px-3 rounded-full min-w-[62px] min-h-[46px] transition-all transform active:scale-95 ${
+            className={`relative flex flex-col items-center justify-center py-1.5 px-1.5 sm:px-2 rounded-full min-w-[48px] sm:min-w-[56px] min-h-[46px] transition-all transform active:scale-95 ${
               moreSheetOpen || ['audit', 'bookmarks', 'competition', 'about'].includes(currentTab)
                 ? 'text-[#8B7CFF] font-bold'
                 : 'text-[var(--text-muted)] hover:text-[var(--text-primary)]'

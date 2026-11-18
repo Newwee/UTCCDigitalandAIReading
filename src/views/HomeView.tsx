@@ -89,7 +89,18 @@ export const HomeView: React.FC<HomeViewProps> = ({
             รวบรวมเนื้อหาครบถ้วนจากคู่มือเตรียมสอบฉบับสมบูรณ์ (57 หน้า) ทั้ง 5 กลุ่มความรู้, 150 ข้อสอบจำลองพร้อมเฉลยละเอียด, 40 คำศัพท์เทคนิค และโจทย์วิเคราะห์อัตนัยรอบชิงชนะเลิศ
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-3 pt-4 max-w-3xl mx-auto w-full px-2">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-3 pt-4 max-w-4xl mx-auto w-full px-2">
+            <button
+              onClick={() => onSelectTab('must-remember')}
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-600 hover:from-amber-600 hover:to-rose-700 text-white text-sm sm:text-base font-black transition-all shadow-lg shadow-orange-500/30 transform hover:-translate-y-0.5 active:scale-95 min-h-[48px] whitespace-nowrap"
+            >
+              <Flame className="w-5 h-5 text-amber-200 fill-amber-200 shrink-0" />
+              <span>🔥 จำก่อนสอบ (สรุปเข้ม + ม็อกสอบ)</span>
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-black bg-white text-rose-600 uppercase tracking-wider shrink-0 animate-pulse shadow-sm">
+                HOT 100 ข้อ
+              </span>
+            </button>
+
             <button
               onClick={() => {
                 if (onOpenRevision) onOpenRevision('unit-tests');
